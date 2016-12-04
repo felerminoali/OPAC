@@ -31,7 +31,7 @@ class Email
         // purposes and is limited to 50 messages per account.
         // Visit https://app.sparkpost.com/account/sending-domains
         // to register and verify your own sending domain.
-        $this->objMailer->SetFrom('testing@sparkpostbox.com', 'Testing');
+        $this->objMailer->SetFrom('testing@sparkpostbox.com', 'Registering :: OPAC');
 
     }
 
