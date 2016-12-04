@@ -20,7 +20,7 @@
 //}
 
 
-//require_once ('_header.php')
+require_once ('_header.php')
 ?>
 
 <!--<h1>Login</h1>-->
@@ -54,7 +54,11 @@
 <!--    </table>-->
 <!--</form>-->
 <!---->
-<?php //require_once ('_footer.php')?>
-
 
 <h1>ola</h1>
+
+
+<?php require_once ('_footer.php')?>
+
+
+
