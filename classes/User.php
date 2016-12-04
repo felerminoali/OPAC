@@ -32,25 +32,27 @@ class User extends Application
 
             if ($this->db->insert($this->_table)) {
 
-                $gen_params['password'] = $this->generatePassword();
-                $gen_params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
-                
-                if($this->updateUser($gen_params, $this->db->lastId())){
+                $this->save_to_test_log('id: '.'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId().'\n\n  pw: '.$this->generatePassword());
 
-                    // send email
-                    $objEmail = new Email();
-
-                    $process_result = $objEmail->process(1, array(
-                        'email' => $params['email'],
-                        'first_name' => $params['first_name'],
-                        'last_name' => $params['last_name'],
-                        'password' =>  $gen_params['password'],
-                        'card_id' => $gen_params['card_id'],
-                        'hash' => $params['hash']
-                    ));
-
-                    return $process_result;
-                }
+//                $gen_params['password'] = $this->generatePassword();
+//                $gen_params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
+//
+//                if($this->updateUser($gen_params, $this->db->lastId())){
+//
+//                    // send email
+//                    $objEmail = new Email();
+//
+//                    $process_result = $objEmail->process(1, array(
+//                        'email' => $params['email'],
+//                        'first_name' => $params['first_name'],
+//                        'last_name' => $params['last_name'],
+//                        'password' =>  $gen_params['password'],
+//                        'card_id' => $gen_params['card_id'],
+//                        'hash' => $params['hash']
+//                    ));
+//
+//                    return $process_result;
+//                }
 
             }
             return false;
@@ -140,5 +142,13 @@ class User extends Application
         }
 
         return $result;
+    }
+
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 }
