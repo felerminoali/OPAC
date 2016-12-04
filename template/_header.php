@@ -38,8 +38,9 @@ $business = $objBusiness->getBusiness();
 </div>
 <div id="outer">
     <div id="wrapper">
+        <?php if(Login::isLogged(Login::$_login_front)){ ?>
         <div id="left">
-            <?php if(Login::isLogged(Login::$_login_front)){ ?>
+<!--            --><?php //if(Login::isLogged(Login::$_login_front)){ ?>
                 <h2>Navigation</h2>
                 <div class="dev br_td">&nbsp;</div>
                 <ul id="navigation">
@@ -94,8 +95,9 @@ $business = $objBusiness->getBusiness();
                         </a>
                     </li>
                 </ul>
-            <?php } else { ?>
-                &nbsp;
-            <?php } ?>
+<!--            --><?php //} else { ?>
+<!--                &nbsp;-->
+<!--            --><?php //} ?>
         </div>
+        <?php } ?>
         <div id="right">
