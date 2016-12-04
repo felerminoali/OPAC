@@ -1,8 +1,9 @@
 <?php
 
-//if(Login::isLogged(Login::$_login_admin)){
-//    Helper::redirect(Login::$_dashboard_admin);
+//if (Login::isLogged(Login::$_login_front)) {
+//    Helper::redirect(Login::$_dashboard_front);
 //}
+
 //
 //$objForm = new Form();
 //$objValid = new Validation($objForm);
