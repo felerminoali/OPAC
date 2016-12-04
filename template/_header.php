@@ -39,63 +39,63 @@ $business = $objBusiness->getBusiness();
 <div id="outer">
     <div id="wrapper">
         <div id="left">
-<!--            --><?php //if (Login::isLogged(Login::$_login_admin)) { ?>
-<!--                <h2>Navigation</h2>-->
-<!--                <div class="dev br_td">&nbsp;</div>-->
-<!--                <ul id="navigation">-->
-<!--                    <li>-->
-<!--                        <a href="/admin/?page=products"-->
-<!--                            --><?php
-//                            echo Helper::getActive(
-//                                array('page' =>'products')
-//                            );
-//                            ?><!-->-->
-<!--                            Products-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/admin/?page=categories"-->
-<!--                            --><?php
-//                            echo Helper::getActive(
-//                                array('page' =>'categories')
-//                            );
-//                            ?><!-->-->
-<!--                            Categories-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/admin/?page=orders"-->
-<!--                            --><?php
-//                            echo Helper::getActive(
-//                                array('page' =>'orders')
-//                            );
-//                            ?><!-->-->
-<!--                            Orders-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/admin/?page=clients"-->
-<!--                            --><?php
-//                            echo Helper::getActive(
-//                                array('page' =>'clients')
-//                            );
-//                            ?><!-->-->
-<!--                            Clients-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/admin/?page=business"-->
-<!--                            --><?php
-//                            echo Helper::getActive(
-//                                array('page' =>'business')
-//                            );
-//                            ?><!-->-->
-<!--                            Business-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            --><?php //} else { ?>
-<!--                &nbsp;-->
-<!--            --><?php //} ?>
+            <?php if(Login::isLogged(Login::$_login_front)){ ?>
+                <h2>Navigation</h2>
+                <div class="dev br_td">&nbsp;</div>
+                <ul id="navigation">
+                    <li>
+                        <a href="/admin/?page=products"
+                            <?php
+                            echo Helper::getActive(
+                                array('page' =>'products')
+                            );
+                            ?>>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/?page=categories"
+                            <?php
+                            echo Helper::getActive(
+                                array('page' =>'categories')
+                            );
+                            ?>>
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/?page=orders"
+                            <?php
+                            echo Helper::getActive(
+                                array('page' =>'orders')
+                            );
+                            ?>>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/?page=clients"
+                            <?php
+                            echo Helper::getActive(
+                                array('page' =>'clients')
+                            );
+                            ?>>
+                            Clients
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/?page=business"
+                            <?php
+                            echo Helper::getActive(
+                                array('page' =>'business')
+                            );
+                            ?>>
+                            Business
+                        </a>
+                    </li>
+                </ul>
+            <?php } else { ?>
+                &nbsp;
+            <?php } ?>
         </div>
         <div id="right">
