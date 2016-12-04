@@ -1,1 +1,5 @@
-<h1>Ola mundo</h1>
+<?php
+require_once ('inc/autoload.php');
+
+$core = new Core();
+$core->run();
