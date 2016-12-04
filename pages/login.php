@@ -30,8 +30,6 @@ if ($objForm->isPost('first_name')) {
         'post_code',
         'country',
         'email',
-        'password',
-        'confirm_password'
     );
 
     $objValid->_required = array(
@@ -43,8 +41,6 @@ if ($objForm->isPost('first_name')) {
         'post_code',
         'country',
         'email',
-        'password',
-        'confirm_password'
     );
 
     $objValid->_special = array(
@@ -58,14 +54,6 @@ if ($objForm->isPost('first_name')) {
     $objValid->_post_format = array(
         'password' => 'password'
     );
-
-    // validate password 
-    $_pass_1 = $objForm->getPost('password');
-    $_pass_2 = $objForm->getPost('confirm_password');
-
-    if (!empty($_pass_1) && !empty($_pass_2) && $_pass_1 != $_pass_2) {
-        $objValid->add2Errors('password_mismatch');
-    }
 
     $email = $objForm->getPost('email');
     $user = $objUser->getByEmail($email);
@@ -99,20 +87,20 @@ require_once ("_header.php");
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         <tr>
             <th>
-                <label for="login_email">Login:</label>
+                <label for="user_id">User identity:</label>
             </th>
             <td>
-                <?php echo $objValid->validate('login'); ?>
-                <input type="text" name="login_email" id="login_email" class="fld" value=""/>
+                <?php echo $objValid->validate('user_id'); ?>
+                <input type="text" name="user_id" id="user_id" class="fld" value=""/>
             </td>
         </tr>
 
         <tr>
             <th>
-                <label for="login_password">Password:</label>
+                <label for="pin">PIN:</label>
             </th>
             <td>
-                <input type="password" name="login_password" id="login_password" class="fld" value=""/>
+                <input type="password" name="pin" id="pin" class="fld" value=""/>
             </td>
         </tr>
 
@@ -208,23 +196,6 @@ require_once ("_header.php");
                 <?php echo $objValid->validate('email'); ?>
                 <?php echo $objValid->validate('email_duplicate'); ?>
                 <input type="text" name="email" id="email" class="fld" value="<?php echo $objForm->stickyText('email'); ?>"/>
-            </td>
-        </tr>
-
-        <tr>
-            <th><label for="password">Password: *</label></th>
-            <td>
-                <?php echo $objValid->validate('password'); ?>
-                <?php echo $objValid->validate('password_mismatch'); ?>
-                <input type="password" name="password" id="password" class="fld" value="<?php echo $objForm->stickyText('password'); ?>"/>
-            </td>
-        </tr>
-
-        <tr>
-            <th><label for="confirm_password">Confirm password: *</label></th>
-            <td>
-                <?php echo $objValid->validate('confirm_password'); ?>
-                <input type="password" name="confirm_password" id="confirm_password" class="fld" value="<?php echo $objForm->stickyText('confirm_password'); ?>"/>
             </td>
         </tr>
 
