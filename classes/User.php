@@ -31,8 +31,9 @@ class User extends Application
             $this->db->prepareInsert($params);
 
             if ($this->db->insert($this->_table)) {
-
-                $gen_params['password'] = $this->randomPassword();
+                
+                $password =  $this->randomPassword();
+                $gen_params['password'] = Login::string2hash($password);
                 $gen_params['card_id'] = 'OPAC' . strtoupper($params['last_name']) . '' . $this->db->lastId();
 
                 if ($this->updateUser($gen_params, $this->db->lastId())) {
@@ -44,7 +45,7 @@ class User extends Application
                         'email' => $params['email'],
                         'first_name' => $params['first_name'],
                         'last_name' => $params['last_name'],
-                        'password' => $gen_params['password'],
+                        'password' => $password,
                         'card_id' => $gen_params['card_id'],
                         'hash' => $params['hash']
                     ));
