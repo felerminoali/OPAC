@@ -9,8 +9,8 @@ $objValid = new Validation($objForm);
 $objUser = new User();
 
 // login form
-if ($objForm->isPost('login_email')) {
-    if ($objUser->isUser($objForm->getPost('login_email'), $objForm->getPost('login_password'))) {
+if ($objForm->isPost('card_id')) {
+    if ($objUser->isUser($objForm->getPost('card_id'), $objForm->getPost('password'))) {
         Login::loginFront($objUser->_id, Url::getReferrerUrl());
     } else {
         $objValid->add2Errors('login');
@@ -47,6 +47,10 @@ if ($objForm->isPost('first_name')) {
         'email' => 'email'
     );
 
+    $objValid->_post_format = array(
+        'password' => 'password'
+    );
+    
     $email = $objForm->getPost('email');
     $user = $objUser->getByEmail($email);
 
@@ -79,20 +83,20 @@ require_once ("_header.php");
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         <tr>
             <th>
-                <label for="user_id">User identity:</label>
+                <label for="card_id">User identity:</label>
             </th>
             <td>
-                <?php echo $objValid->validate('user_id'); ?>
-                <input type="text" name="user_id" id="user_id" class="fld" value=""/>
+                <?php echo $objValid->validate('login'); ?>
+                <input type="text" name="card_id" id="card_id" class="fld" value=""/>
             </td>
         </tr>
 
         <tr>
             <th>
-                <label for="pin">PIN:</label>
+                <label for="password">PIN:</label>
             </th>
             <td>
-                <input type="password" name="pin" id="pin" class="fld" value=""/>
+                <input type="password" name="password" id="password" class="fld" value=""/>
             </td>
         </tr>
 

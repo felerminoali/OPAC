@@ -6,11 +6,11 @@ class User extends Application
     public $_id;
     private $_table = "users";
 
-    public function isUser($email, $password)
+    public function isUser($card_id, $password)
     {
         $pass = Login::string2hash($password);
         $sql = "SELECT * FROM `{$this->_table}`
-                 WHERE `email` ='" . $this->db->escape($email) . "'
+                 WHERE `card_id` ='" . $this->db->escape($card_id) . "'
                  AND `password` ='" . $this->db->escape($pass) . "'
                  AND `active` = 1";
 

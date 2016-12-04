@@ -18,7 +18,7 @@ class Validation
         "country" => "Please select your country ",
         "email" => "Please provide your valid email address",
         "email_duplicate" => "This email address is already taken",
-        "login" => "User and / or password were incorrect",
+        "login" => "User and / or PIN were incorrect",
         "password" => "Please choose your password",
         "confirm_password" => "Please confirm your password",
         "password_mismatch" => "Password did not matched",
