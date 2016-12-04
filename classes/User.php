@@ -3,8 +3,8 @@
 class User extends Application
 {
 
-    private $_table = "users";
     public $_id;
+    private $_table = "users";
 
     public function isUser($email, $password)
     {
@@ -27,39 +27,58 @@ class User extends Application
 
         if (!empty($params)) {
 
-            
+
             $this->db->prepareInsert($params);
 
             if ($this->db->insert($this->_table)) {
 
-//                $this->save_to_test_log('id: '.'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId());
-                $this->save_to_test_log('\n\n  pw: '.$this->randomPassword());
+                $gen_params['password'] = $this->randomPassword();
+                $gen_params['card_id'] = 'OPAC' . strtoupper($params['last_name']) . '' . $this->db->lastId();
 
+                if ($this->updateUser($gen_params, $this->db->lastId())) {
 
-//                $gen_params['password'] = $this->generatePassword();
-//                $gen_params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
-//
-//                if($this->updateUser($gen_params, $this->db->lastId())){
-//
-//                    // send email
-//                    $objEmail = new Email();
-//
-//                    $process_result = $objEmail->process(1, array(
-//                        'email' => $params['email'],
-//                        'first_name' => $params['first_name'],
-//                        'last_name' => $params['last_name'],
-//                        'password' =>  $gen_params['password'],
-//                        'card_id' => $gen_params['card_id'],
-//                        'hash' => $params['hash']
-//                    ));
-//
-//                    return $process_result;
-//                }
+                    // send email
+                    $objEmail = new Email();
+
+                    $process_result = $objEmail->process(1, array(
+                        'email' => $params['email'],
+                        'first_name' => $params['first_name'],
+                        'last_name' => $params['last_name'],
+                        'password' => $gen_params['password'],
+                        'card_id' => $gen_params['card_id'],
+                        'hash' => $params['hash']
+                    ));
+
+                    return $process_result;
+                }
 
             }
             return false;
         }
         return false;
+    }
+
+    function randomPassword($length = 6)
+    {
+        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $pass = array(); //remember to declare $pass as an array
+        $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+        for ($i = 0; $i < $length; $i++) {
+            $n = rand(0, $alphaLength);
+            $pass[] = $alphabet[$n];
+        }
+        return implode($pass); //turn the array into a string
+    }
+
+    public function updateUser($array = null, $id = null)
+    {
+        if (!empty($array) && !empty($id)) {
+            $this->db->prepareUpdate($array);
+            if ($this->db->update($this->_table, $id)) {
+                return true;
+            }
+            return false;
+        }
     }
 
     public function getUserByHash($hash = null)
@@ -102,62 +121,25 @@ class User extends Application
         }
     }
 
-    public function updateUser($array = null, $id = null)
-    {
-        if (!empty($array) && !empty($id)) {
-            $this->db->prepareUpdate($array);
-            if ($this->db->update($this->_table, $id)) {
-                return true;
-            }
-            return false;
-        }
-    }
-
     public function getUsers($search = null)
     {
         $sql = "SELECT * FROM `{$this->_table}`
                     WHERE `active` = 1";
         $sql .= !empty($search) ?
             " AND (`first_name` LIKE '%" . $this->db->escape($search) . "%' 
-                || `last_name` LIKE '%" . $this->db->escape($search) . "%'": null;
+                || `last_name` LIKE '%" . $this->db->escape($search) . "%'" : null;
         $sql .= " ORDER BY `last_name`, 'first_name' ASC";
         return $this->db->fetchAll($sql);
     }
 
     public function removeUser($id = null)
     {
-        if(!empty($id)){
+        if (!empty($id)) {
             $sql = "DELETE FROM `{$this->_table}`
-                      WHERE `id` = '".$this->db->escape($id)."'";
+                      WHERE `id` = '" . $this->db->escape($id) . "'";
             return $this->db->query($sql);
         }
     }
-
-
-//    function generatePassword($length = 6) {
-//        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-//        $count = mb_strlen($chars);
-//
-//        for ($i = 0, $result = ''; $i < $length; $i++) {
-//            $index = rand(0, $count - 1);
-//            $result .= mb_substr($chars, $index, 1);
-//        }
-//
-//        return $result;
-//    }
-
-
-    function randomPassword($length = 6) {
-        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-        $pass = array(); //remember to declare $pass as an array
-        $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
-        for ($i = 0; $i < $length; $i++) {
-            $n = rand(0, $alphaLength);
-            $pass[] = $alphabet[$n];
-        }
-        return implode($pass); //turn the array into a string
-    }
-
 
     function save_to_test_log($text)
     {
