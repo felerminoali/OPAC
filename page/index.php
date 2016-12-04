@@ -20,7 +20,7 @@
 //}
 
 
-require_once ('_header.php')
+//require_once ('_header.php')
 ?>
 
 <!--<h1>Login</h1>-->
