@@ -22,10 +22,16 @@ class User extends Application
         return false;
     }
 
-    public function addUser($params = null, $password = null)
+    public function addUser($params = null)
     {
 
-        if (!empty($params) && !empty($password)) {
+        if (!empty($params)) {
+
+//            $password = $this->generatePassword();
+//            $card_id = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
+            $params['password'] = $this->generatePassword();
+            $params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
+            
             $this->db->prepareInsert($params);
 
             if ($this->db->insert($this->_table)) {
@@ -33,11 +39,15 @@ class User extends Application
                 // send email
                 $objEmail = new Email();
 
+                
+
+
                 $process_result = $objEmail->process(1, array(
                     'email' => $params['email'],
                     'first_name' => $params['first_name'],
                     'last_name' => $params['last_name'],
-                    'password' => $password,
+                    'password' =>  $params['password'],
+                    'card_id' => $params['card_id'],
                     'hash' => $params['hash']
                 ));
 
@@ -117,5 +127,18 @@ class User extends Application
                       WHERE `id` = '".$this->db->escape($id)."'";
             return $this->db->query($sql);
         }
+    }
+
+
+    function generatePassword($length = 6) {
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $count = mb_strlen($chars);
+
+        for ($i = 0, $result = ''; $i < $length; $i++) {
+            $index = rand(0, $count - 1);
+            $result .= mb_substr($chars, $index, 1);
+        }
+
+        return $result;
     }
 }

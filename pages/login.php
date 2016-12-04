@@ -185,7 +185,7 @@ require_once ("_header.php");
             <th><label for="country">Country: *</label></th>
             <td>
                 <?php echo $objValid->validate('country'); ?>
-                <?php echo $objForm->getCountriesSelect(229); ?>
+                <?php echo $objForm->getCountriesSelect(133); ?>
             </td>
         </tr>
 
