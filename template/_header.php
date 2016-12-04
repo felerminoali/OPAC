@@ -31,7 +31,7 @@ $business = $objBusiness->getBusiness();
             echo ' | <a href="/?page=logout">Logout</a>';
             echo '</div>';
         }else{
-            echo '<div id="logged_as"><a href="/">Login</a></div>';
+            echo '<div id="logged_as"><a href="/?page=login">Login</a></div>';
         }
         ?>
     </div>
