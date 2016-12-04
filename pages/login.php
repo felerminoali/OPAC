@@ -47,14 +47,6 @@ if ($objForm->isPost('first_name')) {
         'email' => 'email'
     );
 
-    $objValid->_post_remove = array(
-        'confirm_password'
-    );
-
-    $objValid->_post_format = array(
-        'password' => 'password'
-    );
-
     $email = $objForm->getPost('email');
     $user = $objUser->getByEmail($email);
 
