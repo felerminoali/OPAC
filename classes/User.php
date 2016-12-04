@@ -27,31 +27,31 @@ class User extends Application
 
         if (!empty($params)) {
 
-//            $password = $this->generatePassword();
-//            $card_id = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
-            $params['password'] = $this->generatePassword();
-            $params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
             
             $this->db->prepareInsert($params);
 
             if ($this->db->insert($this->_table)) {
 
-                // send email
-                $objEmail = new Email();
-
+                $gen_params['password'] = $this->generatePassword();
+                $gen_params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
                 
+                if($this->updateUser($gen_params, $this->db->lastId())){
 
+                    // send email
+                    $objEmail = new Email();
 
-                $process_result = $objEmail->process(1, array(
-                    'email' => $params['email'],
-                    'first_name' => $params['first_name'],
-                    'last_name' => $params['last_name'],
-                    'password' =>  $params['password'],
-                    'card_id' => $params['card_id'],
-                    'hash' => $params['hash']
-                ));
+                    $process_result = $objEmail->process(1, array(
+                        'email' => $params['email'],
+                        'first_name' => $params['first_name'],
+                        'last_name' => $params['last_name'],
+                        'password' =>  $gen_params['password'],
+                        'card_id' => $gen_params['card_id'],
+                        'hash' => $params['hash']
+                    ));
 
-                return $process_result;
+                    return $process_result;
+                }
+
             }
             return false;
         }
