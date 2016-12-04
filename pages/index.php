@@ -55,14 +55,14 @@ require_once ('_header.php')
 <!--</form>-->
 <!---->
 
-<div class='container'>
-    <div class='section friendly'>
-        <h1><strong>Heroku | Welcome to your new app!</strong></h1>
-        <div class='article'>
-            <p>Refer to the <a href="//devcenter.heroku.com/">documentation</a> if you need help deploying.</p>
-        </div>
-    </div>
-</div>
+<!--<div class='container'>-->
+<!--    <div class='section friendly'>-->
+<!--        <h1><strong>Heroku | Welcome to your new app!</strong></h1>-->
+<!--        <div class='article'>-->
+<!--            <p>Refer to the <a href="//devcenter.heroku.com/">documentation</a> if you need help deploying.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <?php require_once ('_footer.php')?>

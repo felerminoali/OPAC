@@ -1,12 +1,9 @@
 <?php
 
-//ola
-//$objBusiness = new Business();
-//$business = $objBusiness->getBusiness();
 
-//$objCatalogue = new Catalogue();
-//$cats = $objCatalogue->getCategories();
-//lll
+$objBusiness = new Business();
+$business = $objBusiness->getBusiness();
+
 ?>
 
 
@@ -24,7 +21,7 @@
 <body>
 <div id="header">
     <div id="header_in">
-<!--        <h5><a href="/">--><?php //echo $business['sys_name'] ?><!--</a></h5>-->
+        <h5><a href="/"><?php echo $business['sys_name'] ?></a></h5>
 <!--        --><?php
 //        if(Login::isLogged(Login::$_login_front)){
 //            echo '<div id="logged_as">Logged in as <strong>';
