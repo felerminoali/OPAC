@@ -35,22 +35,21 @@ class Email
 
     }
 
-    public function process($case = null, $array = null)
-    {
+    public function process($case = null, $array = null) {
         if (!empty($case)) {
 
             switch ($case) {
                 case 1:
                     // add url to the array
-                    $link = '<a href="' . SITE_URL . '/?page=activate&code=';
+                    $link = '<a href="'. SITE_URL. '/?page=activate&code=';
                     $link .= $array['hash'];
-                    $link .= '">';
-                    $link .= SITE_URL . '/?page=activate&code=';
+                    $link .='">';
+                    $link .= SITE_URL.'/?page=activate&code=';
                     $link .= $array['hash'];
                     $link .= '</a>';
                     $array['link'] = $link;
 
-                    $this->objMailer->Subject = __('activate_account','default');
+                    $this->objMailer->Subject = "Activate your account";
 
                     $this->objMailer->msgHTML($this->fetchEmail($case, $array));
                     $this->objMailer->addAddress(
@@ -69,8 +68,7 @@ class Email
         }
     }
 
-    public function fetchEmail($case = null, $array = null)
-    {
+    public function fetchEmail($case = null, $array = null) {
         if (!empty($case)) {
 
             if (!empty($array)) {
@@ -80,10 +78,7 @@ class Email
             }
 
             ob_start();
-
-            $lang = Session::getSession('language');
-
-            require_once(EMAILS_PATH . DS . $case . "_".$lang.".php");
+            require_once (EMAILS_PATH . DS . $case . ".php");
             $out = ob_get_clean();
             return $this->wrapEmail($out);
         }
