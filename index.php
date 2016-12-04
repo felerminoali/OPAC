@@ -1,5 +1,8 @@
 <?php
-require_once ('inc/autoload.php');
+//require_once ('inc/autoload.php');
+//
+//$core = new Core();
+//$core->run();
+?>
 
-$core = new Core();
-$core->run();
+<h1>Ola</h1>
