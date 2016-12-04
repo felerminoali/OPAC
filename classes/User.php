@@ -33,7 +33,7 @@ class User extends Application
             if ($this->db->insert($this->_table)) {
 
 //                $this->save_to_test_log('id: '.'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId());
-                $this->save_to_test_log('\n\n  pw: '.$this->generatePassword(6));
+                $this->save_to_test_log('\n\n  pw: '.$this->randomPassword());
 
 
 //                $gen_params['password'] = $this->generatePassword();
@@ -134,16 +134,28 @@ class User extends Application
     }
 
 
-    function generatePassword($length = 6) {
-        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        $count = mb_strlen($chars);
+//    function generatePassword($length = 6) {
+//        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+//        $count = mb_strlen($chars);
+//
+//        for ($i = 0, $result = ''; $i < $length; $i++) {
+//            $index = rand(0, $count - 1);
+//            $result .= mb_substr($chars, $index, 1);
+//        }
+//
+//        return $result;
+//    }
 
-        for ($i = 0, $result = ''; $i < $length; $i++) {
-            $index = rand(0, $count - 1);
-            $result .= mb_substr($chars, $index, 1);
+
+    function randomPassword() {
+        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $pass = array(); //remember to declare $pass as an array
+        $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+        for ($i = 0; $i < 8; $i++) {
+            $n = rand(0, $alphaLength);
+            $pass[] = $alphabet[$n];
         }
-
-        return $result;
+        return implode($pass); //turn the array into a string
     }
 
 
