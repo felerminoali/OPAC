@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: feler
- * Date: 12/4/2016
- * Time: 7:18 PM
- */
+<?php require_once ("_header.php"); ?>
+
+    <h1>Registration Failed</h1>
+
+    <p>There was a problem processing your registration. <br/>
+        Please try again later.
+    </p>
+
+<?php require_once ("_footer.php"); ?>
