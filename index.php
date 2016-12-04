@@ -5,4 +5,4 @@
 //$core->run();
 ?>
 
-<h1>Ola</h1>
+<h1>Ola Mundo</h1>
