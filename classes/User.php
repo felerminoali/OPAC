@@ -32,7 +32,9 @@ class User extends Application
 
             if ($this->db->insert($this->_table)) {
 
-                $this->save_to_test_log('id: '.'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId().'\n\n  pw: '.$this->generatePassword());
+                $this->save_to_test_log('id: '.'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId());
+//                $this->save_to_test_log('\n\n  pw: '.$this->generatePassword());
+
 
 //                $gen_params['password'] = $this->generatePassword();
 //                $gen_params['card_id'] = 'OPAC'.strtoupper($params['last_name']).''.$this->db->lastId();
