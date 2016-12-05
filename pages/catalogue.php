@@ -5,6 +5,9 @@
  * Date: 12/4/2016
  * Time: 8:26 PM
  */
+
+Login::restrictFront();
+
 require_once ("_header.php");
 ?>
 
