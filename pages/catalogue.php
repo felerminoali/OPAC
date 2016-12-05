@@ -11,7 +11,7 @@ Login::restrictFront();
 require_once ("_header.php");
 ?>
 
-    <h1>Catalogue:: Art & Architecture</h1>
+    <h1>Catalogue</h1>
 
 
 
@@ -100,93 +100,59 @@ require_once ("_header.php");
     <div class="catalogue_wrapper">
         <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=12">
-                <img src="media/catalogue/bag1.png" alt="Bag" width="120" />
+            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
+                <img src="media/catalogue/unavailable.png" alt="Drum" width="120" />
             </a>
         </div>
         <div class="catalogue_wrapper_right">
             <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=12"></a>
-                Bag                        </h4>
+                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
+                Drum                        </h4>
             <h4>
-                Price: &pound120.00;
+                Price: &pound145.00;
             </h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="12_1">Add to basket</a> </p>
+            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a> </p>
         </div>
     </div>
     <div class="catalogue_wrapper">
         <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=11">
-                <img src="media/catalogue/acad.png" alt="Auto Desk AutoCad" width="120" />
+            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
+                <img src="media/catalogue/unavailable.png" alt="Drum" width="120" />
             </a>
         </div>
         <div class="catalogue_wrapper_right">
             <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=11"></a>
-                Auto Desk AutoCad                        </h4>
+                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
+                Drum                        </h4>
             <h4>
-                Price: &pound554.00;
+                Price: &pound145.00;
             </h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="11_1">Add to basket</a> </p>
+            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a> </p>
         </div>
     </div>
     <div class="catalogue_wrapper">
         <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=10">
-                <img src="media/catalogue/3D_printer2.png" alt="3D printer" width="120" />
+            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
+                <img src="media/catalogue/unavailable.png" alt="Drum" width="120" />
             </a>
         </div>
         <div class="catalogue_wrapper_right">
             <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=10"></a>
-                3D printer                        </h4>
+                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
+                Drum                        </h4>
             <h4>
-                Price: &pound600.00;
+                Price: &pound145.00;
             </h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="10_1">Add to basket</a> </p>
+            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a> </p>
         </div>
     </div>
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=9">
-                <img src="media/catalogue/guitar2.png" alt="Guitar Acustic" width="120" />
-            </a>
-        </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=9"></a>
-                Guitar Acustic                        </h4>
-            <h4>
-                Price: &pound400.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="9_1">Add to basket</a> </p>
-        </div>
-    </div>
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=8">
-                <img src="media/catalogue/Tambourine1.png" alt="Tambourine" width="120" />
-            </a>
-        </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=8"></a>
-                Tambourine                        </h4>
-            <h4>
-                Price: &pound127.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="8_1">Add to basket</a> </p>
-        </div>
-    </div>
     <ul class="paging"><li><span>First</span></li><li><span>Previous</span></li><li><a href="/?page=catalogue&category=3&amp;pg=2">Next</a></li><li><span>Last</span><li></ul>
 
     </div>
