@@ -126,6 +126,7 @@ a:hover,#footer_in a,.add_to_basket:hover{text-decoration:none}
 /* inline filter -- working attempt*/
 ul#filters li {
     display:inline;
+    padding-right: 10px;
 }
 
 
