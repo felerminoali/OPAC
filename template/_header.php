@@ -41,21 +41,22 @@ $business = $objBusiness->getBusiness();
         
         <div id="left">
             <?php if(Login::isLogged(Login::$_login_front)){ ?>
+                <?php require_once ('basket_left.php');?>
                 <h2>Navigation</h2>
                 <div class="dev br_td">&nbsp;</div>
                 <ul id="navigation">
                     <li>
-                        <a href="/admin/?page=products"
+                        <a href="/?page=catalogue"
                             <?php
                             echo Helper::getActive(
-                                array('page' =>'products')
+                                array('page' =>'catalogue')
                             );
                             ?>>
                             Products
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/?page=categories"
+                        <a href="/?page=categories"
                             <?php
                             echo Helper::getActive(
                                 array('page' =>'categories')
@@ -65,7 +66,7 @@ $business = $objBusiness->getBusiness();
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/?page=orders"
+                        <a href="/?page=orders"
                             <?php
                             echo Helper::getActive(
                                 array('page' =>'orders')
@@ -75,7 +76,7 @@ $business = $objBusiness->getBusiness();
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/?page=clients"
+                        <a href="/?page=clients"
                             <?php
                             echo Helper::getActive(
                                 array('page' =>'clients')
@@ -85,7 +86,7 @@ $business = $objBusiness->getBusiness();
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/?page=business"
+                        <a href="/?page=business"
                             <?php
                             echo Helper::getActive(
                                 array('page' =>'business')
