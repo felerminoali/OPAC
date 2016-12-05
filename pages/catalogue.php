@@ -77,6 +77,7 @@ require_once ("_header.php");
     </div>
 
 
+<h1></h1>
 
 
     <div class="catalogue_wrapper">
