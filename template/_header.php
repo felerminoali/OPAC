@@ -41,7 +41,7 @@ $business = $objBusiness->getBusiness();
         
         <div id="left">
             <?php if(Login::isLogged(Login::$_login_front)){ ?>
-<!--                --><?php //require_once ('basket_left.php');?>
+                <?php require_once ('basket_left.php');?>
                 <h2>Navigation</h2>
                 <div class="dev br_td">&nbsp;</div>
                 <ul id="navigation">
@@ -52,7 +52,7 @@ $business = $objBusiness->getBusiness();
                                 array('page' =>'catalogue')
                             );
                             ?>>
-                            Products
+                            Catalogue
                         </a>
                     </li>
                     <li>
