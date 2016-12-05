@@ -101,3 +101,5 @@ $business = $objBusiness->getBusiness();
             <?php } ?>
         </div>
         <div id="right">
+
+<?php echo '<h1>current page: '.Url::cPage().'</h1>';?>
