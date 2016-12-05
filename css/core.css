@@ -123,8 +123,9 @@ a:hover,#footer_in a,.add_to_basket:hover{text-decoration:none}
     font-size: 11px;
     width: 100%; }
 
-/* inline filter -- working*/
+/* inline filter -- working attempt*/
 ul#filters li {
     display:inline;
 }
+
 
