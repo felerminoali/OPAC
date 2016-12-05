@@ -2,6 +2,7 @@
 require_once ('_header.php')
 ?>
 
+<?php echo Url::cPage();?>
 <div class='container'>
     <div class='section friendly'>
         <h1><strong>OPAC | Welcome to your new app!</strong></h1>
