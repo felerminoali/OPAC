@@ -36,10 +36,33 @@ require_once ("_header.php");
                     </table>
 
                     <ul id="filters">
-                        <li><a href="default.asp">Home</a></li>
-                        <li><a href="news.asp">News</a></li>
-                        <li><a href="contact.asp">Contact</a></li>
-                        <li><a href="about.asp">About</a></li>
+                        <li>
+                            <div class="tickbox">
+                                <input type="checkbox" name="YearCheckFilter"
+                                       id=""
+                                       value=""
+                                />
+                                <span> Books </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tickbox">
+                                <input type="checkbox" name="YearCheckFilter"
+                                       id=""
+                                       value=""
+                                />
+                                <span> Audio / Video </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tickbox">
+                                <input type="checkbox" name="YearCheckFilter"
+                                       id=""
+                                       value=""
+                                />
+                                <span> Periodicals </span>
+                            </div>
+                        </li>
                     </ul>
 
                 </form>
