@@ -37,31 +37,31 @@ require_once ("_header.php");
 
                     <ul id="filters">
                         <li>
-                            <div class="tickbox">
+<!--                            <div class="tickbox">-->
                                 <input type="checkbox" name="YearCheckFilter"
                                        id=""
                                        value=""
                                 />
                                 <span> Books </span>
-                            </div>
+<!--                            </div>-->
                         </li>
                         <li>
-                            <div class="tickbox">
+<!--                            <div class="tickbox">-->
                                 <input type="checkbox" name="YearCheckFilter"
                                        id=""
                                        value=""
                                 />
                                 <span> Audio / Video </span>
-                            </div>
+<!--                            </div>-->
                         </li>
                         <li>
-                            <div class="tickbox">
+<!--                            <div class="tickbox">-->
                                 <input type="checkbox" name="YearCheckFilter"
                                        id=""
                                        value=""
                                 />
                                 <span> Periodicals </span>
-                            </div>
+<!--                            </div>-->
                         </li>
                     </ul>
 
