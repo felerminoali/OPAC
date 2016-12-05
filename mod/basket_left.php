@@ -1,5 +1,5 @@
 <?php //$objBasket = new Basket(); ?>
-<h2>Your Basket</h2>
+<h2>Your Reservation</h2>
 <dl id="basket_left">
     <dt>No. of items:</dt>
     <dd class="bl_ti">
