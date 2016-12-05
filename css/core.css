@@ -122,3 +122,8 @@ a:hover,#footer_in a,.add_to_basket:hover{text-decoration:none}
     display: block;
     font-size: 11px;
     width: 100%; }
+
+
+ul#filters li {
+    display:inline;
+}

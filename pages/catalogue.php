@@ -35,7 +35,7 @@ require_once ("_header.php");
                         </tr>
                     </table>
 
-                    <ul style="display:inline">
+                    <ul id="filters">
                         <li><a href="default.asp">Home</a></li>
                         <li><a href="news.asp">News</a></li>
                         <li><a href="contact.asp">Contact</a></li>
