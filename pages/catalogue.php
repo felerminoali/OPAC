@@ -76,7 +76,7 @@ require_once ("_header.php");
         </div>
     </div>
 
-
+<p>Your search found <strong>18201</strong> records. Displaying records <strong>1</strong> to <strong>10</strong>.</p>
 <h1></h1>
 
 
