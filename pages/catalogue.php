@@ -33,6 +33,17 @@ require_once ("_header.php");
                                 </label>
                             </td>
                         </tr>
+                        <tr>
+                            <th><label for="library">Library:</label></th>
+                            <td>
+                                <select>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </td>
+                        </tr>
                     </table>
 
                     <ul id="filters">
