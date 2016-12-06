@@ -17,7 +17,7 @@ require_once ("_header.php");
 
     <div class='container'>
         <div class='section friendly'>
-<!--            <h1><strong>OPAC | Welcome to your new app!</strong></h1>-->
+            <h1><strong>SEARCH</strong></h1>
             <div class='article'>
 
                 <form action="" method="get">
