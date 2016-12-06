@@ -11,19 +11,16 @@ Login::restrictFront();
 require_once ("_header.php");
 ?>
 
-    <h1>Catalogue</h1>
-
-
 
     <div class='container'>
         <div class='section friendly'>
-            <h1><strong>SEARCH</strong></h1>
+            <h1><strong>SEARCH </strong> | catalogues </h1>
             <div class='article'>
 
                 <form action="" method="get">
                     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
                         <tr>
-                            <th><label for="search">Product:</label></th>
+                            <th><label for="search">library catalague:</label></th>
                             <td>
                                 <input type="text" name="search" value="" class="fld">
                             </td>
