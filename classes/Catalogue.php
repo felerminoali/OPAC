@@ -6,7 +6,7 @@ class Catalogue extends Application
     private $_table = 'categories';
     private $_table_1 = 'items';
     public $_path = 'media/catalogue/';
-    public $_path_alt = 'media/catalogue/unavailable/';
+    public $_path_alt = 'media/unavailable/';
     public $_id;
 
     public function getCategories()
