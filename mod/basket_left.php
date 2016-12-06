@@ -11,5 +11,5 @@
     </dd>
 </dl>
 <div class="dev br_td">&#160;</div>
-<p><a href="/?page=basket">View Reservation</a> | <a href="/?page=checkout">Reserve items</a></p>
+<p><a href="/?page=basket">View </a> | <a href="/?page=checkout">Reserve now</a></p>
 <div class="dev br_td">&#160;</div>

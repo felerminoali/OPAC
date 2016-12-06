@@ -11,6 +11,11 @@ Login::restrictFront();
 
 $objCatalogue = new Catalogue();
 
+$rows = $objCatalogue->getItems();
+
+$objPaging = new Paging($rows, 6);
+$rows = $objPaging->getRecords();
+
 
 require_once("_header.php");
 ?>
@@ -92,102 +97,110 @@ require_once("_header.php");
         </div>
     </div>
 
+    
+
+
+<!--    <div class="catalogue_wrapper">-->
+<!--        <div class="catalogue_wrapper_left">-->
+<!---->
+<!--            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">-->
+<!--                <img src="media/catalogue/unavailable.png" alt="Drum" width="120"/>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div class="catalogue_wrapper_right">-->
+<!--            <h4>-->
+<!--                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>-->
+<!--                Drum </h4>-->
+<!--            <h4>-->
+<!--                Price: &pound145.00;-->
+<!--            </h4>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+<!--                industry&#039;s standard dummy text ever since&hellip;</p>-->
+<!--            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--    <ul class="paging">-->
+<!--        <li><span>First</span></li>-->
+<!--        <li><span>Previous</span></li>-->
+<!--        <li><a href="/?page=catalogue&category=3&amp;pg=2">Next</a></li>-->
+<!--        <li><span>Last</span>-->
+<!--        <li>-->
+<!--    </ul>-->
+<!---->
+<!---->
+<!--    </div>-->
+<!--    <div class="cl">&#160;</div>-->
+
+
+
+<?php
+if (!empty($rows)) {
+    ?>
+
     <div class="paging">
         <p>Your search found <strong>18201</strong> records. Displaying records <strong>1</strong> to
             <strong>10</strong>.</p>
     </div>
 
     <h1></h1>
+    
+    <?php
+    
+    foreach ($rows as $row) {
+        ?>
+        <div class="catalogue_wrapper">
+            <div class="catalogue_wrapper_left">
+                <?php
+
+                $item_cat = $objCatalogue->getCategory($row['category']);
+
+                $image = !empty($row['image']) ?
+                    $objCatalogue->_path . $row['image'] : $objCatalogue->_path_alt . $item_cat['image'];
 
 
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
 
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
-                <img src="media/catalogue/unavailable.png" alt="Drum" width="120"/>
-            </a>
+
+                $width = Helper::getImgSize($image, 0);
+                $width = $width > 120 ? 120 : $width;
+                ?>
+
+                <a href="/?page=catalogue">
+                    <img src="<?php echo $image; ?>" alt="<?php echo Helper::encodeHTML($item_cat['name'], 1); ?>" width="<?php echo $width;?>" />
+                </a>
+            </div>
+            <div class="catalogue_wrapper_right">
+                <h4>
+                    <a href="/?page=catalogue"></a>
+                    <?php echo Helper::encodeHTML($row['title'], 1); ?>
+                </h4>
+                <h4>
+                    Price: <?php
+//                    echo Catalogue::$_currency;
+//                    echo number_format($row['price'], 2);
+                    ?>;
+                </h4>
+                <p><?php echo Helper::shortenString(Helper::encodeHTML($row['description'])); ?></p>
+<!--                <p>--><?php //echo Basket::activeButton($row['id']);?><!-- </p>-->
+            </div>
         </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
-                Drum </h4>
-            <h4>
-                Price: &pound145.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a></p>
-        </div>
+        <?php
+    }
+    echo $objPaging->getPaging();
+} else {
+    ?>
+    
+
+    <div class="paging">
+        <p><strong>No catalogue</strong> found</p>
     </div>
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
-
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
-                <img src="media/catalogue/unavailable.png" alt="Drum" width="120"/>
-            </a>
-        </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
-                Drum </h4>
-            <h4>
-                Price: &pound145.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a></p>
-        </div>
-    </div>
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
-
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
-                <img src="media/catalogue/unavailable.png" alt="Drum" width="120"/>
-            </a>
-        </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
-                Drum </h4>
-            <h4>
-                Price: &pound145.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a></p>
-        </div>
-    </div>
-    <div class="catalogue_wrapper">
-        <div class="catalogue_wrapper_left">
-
-            <a href="/?page=catalogue-item&amp;category=3&amp;id=31">
-                <img src="media/catalogue/unavailable.png" alt="Drum" width="120"/>
-            </a>
-        </div>
-        <div class="catalogue_wrapper_right">
-            <h4>
-                <a href="/?page=catalogue-item&amp;category=3&amp;id=31"></a>
-                Drum </h4>
-            <h4>
-                Price: &pound145.00;
-            </h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry&#039;s standard dummy text ever since&hellip;</p>
-            <p><a href="#" class="add_to_basket" rel="31_1">Add to basket</a></p>
-        </div>
-    </div>
-
-
-    <ul class="paging">
-        <li><span>First</span></li>
-        <li><span>Previous</span></li>
-        <li><a href="/?page=catalogue&category=3&amp;pg=2">Next</a></li>
-        <li><span>Last</span>
-        <li>
-    </ul>
-
-    </div>
-    <div class="cl">&#160;</div>
-
+    
+    
+    <?php
+}?>
 
 <?php require_once("_footer.php"); ?>
