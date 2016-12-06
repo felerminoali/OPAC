@@ -18,7 +18,7 @@ require_once("_header.php");
 
     <div class='container'>
         <div class='section friendly'>
-            <h1><strong>SEARCH | </strong>Catalogues</h1>
+            <h1><strong>SEARCH | </strong>&nbsp;&nbsp;&nbsp;Catalogues</h1>
             <div class='article'>
 
                 <form action="" method="get">
