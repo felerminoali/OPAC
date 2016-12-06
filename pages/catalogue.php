@@ -14,13 +14,13 @@ require_once ("_header.php");
 
     <div class='container'>
         <div class='section friendly'>
-            <h1><strong>SEARCH </strong> | catalogues </h1>
+            <h1><strong>SEARCH | </strong>catalogues</h1>
             <div class='article'>
 
                 <form action="" method="get">
                     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
                         <tr>
-                            <th><label for="search">library catalague:</label></th>
+                            <th><label for="search">Library catalogue:</label></th>
                             <td>
                                 <input type="text" name="search" value="" class="fld">
                             </td>
@@ -33,12 +33,35 @@ require_once ("_header.php");
                         <tr>
                             <th><label for="library">Library:</label></th>
                             <td>
-                                <select>
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
+
+
+                                <?php
+
+                                $objLibrary = new Library();
+                                $libraries = $objLibrary->getlibraries();
+                                if (!empty($libraries)) {
+                                    $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
+                                        $out .= "<option value=\"\">All libraries&hellip;</option>";
+                                    foreach ($libraries as $library) {
+                                        $out .= "<option value=\"";
+                                        $out .= $library['id'];
+                                        $out .= "\"";
+                                        $out .= ">";
+                                        $out .= $library['name'];
+                                        $out .= "</option>";
+                                    }
+                                    $out .= "</select>";
+                                    return $out;
+                                }
+
+                                ?>
+
+<!--                                <select>-->
+<!--                                    <option value="volvo">Volvo</option>-->
+<!--                                    <option value="saab">Saab</option>-->
+<!--                                    <option value="mercedes">Mercedes</option>-->
+<!--                                    <option value="audi">Audi</option>-->
+<!--                                </select>-->
                             </td>
                         </tr>
                     </table>
