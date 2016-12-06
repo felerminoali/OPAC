@@ -8,13 +8,17 @@
 
 Login::restrictFront();
 
+
+$objCatalogue = new Catalogue();
+
+
 require_once("_header.php");
 ?>
 
 
     <div class='container'>
         <div class='section friendly'>
-            <h1><strong>SEARCH | </strong>catalogues</h1>
+            <h1><strong>SEARCH | </strong>Catalogues</h1>
             <div class='article'>
 
                 <form action="" method="get">
@@ -60,43 +64,30 @@ require_once("_header.php");
 
                     </table>
 
-                    <ul id="filters">
-                        <li>
-                            <!--                            <div class="tickbox">-->
-                            <input type="checkbox" name="YearCheckFilter"
-                                   id=""
-                                   value=""
-                            />
-                            <span> Books </span>
-                            <!--                            </div>-->
-                        </li>
-                        <li>
-                            <!--                            <div class="tickbox">-->
-                            <input type="checkbox" name="YearCheckFilter"
-                                   id=""
-                                   value=""
-                            />
-                            <span> Audio / Video </span>
-                            <!--                            </div>-->
-                        </li>
-                        <li>
-                            <!--                            <div class="tickbox">-->
-                            <input type="checkbox" name="YearCheckFilter"
-                                   id=""
-                                   value=""
-                            />
-                            <span> Periodicals </span>
-                            <!--                            </div>-->
-                        </li>
-                    </ul>
+
+                    <?php
+
+                    $categories = $objCatalogue->getCategories();
+
+                    if (!empty($categories)) {
+                        ?>
+
+                        <ul id="filters">
+                            <?php foreach ($categories as $category) { ?>
+                                <li>
+                                    <input type="checkbox" name="filterCat"
+                                           id="cat_<?php echo $category['id'];?>"
+                                           value="cat_<?php echo $category['id'];?>"
+                                    />
+                                    <span><?php echo $category['name'];?></span>
+                                </li>
+                            <?php } ?>
+                        </ul>
+
+                    <?php } ?>
 
                 </form>
 
-
-                <!--                <p>What is Lorem Ipsum?</p>-->
-                <!--                <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-                <!--                </p>-->
-                <!--                <p>Refer to the <a href="https://myopac.herokuapp.com/?page=about">link</a> if you need more info.</p>-->
             </div>
         </div>
     </div>
