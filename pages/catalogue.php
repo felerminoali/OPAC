@@ -12,7 +12,6 @@ Login::restrictFront();
 $objCatalogue = new Catalogue();
 
 $rows = $objCatalogue->getItems();
-$total_records = count($rows);
 
 $objPaging = new Paging($rows, 6);
 $rows = $objPaging->getRecords();
@@ -144,8 +143,7 @@ if (!empty($rows)) {
     ?>
 
     <div class="paging">
-        <p>Your search found <strong><?php echo count($total_records)?></strong> records. Displaying records <strong>1</strong> to
-            <strong>10</strong>.</p>
+        <?php echo $objPaging->getNumberFound(); ?>
     </div>
 
     <h1></h1>
