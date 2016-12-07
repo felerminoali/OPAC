@@ -19,7 +19,6 @@ $param_category = Url::getParam('category');
 
 var_dump($param_category);
 
-
 //$param_book = Url::getParam('books');
 //$param_video = Url::getParam('video');
 
@@ -88,8 +87,8 @@ require_once("_header.php");
 <!---->
 <!--                                    />-->
 
-                                    <input type="checkbox" name="category"
-                                           id="category"
+                                    <input type="checkbox" name="category[]"
+                                           id="category_<?php echo $category['id']; ?>"
                                            value="<?php echo $category['id']; ?>"
 
                                     />
