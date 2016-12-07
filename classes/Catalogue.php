@@ -44,12 +44,6 @@ class Catalogue extends Application
 
         $sql .= " WHERE true = true ";
 
-        if(!empty($search)){
-            $sch = $this->db->escape($search);
-            $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'";
-        }
-        
-
         $sql .= !empty($library) ?
             " AND `library` = '". $this->db->escape($library) . "'": null;
 
@@ -62,7 +56,12 @@ class Catalogue extends Application
             }
         }
 
-        $sql .= " ORDER BY `title` ASC";
+        if(!empty($search)){
+            $sch = $this->db->escape($search);
+            $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'";
+        }
+
+        $sql .= " ORDER BY `title` ASC ";
         
         $this->save_to_test_log($sql);
         
