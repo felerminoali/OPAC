@@ -15,12 +15,7 @@ $objSearchForm = new SearchForm();
 
 $search = Url::getParam('search');
 $param_library = Url::getParam('library');
-$param_category = Url::getParam('category');
-
-var_dump($param_category);
-
-//$param_book = Url::getParam('books');
-//$param_video = Url::getParam('video');
+$param_categories = Url::getParam('category');
 
 $rows = $objCatalogue->getItems();
 
@@ -81,16 +76,14 @@ require_once("_header.php");
                         <ul id="filters">
                             <?php foreach ($categories as $category) { ?>
                                 <li>
-<!--                                    <input type="checkbox" name="--><?php //echo strtolower($category['name']);?><!--"-->
-<!--                                           id="--><?php //echo strtolower($category['name']);?><!--"-->
-<!--                                           value="--><?php //echo $category['id']; ?><!--"-->
-<!---->
-<!--                                    />-->
 
                                     <input type="checkbox" name="category[]"
                                            id="category_<?php echo $category['id']; ?>"
                                            value="<?php echo $category['id']; ?>"
 
+                                           <?php if (in_array($category['id'], $param_categories)){
+                                               $objSearchForm->stickyCheckedFilter();
+                                           } ?>
                                     />
                                     <span><?php echo $category['name']; ?></span>
                                 </li>
