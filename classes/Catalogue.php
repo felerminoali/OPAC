@@ -5,6 +5,7 @@ class Catalogue extends Application
 
     private $_table = 'categories';
     private $_table_1 = 'items';
+    private $_table_2 = 'item_status';
     public $_path = 'media/catalogue/';
     public $_path_alt = 'media/unavailable/';
     public $_id;
@@ -19,6 +20,19 @@ class Catalogue extends Application
     public function getCategory($id)
     {
         $sql = "SELECT * FROM `{$this->_table}`
+                WHERE `id`= '" . $this->db->escape($id) . "'";
+        return $this->db->fetchOne($sql);
+    }
+
+    public function getStatuses()
+    {
+        $sql = "SELECT * FROM `{$this->_table_2}`
+                ORDER BY `status` ASC";
+        return $this->db->fetchAll($sql);
+    }
+
+    public function getStatus($id){
+        $sql = "SELECT * FROM `{$this->_table_2}`
                 WHERE `id`= '" . $this->db->escape($id) . "'";
         return $this->db->fetchOne($sql);
     }
