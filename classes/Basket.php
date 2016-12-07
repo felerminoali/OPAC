@@ -26,10 +26,10 @@ class Basket {
     public static function activeButton($sess_id) {
         if (isset($_SESSION['basket'][$sess_id])) {
             $id = 0;
-            $label = 'Remove from basket';
+            $label = 'Remove from reservation';
         } else {
             $id = 1;
-            $label = 'Add to basket';
+            $label = 'Add to reservation';
         }
 
         $out = '<a href="#" class="add_to_basket';
