@@ -15,7 +15,11 @@ $objSearchForm = new SearchForm();
 
 $search = Url::getParam('search');
 $param_library = Url::getParam('library');
-//$param_audio = Url::getParam('audio');
+$param_category = Url::getParam('category');
+
+var_dump($param_category);
+
+
 //$param_book = Url::getParam('books');
 //$param_video = Url::getParam('video');
 
