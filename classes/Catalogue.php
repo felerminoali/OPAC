@@ -57,7 +57,7 @@ class Catalogue extends Application
             $flag = true;
             foreach ($categories as $category){
                 $sql .= ($flag) ? " AND " : " OR ";
-                $sql .= ' `category` = '. $this->db->escape($category) . "'";
+                $sql .= " `category` = '". $this->db->escape($category) . "'";
                 $flag = false;
             }
         }
