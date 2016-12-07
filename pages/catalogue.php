@@ -58,7 +58,7 @@ require_once("_header.php");
                             <tr>
                                 <th><label for="library">Library:</label></th>
                                 <td>
-                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries); ?>
+                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries, !empty($param_library) ? $param_library : null); ?>
                                 </td>
                             </tr>
                         <?php } ?>
