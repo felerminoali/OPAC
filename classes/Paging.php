@@ -109,9 +109,11 @@ class Paging{
     
     public function getNumberFound(){
         
-        $out = '<p>Your search found';
+        $out = '<p>Your search found ';
         $out .= '<strong>'.$this->_number_of_records.'</strong>';
-        $out .= ' records.</p>';
+        $out .= ' records. Displaying page <strong>'.$this->_current.'</strong> of <strong>'.$this->_number_of_pages.'</strong> pages';
+        $out .= '</p>';
+
         
         return $out;
     }

@@ -12,6 +12,7 @@ Login::restrictFront();
 $objCatalogue = new Catalogue();
 
 $rows = $objCatalogue->getItems();
+$total_records = count($rows);
 
 $objPaging = new Paging($rows, 6);
 $rows = $objPaging->getRecords();
@@ -143,7 +144,8 @@ if (!empty($rows)) {
     ?>
 
     <div class="paging">
-        <?php echo $objPaging->getNumberFound();?>
+        <p>Your search found <strong><?php echo count($total_records)?></strong> records. Displaying records <strong>1</strong> to
+            <strong>10</strong>.</p>
     </div>
 
     <h1></h1>
@@ -186,7 +188,7 @@ if (!empty($rows)) {
                     ?>;
                 </h4>
                 <p><?php echo Helper::shortenString(Helper::encodeHTML($row['description'])); ?></p>
-                <p><?php echo Basket::activeButton($row['id']);?> </p>
+<!--                <p>--><?php //echo Basket::activeButton($row['id']);?><!-- </p>-->
             </div>
         </div>
         <?php
