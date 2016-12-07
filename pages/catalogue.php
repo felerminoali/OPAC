@@ -11,8 +11,11 @@ Login::restrictFront();
 
 $objCatalogue = new Catalogue();
 
+$objSearchForm = new SearchForm();
 
 $search = Url::getParam('search');
+$param_library = Url::getParam('library');
+
 
 $rows = $objCatalogue->getItems();
 
@@ -37,7 +40,7 @@ require_once("_header.php");
                         <tr>
                             <th><label for="search">Library catalogue:</label></th>
                             <td>
-                                <input type="text" name="search" value="" class="fld">
+                                <input type="text" name="search" value="<?php echo stripslashes($search); ?>" class="fld">
                             </td>
                             <td>
                                 <label for="btn_add" class="sbm sbm_blue fl_l">
@@ -55,20 +58,7 @@ require_once("_header.php");
                             <tr>
                                 <th><label for="library">Library:</label></th>
                                 <td>
-                                    <?php
-                                    $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
-                                    $out .= "<option value=\"\">All libraries&hellip;</option>";
-                                    foreach ($libraries as $library) {
-                                        $out .= "<option value=\"";
-                                        $out .= $library['id'];
-                                        $out .= "\"";
-                                        $out .= ">";
-                                        $out .= $library['name'];
-                                        $out .= "</option>";
-                                    }
-                                    $out .= "</select>";
-                                    echo $out;
-                                    ?>
+                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries); ?>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -88,7 +78,9 @@ require_once("_header.php");
                                 <li>
                                     <input type="checkbox" name="<?php echo $category['name'];?>"
                                            id="<?php echo $category['name'];?>"
-                                           value="<?php echo $category['id']; ?>"
+                                           value="<?php echo $category['id']; ?>
+
+                                           "
                                     />
                                     <span><?php echo $category['name']; ?></span>
                                 </li>
