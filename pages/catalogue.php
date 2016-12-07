@@ -13,8 +13,6 @@ $objCatalogue = new Catalogue();
 
 $rows = $objCatalogue->getItems();
 
-$total_records = count($rows[0]);
-
 $objPaging = new Paging($rows, 6);
 $rows = $objPaging->getRecords();
 
@@ -145,7 +143,7 @@ if (!empty($rows)) {
     ?>
 
     <div class="paging">
-        <p>Your search found <strong><?php echo count($total_records)?></strong> records.</p>
+        <?php echo $objPaging->getNumberFound();?>
     </div>
 
     <h1></h1>

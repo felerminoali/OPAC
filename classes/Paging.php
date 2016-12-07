@@ -106,4 +106,13 @@ class Paging{
         }
         
     }
+    
+    public function getNumberFound(){
+        
+        $out = '<p>Your search found';
+        $out .= '<strong>'.$this->_number_of_records.'</strong>';
+        $out .= ' records.</p>';
+        
+        return $out;
+    }
 }
