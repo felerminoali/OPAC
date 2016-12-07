@@ -19,6 +19,8 @@ $param_categories = Url::getParam('category');
 
 var_dump($param_categories);
 
+//array(4) { [0]=> string(2) "12" [1]=> string(1) "2" [2]=> string(2) "32" [3]=> string(2) "22" };
+
 $rows = $objCatalogue->getItems();
 
 
@@ -83,7 +85,7 @@ require_once("_header.php");
                                            id="category_<?php echo $category['id']; ?>"
                                            value="<?php echo $category['id']; ?>"
 
-                                           <?php if (in_array($category['id'], $param_categories)){
+                                           <?php if (in_array($category['id'].'', $param_categories)){
                                                $objSearchForm->stickyCheckedFilter();
                                            } ?>
                                     />
