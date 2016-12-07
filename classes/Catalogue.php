@@ -41,6 +41,10 @@ class Catalogue extends Application
     public function getItems($search = null){
 
         $sql = "SELECT * FROM `{$this->_table_1}`";
+
+        $sql .= " WHERE true = true ";
+        
+        
         $sql .= !empty($search) ?
             " WHERE `id` = '" . $this->db->escape($search) . "'" : null;
         $sql .= " ORDER BY `title` ASC";
