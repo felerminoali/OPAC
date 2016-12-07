@@ -140,21 +140,21 @@ if (!empty($rows)) {
                 </h4>
 
                 <?php if (!empty($row['author'])) { ?>
-                    <h6>
+                    <h5>
                         by: <u><?php echo $row['author']; ?></u>;
-                    </h6>
+                    </h5>
                 <?php } ?>
 
                 <?php if (!empty($row['year'])) { ?>
-                    <h6>
+                    <h5>
                         <?php echo $row['year']; ?>;
-                    </h6>
+                    </h5>
                 <?php } ?>
 
                 <?php if (!empty($row['publishing_date'])) { ?>
-                    <h6>
+                    <h5>
                         <?php echo $row['publishing_date']; ?>;
-                    </h6>
+                    </h5>
                 <?php } ?>
 
 
