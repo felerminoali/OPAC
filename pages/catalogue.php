@@ -163,7 +163,7 @@ if (!empty($rows)) {
                 <?php } ?>
                 <p>
                     <?php
-                    $item_status = $objCatalogue->getStatus($rows['status']);
+                    $item_status = $objCatalogue->getStatus($row['status']);
                     $out = $item_cat['name'];
                     $out .= ': ' . $item_status['status'];
 
