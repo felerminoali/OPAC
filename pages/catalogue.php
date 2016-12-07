@@ -11,7 +11,15 @@ Login::restrictFront();
 
 $objCatalogue = new Catalogue();
 
+
+$search = Url::getParam('search');
+
+echo '<h1>'.$search.'</h1>';
+
+
 $rows = $objCatalogue->getItems();
+
+
 
 $objPaging = new Paging($rows, 6);
 $rows = $objPaging->getRecords();
@@ -164,7 +172,7 @@ if (!empty($rows)) {
                 <p>
                     <?php
                     $item_status = $objCatalogue->getStatus($row['status']);
-                    $out = $item_cat['name'];
+                    $out = '<strong>'.$item_cat['name'].'</strong>';
                     $out .= ': ' . $item_status['status'];
 
                     echo $out;

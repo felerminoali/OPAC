@@ -21,6 +21,8 @@ class Form {
             return $this->isPost($field) ? strip_tags($_POST[$field]) : null;
         }
     }
+    
+    
 
     public function stickySelect($field, $value, $default = null) {
         if ($this->isPost($field) && $this->getPost($field) == $value) {
