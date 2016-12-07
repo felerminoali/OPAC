@@ -15,7 +15,9 @@ $objSearchForm = new SearchForm();
 
 $search = Url::getParam('search');
 $param_library = Url::getParam('library');
-
+//$param_audio = Url::getParam('audio');
+//$param_book = Url::getParam('books');
+//$param_video = Url::getParam('video');
 
 $rows = $objCatalogue->getItems();
 
@@ -58,7 +60,7 @@ require_once("_header.php");
                             <tr>
                                 <th><label for="library">Library:</label></th>
                                 <td>
-                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries, !empty($param_library) ? $param_library : null); ?>
+                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries, !empty($param_library) ? stripslashes($param_library) : null); ?>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -76,8 +78,14 @@ require_once("_header.php");
                         <ul id="filters">
                             <?php foreach ($categories as $category) { ?>
                                 <li>
-                                    <input type="checkbox" name="<?php echo $category['name'];?>"
-                                           id="<?php echo $category['name'];?>"
+<!--                                    <input type="checkbox" name="--><?php //echo strtolower($category['name']);?><!--"-->
+<!--                                           id="--><?php //echo strtolower($category['name']);?><!--"-->
+<!--                                           value="--><?php //echo $category['id']; ?><!--"-->
+<!---->
+<!--                                    />-->
+
+                                    <input type="checkbox" name="category"
+                                           id="category"
                                            value="<?php echo $category['id']; ?>"
 
                                     />
