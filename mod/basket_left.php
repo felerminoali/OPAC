@@ -11,7 +11,7 @@
     </dd>
 
     <dt>Books:</dt>
-    <dd class="bl_st">&pound;
+    <dd class="bl_st">
         <span>
             1
 <!--            --><?php //echo number_format($objBasket->_sub_total, 2); ?>
@@ -19,7 +19,7 @@
     </dd>
 
     <dt>Audio:</dt>
-    <dd class="bl_st">&pound;
+    <dd class="bl_st">
         <span>
             2
             <!--            --><?php //echo number_format($objBasket->_sub_total, 2); ?>
@@ -27,7 +27,7 @@
     </dd>
 
     <dt>Videos:</dt>
-    <dd class="bl_st">&pound;
+    <dd class="bl_st">
         <span>
             3
             <!--            --><?php //echo number_format($objBasket->_sub_total, 2); ?>
@@ -36,7 +36,7 @@
 
 
     <dt>Periodicals:</dt>
-    <dd class="bl_st">&pound;
+    <dd class="bl_st">
         <span>
             4
             <!--            --><?php //echo number_format($objBasket->_sub_total, 2); ?>

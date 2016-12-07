@@ -3,12 +3,12 @@
 class Catalogue extends Application
 {
 
-    private $_table = 'categories';
-    private $_table_1 = 'items';
-    private $_table_2 = 'item_status';
     public $_path = 'media/catalogue/';
     public $_path_alt = 'media/unavailable/';
     public $_id;
+    private $_table = 'categories';
+    private $_table_1 = 'items';
+    private $_table_2 = 'item_status';
 
     public function getCategories()
     {
@@ -19,52 +19,71 @@ class Catalogue extends Application
 
     public function getCategory($id)
     {
-        $sql = "SELECT * FROM `{$this->_table}`
+        if (!empty($id)) {
+            $sql = "SELECT * FROM `{$this->_table}`
                 WHERE `id`= '" . $this->db->escape($id) . "'";
-        return $this->db->fetchOne($sql);
+            return $this->db->fetchOne($sql);
+        }
     }
 
     public function getStatuses()
     {
-        $sql = "SELECT * FROM `{$this->_table_2}`
+        if (!empty($id)) {
+            $sql = "SELECT * FROM `{$this->_table_2}`
                 ORDER BY `status` ASC";
-        return $this->db->fetchAll($sql);
+            return $this->db->fetchAll($sql);
+        }
     }
 
-    public function getStatus($id){
-        $sql = "SELECT * FROM `{$this->_table_2}`
+    public function getStatus($id)
+    {
+        if (!empty($id)) {
+            $sql = "SELECT * FROM `{$this->_table_2}`
                 WHERE `id`= '" . $this->db->escape($id) . "'";
-        return $this->db->fetchOne($sql);
+            return $this->db->fetchOne($sql);
+        }
     }
 
 
-    public function getItems($search = null, $library = null, $categories = null){
+    public function getItems($search = null, $library = null, $categories = null)
+    {
 
         $sql = "SELECT * FROM `{$this->_table_1}`";
 
         $sql .= " WHERE true = true ";
 
         $sql .= !empty($library) ?
-            " AND `library` = '". $this->db->escape($library) . "'": null;
+            " AND `library` = '" . $this->db->escape($library) . "'" : null;
 
-        if(!empty($categories)){
+        if (!empty($categories)) {
             $flag = true;
-            foreach ($categories as $category){
+            foreach ($categories as $category) {
                 $sql .= ($flag) ? " AND " : " OR ";
-                $sql .= " `category` = '". $this->db->escape($category) . "'";
+                $sql .= " `category` = '" . $this->db->escape($category) . "'";
                 $flag = false;
             }
         }
 
-        if(!empty($search)){
+        if (!empty($search)) {
             $sch = $this->db->escape($search);
             $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'";
         }
 
         $sql .= " ORDER BY `title` ASC ";
-        
+
         return $this->db->fetchAll($sql);
 
+    }
+
+
+    public function getItem($id = null)
+    {
+
+        if (!empty($id)) {
+            $sql = "SELECT * FROM `{$this->_table_1}`
+                WHERE `id`= '" . $this->db->escape($id) . "'";
+            return $this->db->fetchOne($sql);
+        }
     }
 
     function save_to_test_log($text)
