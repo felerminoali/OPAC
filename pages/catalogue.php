@@ -21,6 +21,11 @@ $array_test = array('12','2','32', '22');
 //var_dump($param_categories);
 var_dump($array_test);
 //array(4) { [0]=> string(2) "12" [1]=> string(1) "2" [2]=> string(2) "32" [3]=> string(2) "22" };
+//array(4) { [0]=> string(2) "12" [1]=> string(1) "2" [2]=> string(2) "32" [3]=> string(2) "22" }
+
+if(in_array('12', $array_test)){
+    echo '<h1>CHECKED</h1>';
+}
 
 $rows = $objCatalogue->getItems();
 
