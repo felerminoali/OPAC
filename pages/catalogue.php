@@ -91,9 +91,11 @@ require_once("_header.php");
                                            id="category_<?php echo $category['id']; ?>"
                                            value="<?php echo $category['id']; ?>"
 
-                                           <?php if (in_array($category['id'].'', $param_categories)){
-                                               $objSearchForm->stickyCheckedFilter();
-                                           } ?>
+                                           <?php 
+                                           if (in_array($category['id'], $param_categories)){
+                                               echo $objSearchForm->stickyCheckedFilter();
+                                           } 
+                                           ?>
                                     />
                                     <span><?php echo $category['name']; ?></span>
                                 </li>
