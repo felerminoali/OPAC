@@ -46,7 +46,7 @@ class Catalogue extends Application
 
         if(!empty($search)){
             $sch = $this->db->escape($search);
-            $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'" . "'";
+            $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'";
         }
         
 
