@@ -38,18 +38,40 @@ class Catalogue extends Application
     }
 
 
-    public function getItems($search = null){
+    public function getItems($search = null, $library = null, $categories = null){
 
         $sql = "SELECT * FROM `{$this->_table_1}`";
 
         $sql .= " WHERE true = true ";
         
-        
         $sql .= !empty($search) ?
-            " WHERE `id` = '" . $this->db->escape($search) . "'" : null;
+            " AND `title` LIKE '%{$this->db->escape($search)}%' || `id` = '{$this->db->escape($search)}'" . "'" : null;
+
+        $sql .= !empty($library) ?
+            " AND `library` = '". $this->db->escape($library) . "'": null;
+
+        if(!empty($categories)){
+            $flag = true;
+            foreach ($categories as $category){
+                $sql .= ($flag) ? " AND " : " OR ";
+                $sql .= ' category = '. $this->db->escape($category) . "'";
+                $flag = false;
+            }
+        }
+
         $sql .= " ORDER BY `title` ASC";
+        
+        $this->save_to_test_log($sql);
+        
         return $this->db->fetchAll($sql);
 
+    }
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
