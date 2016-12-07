@@ -78,9 +78,8 @@ require_once("_header.php");
                                 <li>
                                     <input type="checkbox" name="<?php echo $category['name'];?>"
                                            id="<?php echo $category['name'];?>"
-                                           value="<?php echo $category['id']; ?>
+                                           value="<?php echo $category['id']; ?>"
 
-                                           "
                                     />
                                     <span><?php echo $category['name']; ?></span>
                                 </li>

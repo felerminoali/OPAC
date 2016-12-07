@@ -22,8 +22,8 @@ class SearchForm
             foreach ($libraries as $library) {
                 $out .= "<option value=\"";
                 $out .= $library['id'];
-                $out .= "\"";
-                $out .= $this->stickySelect('library', $library['id'], $record);
+                $out .= "\" ";
+//                $out .= $this->stickySelect('library', $library['id'], $record);
                 $out .= ">";
                 $out .= $library['name'];
                 $out .= "</option>";
