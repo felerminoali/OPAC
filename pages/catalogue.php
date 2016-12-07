@@ -12,6 +12,9 @@ Login::restrictFront();
 $objCatalogue = new Catalogue();
 
 $rows = $objCatalogue->getItems();
+
+var_dump($rows);
+
 $total_records = count($rows);
 
 $objPaging = new Paging($rows, 6);
