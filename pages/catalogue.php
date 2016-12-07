@@ -170,11 +170,9 @@ if (!empty($rows)) {
                     $item_status = $objCatalogue->getStatus($row['status']);
                     $out = '<strong>'.$item_cat['name'].'</strong>';
                     $out .= ': ' . $item_status['status'];
-
                     echo $out;
                     ?>;
                 </p>
-
 
                 <p><?php echo Basket::activeButton($row['id']); ?> </p>
             </div>
