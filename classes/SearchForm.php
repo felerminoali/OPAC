@@ -15,9 +15,9 @@ class SearchForm
         if (!empty($libraries)) {
 
             $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
-            if (empty($record)) {
+//            if (empty($record)) {
                 $out .= "<option value=\"\">All libraries&hellip;</option>";
-            }
+//            }
 
             foreach ($libraries as $library) {
                 $out .= "<option value=\"";
