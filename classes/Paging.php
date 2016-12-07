@@ -84,7 +84,7 @@ class Paging{
             
             
             // last Link 
-            if($this->_current == $this->_number_of_pages){
+            if($this->_current != $this->_number_of_pages){
                 $url = $this->_url.'&amp;'.self::$_key.'='.$this->_number_of_pages;
                 $out[] = '<a href="'.$url.'">Last</a>';
             }else{
