@@ -13,9 +13,7 @@ $objCatalogue = new Catalogue();
 
 $rows = $objCatalogue->getItems();
 
-var_dump($rows);
-
-$total_records = count($rows);
+$total_records = count($rows[0]);
 
 $objPaging = new Paging($rows, 6);
 $rows = $objPaging->getRecords();
