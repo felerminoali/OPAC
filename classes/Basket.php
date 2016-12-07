@@ -38,7 +38,6 @@ class Basket {
         $out .= $sess_id . '_' . $id;
         $out .= '">' . $label . '</a>';
 
-//        var_dump($out);
 
         return $out;
     }

@@ -144,8 +144,7 @@ if (!empty($rows)) {
     ?>
 
     <div class="paging">
-        <p>Your search found <strong><?php count($total_records)?></strong> records. Displaying records <strong>1</strong> to
-            <strong>10</strong>.</p>
+        <p>Your search found <strong><?php echo count($total_records)?></strong> records.</p>
     </div>
 
     <h1></h1>
@@ -177,7 +176,9 @@ if (!empty($rows)) {
             <div class="catalogue_wrapper_right">
                 <h4>
                     <a href="/?page=catalogue"></a>
+                    <strong>
                     <?php echo Helper::encodeHTML($row['title'], 1); ?>
+                    </strong>
                 </h4>
                 <h4>
                     Year: <?php
@@ -186,7 +187,7 @@ if (!empty($rows)) {
                     ?>;
                 </h4>
                 <p><?php echo Helper::shortenString(Helper::encodeHTML($row['description'])); ?></p>
-<!--                <p>--><?php //echo Basket::activeButton($row['id']);?><!-- </p>-->
+                <p><?php echo Basket::activeButton($row['id']);?> </p>
             </div>
         </div>
         <?php
