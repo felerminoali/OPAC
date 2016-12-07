@@ -63,8 +63,6 @@ class Catalogue extends Application
 
         $sql .= " ORDER BY `title` ASC ";
         
-        $this->save_to_test_log($sql);
-        
         return $this->db->fetchAll($sql);
 
     }

@@ -9,15 +9,13 @@
 class SearchForm
 {
 
-    public function getLibrariesSelect($libraries= null, $record = null)
+    public function getLibrariesSelect($libraries = null, $record = null)
     {
 
         if (!empty($libraries)) {
 
             $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
-//            if (empty($record)) {
-                $out .= "<option value=\"\">All libraries&hellip;</option>";
-//            }
+            $out .= "<option value=\"\">All libraries&hellip;</option>";
 
             foreach ($libraries as $library) {
                 $out .= "<option value=\"";
@@ -35,15 +33,8 @@ class SearchForm
 
     }
 
-    public function stickyCheckedFilter()
+    public function stickySelect($field, $value, $default = null)
     {
-        return ' checked="checked"';
-    }
-
-
-
-
-    public function stickySelect($field, $value, $default = null) {
         if ($this->isPost($field) && $this->getPost($field) == $value) {
             return ' selected="selected"';
         } else {
@@ -52,8 +43,8 @@ class SearchForm
         }
     }
 
-
-    public function isPost($field = null) {
+    public function isPost($field = null)
+    {
         if (!empty($field)) {
             if (isset($_POST[$field])) {
                 return true;
@@ -67,10 +58,16 @@ class SearchForm
         }
     }
 
-    public function getPost($field = null) {
+    public function getPost($field = null)
+    {
         if (!empty($field)) {
             return $this->isPost($field) ? strip_tags($_POST[$field]) : null;
         }
+    }
+
+    public function stickyCheckedFilter()
+    {
+        return ' checked="checked"';
     }
 
 
