@@ -14,9 +14,6 @@ $objCatalogue = new Catalogue();
 
 $search = Url::getParam('search');
 
-echo '<h1>'.$search.'</h1>';
-
-
 $rows = $objCatalogue->getItems();
 
 
@@ -35,6 +32,7 @@ require_once("_header.php");
             <div class='article'>
 
                 <form action="" method="get">
+                    <?php echo Url::getParams4Search(array('search'), Paging::$_key); ?>
                     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
                         <tr>
                             <th><label for="search">Library catalogue:</label></th>
@@ -88,9 +86,9 @@ require_once("_header.php");
                         <ul id="filters">
                             <?php foreach ($categories as $category) { ?>
                                 <li>
-                                    <input type="checkbox" name="filterCat"
-                                           id="cat_<?php echo $category['id']; ?>"
-                                           value="cat_<?php echo $category['id']; ?>"
+                                    <input type="checkbox" name="<?php echo $category['name'];?>"
+                                           id="<?php echo $category['name'];?>"
+                                           value="<?php echo $category['id']; ?>"
                                     />
                                     <span><?php echo $category['name']; ?></span>
                                 </li>
