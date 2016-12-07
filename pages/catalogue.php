@@ -18,7 +18,7 @@ $param_library = Url::getParam('library');
 $param_categories = Url::getParam('category');
 
 
-$rows = $objCatalogue->getItems();
+$rows = $objCatalogue->getItems($search, $param_library, $param_categories);
 
 
 

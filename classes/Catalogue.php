@@ -43,9 +43,12 @@ class Catalogue extends Application
         $sql = "SELECT * FROM `{$this->_table_1}`";
 
         $sql .= " WHERE true = true ";
+
+        if(!empty($search)){
+            $sch = $this->db->escape($search);
+            $sql .= " AND `title` LIKE '%{$sch}%' || `id` = '{$sch}'" . "'";
+        }
         
-        $sql .= !empty($search) ?
-            " AND `title` LIKE '%{$this->db->escape($search)}%' || `id` = '{$this->db->escape($search)}'" . "'" : null;
 
         $sql .= !empty($library) ?
             " AND `library` = '". $this->db->escape($library) . "'": null;
@@ -54,7 +57,7 @@ class Catalogue extends Application
             $flag = true;
             foreach ($categories as $category){
                 $sql .= ($flag) ? " AND " : " OR ";
-                $sql .= ' category = '. $this->db->escape($category) . "'";
+                $sql .= ' `category` = '. $this->db->escape($category) . "'";
                 $flag = false;
             }
         }
