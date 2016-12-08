@@ -66,6 +66,10 @@ require_once ('_header.php');
                     <a href="/?page=checkout" class="btn">Place Hold</a>
                 </div>
 
+            <div class="fl_l">
+                <a href="javascript:history.go(-1)">Go back</a>
+            </div>
+
 
             </form>
         </div>
