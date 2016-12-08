@@ -16,7 +16,7 @@ if (!empty($id)) {
         ?>
 
 
-        <h1>Catalogue :: <?php echo $category['name']; ?></php></h1>;
+        <h1>Catalogue :: <?php echo $category['name']; ?></php></h1>
 
 
         <div class="fl_l">
@@ -69,7 +69,7 @@ if (!empty($id)) {
             </div>
         </div>
         <div class="dev">&#160;</div>
-        <p><?php echo Helper::encodeHTML($product['description']); ?></p>
+        <p><?php echo Helper::encodeHTML($item['description']); ?></p>
         <div class="dev br_td">&#160;</div>
         <p><a href="javascript:history.go(-1)">Go back</a></p>
 
