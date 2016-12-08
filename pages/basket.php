@@ -19,7 +19,7 @@ if (!empty($session)) {
 require_once ('_header.php');
 ?>
 
-<h1>My Basket</h1>
+<h1>My Reservation</h1>
 
 <?php if (!empty($out)) { ?>
     <div id="big_basket">
