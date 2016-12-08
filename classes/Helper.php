@@ -61,6 +61,19 @@ class Helper {
         return $string;
     }
 
+    public static function shortenStringNoEncode($string, $len = 15) {
+        if (strlen($string) > $len) {
+            $string = trim(substr($string, 0, $len));
+            $string = substr($string, 0, strrpos($string, " "));
+            $string .="...";
+        } else {
+            $string .="...";
+        }
+        return $string;
+    }
+    
+    
+
     public static function redirect($url) {
         if (!empty($url)) {
             header("Location: {$url}");

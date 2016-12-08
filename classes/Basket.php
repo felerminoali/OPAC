@@ -43,7 +43,7 @@ class Basket
                 
                 $item = $objCatalogue->getItem($key);
 
-                $out[] = $cat['name'].': ('.Helper::shortenString($item['title'], 12).')';
+                $out[] = $cat['name'].': ('.Helper::shortenStringNoEncode($item['title']).')';
             }
         }
         $this->_summary = 'Type of items: '.implode("\n", $out);
