@@ -32,8 +32,8 @@ class Basket
 
     public function summarize()
     {
-        
 
+        $out[] =null;
         if (!$this->_empty_basket) {
             $objCatalogue = new Catalogue();
 
