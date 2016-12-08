@@ -24,7 +24,6 @@ require_once ('_header.php');
 <?php if (!empty($out)) { ?>
     <div id="big_basket">
 
-        <form action="" method="POST" id="frm_basket">
             <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
                 <tr>
                     <th>Item</th>
@@ -48,12 +47,6 @@ require_once ('_header.php');
                             ?>
                         </td>
                         <td><?php echo '12-11-2016'; ?></td>
-<!--                        <td>-->
-<!--                            <input type="text" name="qty---><?php //echo $item['id']; ?><!--"-->
-<!--                                   id="qty---><?php //echo $item['id']; ?><!--" class="fld_qty"-->
-<!--                                   value="--><?php //echo $session[$item['id']]['qty']; ?><!--" />-->
-<!--                        </td>-->
-<!--                        <td class="ta_r">&pound;--><?php //echo number_format($objBasket->itemTotal($item['price'], $session[$item['id']]['qty']), 2); ?><!--</td>-->
                         <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
                     </tr>
 
@@ -71,7 +64,6 @@ require_once ('_header.php');
             </div>
 
 
-            </form>
         </div>
   <?php
 } else { ?>

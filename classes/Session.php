@@ -6,7 +6,7 @@ class Session{
         $_SESSION['basket'][$id]['cat']= $cat;
     }
     
-    public static function removeItem($id, $cat = null){
+    public static function removeItem($id){
             $_SESSION['basket'][$id] = null;
             unset($_SESSION['basket'][$id]);
     }
