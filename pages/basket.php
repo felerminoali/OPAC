@@ -54,9 +54,9 @@ require_once ('_header.php');
 
                             $estimation_date = date('Y-m-d-H:i:s', strtotime('+1 day', $current_date));
 
-//                            echo $current_date;
+                            echo $current_date;
 
-                            echo $estimation_date;
+//                            echo $estimation_date;
                             ?>
                         </td>
                         <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
@@ -79,6 +79,6 @@ require_once ('_header.php');
         </div>
   <?php
 } else { ?>
-    <p>Your basket is currently empty</p>
+    <p>Your reservation is currently empty</p>
 <?php } ?>
 <?php require_once ('_footer.php'); ?>
