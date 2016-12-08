@@ -134,7 +134,7 @@ if (!empty($rows)) {
                 $width = $width > 120 ? 120 : $width;
                 ?>
 
-                <a href="/?page=catalogue">
+                <a href="/?page=catalogue-item&amp;id=<?php echo $row['id']; ?>">
                     <img src="<?php echo $image; ?>" alt="<?php echo Helper::encodeHTML($item_cat['name'], 1); ?>"
                          width="<?php echo $width; ?>"/>
                 </a>
