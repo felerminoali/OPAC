@@ -1,4 +1,7 @@
 <?php
+
+Login::restrictFront();
+
 $session = Session::getSession('basket');
 
 $objBasket = new Basket();
