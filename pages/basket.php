@@ -29,10 +29,9 @@ require_once ('_header.php');
                 <tr>
                     <th>Item</th>
                     <th class="ta_r">Category</th>
-<!--                    <th class="ta_r">Qty</th>-->
-<!--                    <th class="ta_r col_15">Price</th>-->
-                    <th class="ta_r col_15">Remove</th>
                     <th class="ta_r col_15">Estimation collection date</th>
+                    <th class="ta_r col_15">Remove</th>
+
                 </tr>
 
                 <?php foreach ($out as $item) { ?>
