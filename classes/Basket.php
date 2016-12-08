@@ -42,6 +42,8 @@ class Basket
                 
                 $text = 'is basket{'.$basket['cat'].'} == db{'.$book_cat['id'].'} =====> ';
                 
+                var_dump($basket['cat']);
+                
                 $this->save_to_test_log($text);
 
 //                if(($basket['cat'] == $book_cat['id'])){
