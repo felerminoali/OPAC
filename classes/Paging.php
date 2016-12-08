@@ -91,7 +91,7 @@ class Paging{
                 $out[] = "<span>Last</span>";
             }
             
-            return '<li>'.implode("</li><li>", $out).'<li>';
+            return '<li>'.implode("</li><li>", $out).'</li>';
         }
     }
     
