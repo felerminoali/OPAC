@@ -9,11 +9,13 @@
             <?php echo $objBasket->_number_of_items; ?>
         </span>
     </dd>
-    <dd class="bl_s">
+    <div>
+        <dd class="bl_s">
         <span>
             <?php echo $objBasket->_summary; ?>
         </span>
-    </dd>
+        </dd>
+    </div>
 </dl>
 <div class="dev br_td">&#160;</div>
 <p><a href="/?page=basket">View </a> | <a href="/?page=checkout">Reserve now</a></p>
