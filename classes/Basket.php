@@ -46,7 +46,7 @@ class Basket
                 $out[] = $cat['name'].': ('.Helper::shortenStringNoEncode($item['title']).')';
             }
         }
-        $this->_summary = "Type of items: ".implode(", ", $out);
+        $this->_summary = "Items: ".implode(", ", $out);
 
     }
 
