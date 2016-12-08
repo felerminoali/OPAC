@@ -39,10 +39,14 @@ class Basket
             $book_cat = $objCatalogue->getCategoryByName('Books');
 
             foreach ($_SESSION['basket'] as $key => $basket) {
+                
+                $text = 'is basket{'.$basket['cat'].'} == db{'.$book_cat['id'].'} =====> ';
+                
+                $this->save_to_test_log($text);
 
-                if(($basket['cat'] == $book_cat['id'])){
-                    $value++;
-                }
+//                if(($basket['cat'] == $book_cat['id'])){
+//                    $value++;
+//                }
             }
         }
         $this->_qtd_books = $value;
@@ -80,5 +84,13 @@ class Basket
         }
     }
 
-    
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
+    }
+
+
+
 }
