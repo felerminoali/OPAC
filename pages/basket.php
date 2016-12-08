@@ -50,13 +50,14 @@ require_once ('_header.php');
 
                             <?php
 
-                            $current_date = Helper::setDate(1);
+//                            $current_date = Helper::setDate(1);
+//                            $estimation_date = date('d/m/Y', strtotime('+1 day', $current_date));
 
-                            $estimation_date = date('d/m/Y', strtotime('+1 day', $current_date));
+                            $current_date = new DateTime();
 
-//                            echo $current_date;
+                            echo $current_date;
 
-                            echo $estimation_date;
+//                            echo $estimation_date;
                             ?>
                         </td>
                         <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
