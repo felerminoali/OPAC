@@ -16,6 +16,7 @@ class Basket
         $objBusiness = new Business();
 
         $this->noItems();
+        $this->total_books();
     }
 
     public function noItems()
@@ -27,6 +28,25 @@ class Basket
             }
         }
         $this->_number_of_items = $value;
+    }
+
+    public function total_books()
+    {
+        $value=0;
+
+        if (!$this->_empty_basket) {
+            $objCatalogue = new Catalogue();
+            $book_cat = $objCatalogue->getCategoryByName('Books');
+
+            foreach ($_SESSION['basket'] as $key => $basket) {
+
+                if(($basket['cat'] == $book_cat['id'])){
+                    $value++;
+                }
+            }
+        }
+        $this->_qtd_books = $value;
+
     }
 
     public static function activeButton($sess_id)
@@ -60,22 +80,5 @@ class Basket
         }
     }
 
-    public function total_books()
-    {
-        $value=0;
-        
-        if (!$this->_empty_basket) {
-            $objCatalogue = new Catalogue();
-            $book_cat = $objCatalogue->getCategory('Books');
-                
-            foreach ($_SESSION['basket'] as $key => $basket) {
-
-                if(($basket['cat'] == $book_cat['id'])){
-                    $value++;
-                }
-            }
-        }
-        $this->_qtd_books = $value;
-
-    }
+    
 }
