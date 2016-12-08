@@ -52,8 +52,10 @@ require_once ('_header.php');
 
                             $current_date = Helper::setDate();
 
-                            $estimation_date = date('Y-m-d-H:i:s', strtotime($current_date . ' +1 day'));
-                            
+                            $estimation_date = date('Y-m-d-H:i:s', strtotime('+1 day', $current_date));
+
+//                            echo $current_date;
+
                             echo $estimation_date;
                             ?>
                         </td>
