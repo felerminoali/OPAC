@@ -25,14 +25,23 @@ require_once ('_header.php');
             <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
                 <tr>
                     <th>Item</th>
+                    <th class="ta_r">Category</th>
 <!--                    <th class="ta_r">Qty</th>-->
 <!--                    <th class="ta_r col_15">Price</th>-->
                     <th class="ta_r col_15">Remove</th>
+                    <th class="ta_r col_15">Estimation collection date</th>
                 </tr>
 
                 <?php foreach ($out as $item) { ?>
                     <tr>
                         <td><?php echo Helper::encodeHTML($item['title']); ?></td>
+                        <td class="ta_r">
+                            <?php
+                            $cat = $objCatalogue->getCategory($item['category']);
+                            echo Helper::encodeHTML($cat['name']);
+                            ?>
+                        </td>
+                        <td><?php echo '12-11-2016'; ?></td>
 <!--                        <td>-->
 <!--                            <input type="text" name="qty---><?php //echo $item['id']; ?><!--"-->
 <!--                                   id="qty---><?php //echo $item['id']; ?><!--" class="fld_qty"-->
@@ -48,13 +57,13 @@ require_once ('_header.php');
 
                 <div class="dev br_td">&#160;</div>
                 <div class="sbm sbm_blue fl_r">
-                    <a href="/?page=checkout" class="btn">Reverve Now</a> 
+                    <a href="/?page=checkout" class="btn">Place Hold</a>
                 </div>
 
 
             </form>
         </div>
-    
+  <?php
 } else { ?>
     <p>Your basket is currently empty</p>
 <?php } ?>
