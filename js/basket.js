@@ -79,7 +79,7 @@ $(document).ready(function () {
                             trigger.text("Add to basket");
                             trigger.removeClass("red");
                         }
-                        refreshSmallBasket();
+                        // refreshSmallBasket();
                     }
                 },
                 error: function (data) {
