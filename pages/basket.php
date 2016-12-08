@@ -36,7 +36,11 @@ require_once ('_header.php');
 
                 <?php foreach ($out as $item) { ?>
                     <tr>
-                        <td><?php echo Helper::encodeHTML($item['title']); ?></td>
+                        <td>
+                            <a href="/?page=catalogue-item&amp;id=<?php echo $item['id']; ?>">
+                            <?php echo Helper::encodeHTML($item['title']); ?>
+                            </a>
+                        </td>
                         <td class="ta_r">
                             <?php
                             $cat = $objCatalogue->getCategory($item['category']);
