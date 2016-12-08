@@ -1,11 +1,7 @@
 <?php $objBasket = new Basket(); ?>
 <h2>Your Reservation</h2>
 
-<?php if($objBasket->_empty_basket) {?>
-<dl>
-    <dt>Your reservation is empty</dt>
-</dl>
-<?php } else {?>
+
 <dl id="basket_left">
     <dt>No. of items:</dt>
     <dd class="bl_ti">
@@ -52,4 +48,3 @@
 <p><a href="/?page=basket">View </a> | <a href="/?page=checkout">Reserve now</a></p>
 <div class="dev br_td">&#160;</div>
 
-<?php } ?>
