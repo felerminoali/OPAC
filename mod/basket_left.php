@@ -13,8 +13,7 @@
     <dt>Books:</dt>
     <dd class="bl_tb">
         <span>
-            1
-<!--            --><?php //echo number_format($objBasket->_sub_total, 2); ?>
+            <?php echo $objBasket->_qtd_books; ?>
         </span>
     </dd>
 

@@ -26,6 +26,16 @@ class Catalogue extends Application
         }
     }
 
+    public function getCategoryByName($name){
+
+        if (!empty($name)) {
+            $sql = "SELECT * FROM `{$this->_table}`
+                WHERE `name`= '" . $this->db->escape($name) . "'";
+            return $this->db->fetchOne($sql);
+        }
+
+    }
+
     public function getStatuses()
     {
         if (!empty($id)) {

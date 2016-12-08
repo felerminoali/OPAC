@@ -2,7 +2,7 @@
 
 class Session{
     
-    public static function setItem($id, $cat = 1){
+    public static function setItem($id, $cat){
         $_SESSION['basket'][$id]['cat']= $cat;
     }
     

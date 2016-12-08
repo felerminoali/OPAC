@@ -22,7 +22,9 @@ if(isset($_POST['job'])&& isset($_POST['id'])){
                 $out['job'] = 1;
                 break;
             case 1:
-                Session::setItem($id);
+                
+                $category = $objCatalogue->getCategory($id);
+                Session::setItem($id, $category);
                 $out['job'] = 0;
                 break;
         }
