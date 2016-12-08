@@ -65,46 +65,7 @@ $business = $objBusiness->getBusiness();
                         Catalogue
                     </a>
                 </li>
-                <li>
-                    <a href="/?page=categories"
-                        <?php
-                        echo Helper::getActive(
-                            array('page' => 'categories')
-                        );
-                        ?>>
-                        Categories
-                    </a>
-                </li>
-                <li>
-                    <a href="/?page=orders"
-                        <?php
-                        echo Helper::getActive(
-                            array('page' => 'orders')
-                        );
-                        ?>>
-                        Orders
-                    </a>
-                </li>
-                <li>
-                    <a href="/?page=clients"
-                        <?php
-                        echo Helper::getActive(
-                            array('page' => 'clients')
-                        );
-                        ?>>
-                        Clients
-                    </a>
-                </li>
-                <li>
-                    <a href="/?page=business"
-                        <?php
-                        echo Helper::getActive(
-                            array('page' => 'business')
-                        );
-                        ?>>
-                        Business
-                    </a>
-                </li>
+                
             </ul>
         <?php } else { ?>
             &nbsp;
