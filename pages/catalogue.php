@@ -11,7 +11,7 @@ Login::restrictFront();
 
 $objBasket = new Basket();
 
-var_dump($objBasket);
+//var_dump($objBasket);
 
 $objCatalogue = new Catalogue();
 
