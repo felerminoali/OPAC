@@ -2,17 +2,13 @@
 
 class Session{
     
-    public static function setItem($id, $qty = 1){
-        $_SESSION['basket'][$id]['qty']= $qty;
+    public static function setItem($id, $cat = 1){
+        $_SESSION['basket'][$id]['cat']= $cat;
     }
     
-    public static function removeItem($id, $qty = null){
-        if($qty != null && $qty < $_SESSION['basket'][$id]['qty']){
-            $_SESSION['basket'][$id]['qty'] = ($_SESSION['basket'][$id]['qty'] - $qty);
-        }else{
+    public static function removeItem($id, $cat = null){
             $_SESSION['basket'][$id] = null;
             unset($_SESSION['basket'][$id]);
-        }
     }
     
     public static function getSession($name = null){

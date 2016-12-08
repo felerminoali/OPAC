@@ -9,6 +9,10 @@
 Login::restrictFront();
 
 
+$objBasket = new Basket();
+
+var_dump($objBasket);
+
 $objCatalogue = new Catalogue();
 
 $objSearchForm = new SearchForm();

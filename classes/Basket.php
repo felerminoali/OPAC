@@ -43,7 +43,10 @@ class Basket {
         }
         $this->_number_of_items = $value;
     }
-    
+
+    public function total_books(){
+        
+    }
 
     public static function removeButton($id=null){
         if(!empty($id)){
