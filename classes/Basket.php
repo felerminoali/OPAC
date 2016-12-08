@@ -46,7 +46,7 @@ class Basket
                 $out[] = $cat['name'];
             }
         }
-        $this->_summary = 'Type of items: <p>'.implode('</p><p>', $out).'</p>';
+        $this->_summary = 'Type of items: '.implode("\n", $out);
 
     }
 
