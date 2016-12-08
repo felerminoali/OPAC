@@ -24,10 +24,9 @@ h4,h4 a{font-size:14px}
 .cl,.dev{height:0;font-size:0;line-height:0}
 .dev{height:14px}
 .br_td{border-top:dashed 1px #aaa}
-#basket_left dt{clear:left;width:40%}
-#basket_left dt .maximized{clear:left;width:100%}
+#basket_left dt{clear:left;width:90%}
 
-#basket_left dd{text-align:right;width:30%}
+#basket_left dd{text-align:right;width:10%}
 
 .catalogue_wrapper{width:100%;border-bottom:dashed 1px #aaa;margin-bottom:14px}
 .catalogue_wrapper_left{width:150px}
