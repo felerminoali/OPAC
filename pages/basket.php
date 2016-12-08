@@ -55,7 +55,7 @@ require_once ('_header.php');
 
                             $current_date = new DateTime();
 
-                            echo $current_date;
+                            echo $current_date->format('d/m/Y');
 
 //                            echo $estimation_date;
                             ?>
