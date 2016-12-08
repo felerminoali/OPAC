@@ -9,11 +9,11 @@
             <?php echo $objBasket->_number_of_items; ?>
         </span>
     </dd>
-    <dd class="bl_s maximum">
+    <dt class="bl_s maximized">
         <span>
             <?php echo $objBasket->_summary; ?>
         </span>
-    </dd>
+    </dt>
 </dl>
 <div class="dev br_td">&#160;</div>
 <p><a href="/?page=basket">View </a> | <a href="/?page=checkout">Reserve now</a></p>
