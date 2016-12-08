@@ -41,9 +41,9 @@ class Basket
 
                 $cat = $objCatalogue->getCategory($basket['cat']);
                 
-                $this->save_to_test_log($cat['name']);
-                
-                $out[] = $cat['name'].': ('.$key.')';
+                $item = $objCatalogue->getItem($key);
+
+                $out[] = $cat['name'].': ('.Helper::shortenString($item['title'], 12).')';
             }
         }
         $this->_summary = 'Type of items: '.implode("\n", $out);
