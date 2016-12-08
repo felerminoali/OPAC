@@ -43,7 +43,7 @@ class Basket
                 
                 $this->save_to_test_log($cat['name']);
                 
-                $out[] = $cat['name'];
+                $out[] = $cat['name'].': ('.$basket[$key].')';
             }
         }
         $this->_summary = 'Type of items: '.implode("\n", $out);
