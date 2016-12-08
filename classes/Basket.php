@@ -6,7 +6,7 @@ class Basket
     public $_inst_catalogue;
     public $_empty_basket;
     public $_number_of_items;
-    public $_qtd_books;
+    public $_summary;
 
     public function __construct()
     {
@@ -16,7 +16,7 @@ class Basket
         $objBusiness = new Business();
 
         $this->noItems();
-        $this->total_books();
+        $this->summarize();
     }
 
     public function noItems()
@@ -30,28 +30,20 @@ class Basket
         $this->_number_of_items = $value;
     }
 
-    public function total_books()
+    public function summarize()
     {
-        $value=0;
+        
 
         if (!$this->_empty_basket) {
             $objCatalogue = new Catalogue();
-            $book_cat = $objCatalogue->getCategoryByName('Books');
 
             foreach ($_SESSION['basket'] as $key => $basket) {
-                
-                $text = 'is basket{'.$basket['cat'].'} == db{'.$book_cat['id'].'} =====> ';
-                
-                var_dump($basket['cat']);
-                
-                $this->save_to_test_log($text);
 
-//                if(($basket['cat'] == $book_cat['id'])){
-//                    $value++;
-//                }
+                $cat = $objCatalogue->getCategory($basket['cat']);
+                $out[] = ' + '.$cat['name'];
             }
         }
-        $this->_qtd_books = $value;
+        $this->_summary = implode(',', $out);
 
     }
 
