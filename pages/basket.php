@@ -55,6 +55,8 @@ require_once ('_header.php');
 
                             $current_date = new DateTime();
 
+                            $current_date->modify('+ 1 day');
+                            
                             echo $current_date->format('d/m/Y');
 
 //                            echo $estimation_date;
