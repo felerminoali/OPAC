@@ -40,10 +40,13 @@ class Basket
             foreach ($_SESSION['basket'] as $key => $basket) {
 
                 $cat = $objCatalogue->getCategory($basket['cat']);
+                
+                $this->save_to_test_log($cat['name']);
+                
                 $out[] = $cat['name'];
             }
         }
-        $this->_summary = implode('+', $out);
+        $this->_summary = 'Type of items: '.implode('+', $out);
 
     }
 
