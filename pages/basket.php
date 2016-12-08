@@ -46,7 +46,17 @@ require_once ('_header.php');
                             echo Helper::encodeHTML($cat['name']);
                             ?>
                         </td>
-                        <td><?php echo '12-11-2016'; ?></td>
+                        <td>
+
+                            <?php
+
+                            $current_date = Helper::setDate();
+
+                            $estimation_date = date('Y-m-d-H:i:s', strtotime($current_date . ' +1 day'));
+                            
+                            echo $estimation_date;
+                            ?>
+                        </td>
                         <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
                     </tr>
 
