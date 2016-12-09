@@ -17,13 +17,19 @@ require_once("_header.php"); ?>
 
     <?php foreach ($reservations as $reservation) { ?>
 
-        <table Border = "1" Cellpadding = "5" Cellspacing = "5">
+        <!--        <table Border = "1" Cellpadding = "5" Cellspacing = "5">-->
+        <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
             <tr>
-                <th Colspan = "2" Align = "Center">Time Table</th>
+                <th Colspan="3" Align="Center">Time Table</th>
             </tr>
             <tr>
-                <td>Column 1</td>
-                <td>Column 2</td>
+                <th>Mon</th>
+                <th>Tue</th>
+            </tr>
+            <tr>
+                <td class="ta_r">Column 1</td>
+                <td class="ta_r">Column 2</td>
+                <td class="ta_r">Column 2</td>
             </tr>
         </table>
 
