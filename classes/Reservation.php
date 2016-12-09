@@ -75,4 +75,18 @@ class Reservation extends Application
         }
 
     }
+
+
+    public function getUserReservations($id = null){
+
+        if(!empty($id)){
+            $sql = "SELECT * FROM `{$this->_table}`
+                      WHERE `user` = '" . $this->db->escape($id) . "'
+                       AND `canceled` = 0
+                      ORDER BY `dateRevesed` DESC";
+
+            return $this->db->fetchAll($sql);
+        }
+
+    }
 }
