@@ -25,11 +25,12 @@ require_once("_header.php"); ?>
             <tr>
                 <th>Mon</th>
                 <th>Tue</th>
+                <th>Thr</th>
             </tr>
             <tr>
-                <td class="ta_r">Column 1</td>
-                <td class="ta_r">Column 2</td>
-                <td class="ta_r">Column 2</td>
+                <td >Column 1</td>
+                <td >Column 2</td>
+                <td >Column 2</td>
             </tr>
         </table>
 
