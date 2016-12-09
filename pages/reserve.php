@@ -48,7 +48,7 @@ require_once ("_header.php");
 <h1>Place reservation</h1>
 
 
-<form action="">
+<form action="" method="post" id="frm_ph">
 
     <input type="hidden" name="user" value="<?php echo Session::getSession(Login::$_login_front);?>">
 
