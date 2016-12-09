@@ -55,12 +55,14 @@ require_once('_header.php');
 
                         $borrow = $objBorrow->getBorrow($item['id']);
 
+                        echo Helper::setDate(1,$borrow['date']);
 
-                        if(!empty($borrow)){
-                            $current_date = new DateTime($borrow['duedate']);
-                        }else{
-                            $current_date = new DateTime();
-                        }
+
+//                        if(!empty($borrow)){
+//                            $current_date = new DateTime($borrow['duedate']);
+//                        }else{
+//                            $current_date = new DateTime();
+//                        }
 
 //                        $no_of_waiting_days = $cat['loanPeriod'];
 //                        $queque = $objCatalogue->getWaintQueque();
@@ -78,10 +80,10 @@ require_once('_header.php');
 //                            $current_date->modify('+ ' . $total_waiting_day . ' days');
 //                        }
 
-                        $total_waiting_day = 2;
-                        $current_date->modify('+ ' . $total_waiting_day . ' days');
+//                        $total_waiting_day = 2;
+//                        $current_date->modify('+ ' . $total_waiting_day . ' days');
 
-                        echo $current_date->format('d/m/Y');
+//                        echo $current_date->format('d/m/Y');
 
                         ?>
                     </td>
