@@ -16,72 +16,95 @@ if (!empty($session)) {
     }
 }
 
-require_once ('_header.php');
+require_once('_header.php');
 ?>
 
-<h1>My Reservation</h1>
+    <h1>My Reservation</h1>
 
 <?php if (!empty($out)) { ?>
     <div id="big_basket">
 
-            <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
-                <tr>
-                    <th>Item</th>
-                    <th class="ta_r">Category</th>
-                    <th class="ta_r col_15">Estimation collection date</th>
-                    <th class="ta_r col_15">Remove</th>
+        <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
+            <tr>
+                <th>Item</th>
+                <th class="ta_r">Category</th>
+                <th class="ta_r col_15">Estimation collection date</th>
+                <th class="ta_r col_15">Remove</th>
 
+            </tr>
+
+            <?php foreach ($out as $item) { ?>
+                <tr>
+                    <td>
+                        <a href="/?page=catalogue-item&amp;id=<?php echo $item['id']; ?>">
+                            <?php echo Helper::encodeHTML($item['title']); ?>
+                        </a>
+                    </td>
+                    <td class="ta_r">
+                        <?php
+                        $cat = $objCatalogue->getCategory($item['category']);
+                        echo Helper::encodeHTML($cat['name']);
+                        ?>
+                    </td>
+                    <td>
+
+                        <?php
+
+
+                        $objBorrow = new Borrow();
+
+                        $borrow = $objBorrow->getBorrow($item['id']);
+
+
+                        if(!empty($borrow)){
+                            $current_date = new DateTime($borrow['duedate']);
+                        }else{
+                            $current_date = new DateTime();
+                        }
+
+//                        $no_of_waiting_days = $cat['loanPeriod'];
+//                        $queque = $objCatalogue->getWaintQueque();
+//
+//                        $i = 0;
+//
+//                        foreach () {
+//                            $array[$id] = $i;
+//                            $i++;
+//                        }
+//
+//                        $total_waiting_day = $array[$item['id']] * $no_of_waiting_days;
+//
+//                        if ($total_waiting_day != 0) {
+//                            $current_date->modify('+ ' . $total_waiting_day . ' days');
+//                        }
+
+                        $total_waiting_day = 2;
+                        $current_date->modify('+ ' . $total_waiting_day . ' days');
+
+                        echo $current_date->format('d/m/Y');
+
+                        ?>
+                    </td>
+                    <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
                 </tr>
 
-                <?php foreach ($out as $item) { ?>
-                    <tr>
-                        <td>
-                            <a href="/?page=catalogue-item&amp;id=<?php echo $item['id']; ?>">
-                            <?php echo Helper::encodeHTML($item['title']); ?>
-                            </a>
-                        </td>
-                        <td class="ta_r">
-                            <?php
-                            $cat = $objCatalogue->getCategory($item['category']);
-                            echo Helper::encodeHTML($cat['name']);
-                            ?>
-                        </td>
-                        <td>
+            <?php } ?>
 
-                            <?php
+        </table>
 
-//                            $current_date = Helper::setDate(1);
-//                            $estimation_date = date('d/m/Y', strtotime('+1 day', $current_date));
-
-                            $current_date = new DateTime();
-
-                            $current_date->modify('+ 1 day');
-                            
-                            echo $current_date->format('d/m/Y');
-
-//                            echo $estimation_date;
-                            ?>
-                        </td>
-                        <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
-                    </tr>
-
-                <?php } ?>
-
-                </table>
-
-                <div class="dev br_td">&#160;</div>
-                <div class="sbm sbm_blue fl_r">
-                    <a href="/?page=checkout" class="btn">Place Hold</a>
-                </div>
-
-            <div class="fl_l">
-                <a href="javascript:history.go(-1)">Go back</a>
-            </div>
-
-
+        <div class="dev br_td">&#160;</div>
+        <div class="sbm sbm_blue fl_r">
+            <a href="/?page=checkout" class="btn">Place Hold</a>
         </div>
-  <?php
+
+        <div class="fl_l">
+            <a href="javascript:history.go(-1)">Go back</a>
+        </div>
+
+
+    </div>
+    <?php
 } else { ?>
     <p>Your reservation is currently empty</p>
 <?php } ?>
-<?php require_once ('_footer.php'); ?>
+<?php require_once('_footer.php'); ?>
