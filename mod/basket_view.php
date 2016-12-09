@@ -92,12 +92,13 @@ if (!empty($session)) {
 
     <div class="dev br_td">&#160;</div>
     <div class="sbm sbm_blue fl_r">
-        <a href="/?page=checkout" class="btn">Place Hold</a>
+        <a href="/?page=reserve" class="btn">Place Hold</a>
     </div>
 
     <div class="fl_l">
         <a href="javascript:history.go(-1)">Go back</a>
     </div>
+
 
 <?php } else { ?>
 

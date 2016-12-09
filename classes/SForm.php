@@ -6,16 +6,19 @@
  * Date: 12/7/2016
  * Time: 11:27 AM
  */
-class SearchForm
+class SForm
 {
 
-    public function getLibrariesSelect($libraries = null, $record = null)
+    public function getLibrariesSelect($libraries = null, $record = null, $addFirst = true)
     {
 
         if (!empty($libraries)) {
 
             $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
-            $out .= "<option value=\"\">All libraries&hellip;</option>";
+
+            if ($addFirst) {
+                $out .= "<option value=\"\">All libraries&hellip;</option>";
+            }
 
             foreach ($libraries as $library) {
                 $out .= "<option value=\"";

@@ -15,7 +15,7 @@ $objBasket = new Basket();
 
 $objCatalogue = new Catalogue();
 
-$objSearchForm = new SearchForm();
+$objSForm = new SForm();
 
 $search = Url::getParam('search');
 $param_library = Url::getParam('library');
@@ -63,7 +63,7 @@ require_once("_header.php");
                             <tr>
                                 <th><label for="library">Library:</label></th>
                                 <td>
-                                    <?php  echo $objSearchForm->getLibrariesSelect($libraries, !empty($param_library) ? stripslashes($param_library) : null); ?>
+                                    <?php  echo $objSForm->getLibrariesSelect($libraries, !empty($param_library) ? stripslashes($param_library) : null); ?>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -88,7 +88,7 @@ require_once("_header.php");
 
                                            <?php 
                                            if (in_array($category['id'], $param_categories)){
-                                               echo $objSearchForm->stickyCheckedFilter();
+                                               echo $objSForm->stickyCheckedFilter();
                                            } 
                                            ?>
                                     />
