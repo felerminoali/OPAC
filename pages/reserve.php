@@ -35,6 +35,7 @@ if ($objSForm->isPost('pickuplocation')) {
     $reservation['dateRevesed'] = Helper::setDate();
     
     if($objReservation->placeRevervation($reservation, $out)){
+        Session::clear('basket');
         Helper::redirect('/?page=reserved');
     }else{
         Helper::redirect('/?page=reserve-failed');
