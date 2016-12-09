@@ -17,7 +17,7 @@ require_once("_header.php"); ?>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
             <tr>
-                <th colspan="3" align="center">Time Table</th>
+                <th colspan="5" class="ta_c"><strong>Reservation ID: <?php echo $reservation['id'];?></strong></th>
             </tr>
             <tr>
                 <th>Item</th>
@@ -93,6 +93,7 @@ require_once("_header.php"); ?>
             <?php } ?>
         </table>
 
+        <br/>
         <br/>
 
     <?php } ?>
