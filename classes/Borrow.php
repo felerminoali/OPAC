@@ -50,7 +50,7 @@ class Borrow extends Application
                         AND
                         `{$this->_table_1}`.`user` = '" . $this->db->escape($id) . "' 
                         AND
-                        `{$this->_table_1}`.checked_in = 0";
+                        `{$this->_table}`.checked_in = 0";
 
             return $this->db->fetchAll($sql);
         }
