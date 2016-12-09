@@ -28,7 +28,8 @@ require_once('_header.php');
             <tr>
                 <th>Item</th>
                 <th class="ta_r">Category</th>
-                <th class="ta_r col_15">Estimation collection date</th>
+                <th class="ta_r col_15">Estimation waiting days</th>
+                <th class="ta_r col_15">Estimation collect date</th>
                 <th class="ta_r col_15">Remove</th>
 
             </tr>
@@ -46,22 +47,9 @@ require_once('_header.php');
                         echo Helper::encodeHTML($cat['name']);
                         ?>
                     </td>
-                    <td>
+                    <td class="ta_r">
 
                         <?php
-
-
-                        $objBorrow = new Borrow();
-
-                        $borrow = $objBorrow->getBorrow($item['id']);
-
-                        if(!empty($borrow)){
-                            // Due date if this catalogue was borrowed
-                            $start_date = new DateTime($borrow['duedate']);
-                        }else{
-                            // Current date if this catalogue was not borrowed
-                            $start_date = new DateTime();
-                        }
 
                         $total_waiting_day = 0;
                         $objReservation = new Reservation();
@@ -73,6 +61,24 @@ require_once('_header.php');
                             $total_waiting_day = $no_of_waiting_days * count($queue_list);
                         }
 
+                        echo $total_waiting_day;
+                        ?>
+
+                    </td>
+                    <td class="ta_r">
+                        <?php
+
+                        $objBorrow = new Borrow();
+                        $borrow = $objBorrow->getBorrow($item['id']);
+
+                        if(!empty($borrow)){
+                            // Due date if this catalogue was borrowed
+                            $start_date = new DateTime($borrow['duedate']);
+                        }else{
+                            // Current date if this catalogue was not borrowed
+                            $start_date = new DateTime();
+                        }
+
                         if($total_waiting_day !=0){
                             $start_date->modify('+ ' . $total_waiting_day . ' days');
                         }
@@ -80,6 +86,7 @@ require_once('_header.php');
                         echo $start_date->format('d/m/Y');
 
                         ?>
+
                     </td>
                     <td class="ta_r"><?php echo Basket::removeButton($item['id']); ?></td>
                 </tr>
