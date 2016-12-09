@@ -10,7 +10,7 @@ Login::restrictFront();
 
 
 $objSForm = new SForm();
-$objValid = new Validation($objSForm);
+//$objValid = new Validation($objSForm);
 $objReservation = new Reservation();
 
 $objBasket = new Basket();
@@ -26,24 +26,22 @@ if (!empty($session)) {
 }
 
 
-if ($objSForm->isPost('library')) {
-    
-    $objValid->_expected = array(
-        'user',
-        'pickuplocation',
-        'notes'
-    );
-
-    $objValid->_post['dateRevesed'] = Helper::setDate();
-    
-    if($objReservation->placeRevervation()){
-    Helper::redirect('/?page=reserved');
-    }else{
-        Helper::redirect('/?page=reserve-failed');
-    }
-
-
-}
+//if ($objSForm->isPost('library')) {
+//    
+//    $objValid->_expected = array(
+//        'user',
+//        'pickuplocation',
+//        'notes'
+//    );
+//
+//    $objValid->_post['dateRevesed'] = Helper::setDate();
+//    
+//    if($objReservation->placeRevervation($objValid->_post, $out)){
+//    Helper::redirect('/?page=reserved');
+//    }else{
+//        Helper::redirect('/?page=reserve-failed');
+//    }
+//}
 
 
 require_once("_header.php");
@@ -81,9 +79,7 @@ if(!empty($out)){
                 <label for="notes">Notes: </label>
             </th>
             <td>
-                <!--                <input type="text" name="notes" id="notes" class="fld" value="-->
-                <?php //echo $objForm->stickyText('notes'); ?><!--"/>-->
-                <textarea name='notes' id='notes'></textarea><br/>
+                <textarea name='notes' id='notes' style="border: 1px"></textarea><br/>
             </td>
         </tr>
 
