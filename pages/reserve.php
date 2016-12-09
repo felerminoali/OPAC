@@ -38,7 +38,7 @@ if ($objSForm->isPost('library')) {
     $objValid->_post['dateRevesed'] = Helper::setDate();
     
     if($objReservation->placeRevervation($objValid->_post, $out)){
-    Helper::redirect('/?page=reserved');
+        Helper::redirect('/?page=reserved');
     }else{
         Helper::redirect('/?page=reserve-failed');
     }
