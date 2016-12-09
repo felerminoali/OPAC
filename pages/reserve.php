@@ -29,19 +29,19 @@ if (!empty($session)) {
 
 if ($objSForm->isPost('library')) {
     
-    $objValid->_expected = array(
-        'user',
-        'pickuplocation',
-        'notes'
-    );
-
-    $objValid->_post['dateRevesed'] = Helper::setDate();
-    
-    if($objReservation->placeRevervation($objValid->_post, $out)){
+//    $objValid->_expected = array(
+//        'user',
+//        'pickuplocation',
+//        'notes'
+//    );
+//
+//    $objValid->_post['dateRevesed'] = Helper::setDate();
+//    
+//    if($objReservation->placeRevervation($objValid->_post, $out)){
         Helper::redirect('/?page=reserved');
-    }else{
-        Helper::redirect('/?page=reserve-failed');
-    }
+//    }else{
+//        Helper::redirect('/?page=reserve-failed');
+//    }
 }
 
 
@@ -66,7 +66,7 @@ require_once("_header.php");
         if (!empty($libraries)) {
             ?>
             <tr>
-                <th><label for="pickuplocation">Pickup Location: * </label></th>
+                <th><label for="pickuplocation">Pickup Location: </label></th>
                 <td>
                     <?php echo $objSForm->getLibrariesSelect($libraries, 'pickuplocation', null, false); ?>
                 </td>
