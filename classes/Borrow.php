@@ -46,7 +46,7 @@ class Borrow extends Application
                         `{$this->_table}` ,
                         `{$this->_table_1}`
                         WHERE
-                        `{$this->_table_1}`.reservation = `{$this->_table_1}`.id 
+                        `{$this->_table}`.reservation = `{$this->_table_1}`.id 
                         AND
                         `{$this->_table_1}`.`user` = '" . $this->db->escape($id) . "' 
                         AND
