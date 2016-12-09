@@ -1,4 +1,6 @@
-<?php require_once ("_header.php"); ?>
+<?php
+Login::restrictFront();
+require_once ("_header.php"); ?>
 
     <h1>Reservation Failed</h1>
 
