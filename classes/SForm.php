@@ -14,7 +14,7 @@ class SForm
 
         if (!empty($libraries)) {
 
-            $out = "<select name='.$id.' id='.$id.' class=\"sel\">";
+            $out = "<select name=".$id." id=".$id." class=\"sel\">";
 
             if ($addFirst) {
                 $out .= "<option value=\"\">All libraries&hellip;</option>";
