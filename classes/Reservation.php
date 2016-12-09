@@ -25,7 +25,26 @@ class Reservation extends Application
         return $this->db->fetchAll($sql);
     }
     
-    public function placeRevervation(){
-        return true;
+    public function placeRevervation($params = null, $array = null){
+        
+        if(!empty($params) && !empty($array)){
+            
+            if($this->addReservation($params)){
+                
+                return true;
+            }
+        }
+        
+    }
+    
+    public function addReservation($params){
+        
+        if(!empty($params)){
+
+            $this->db->prepareInsert($params);
+            
+            return $this->db->insert($this->_table);
+        }
+        
     }
 }

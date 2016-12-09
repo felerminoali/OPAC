@@ -22,7 +22,7 @@ class User extends Application
         return false;
     }
 
-    public function addUser($params = null)
+    public function addUser($params = null, $pw = null)
     {
 
         if (!empty($params)) {

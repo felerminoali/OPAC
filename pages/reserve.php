@@ -10,10 +10,13 @@ Login::restrictFront();
 
 
 $objSForm = new SForm();
+$objValid = new Validation($objSForm);
 $objReservation = new Reservation();
 
 if ($objSForm->isPost('library')) {
 
+
+    
 
     $objBasket = new Basket();
 
@@ -26,12 +29,21 @@ if ($objSForm->isPost('library')) {
             $out[$key] = $objCatalogue->getItem($key);
         }
     }
+    
+    
+    $objValid->_expected = array(
+        'user',
+        'pickuplocation',
+        'notes'
+    );
 
-//    if($objReservation->placeRevervation()){
+    $objValid->_post['dateRevesed'] = Helper::setDate();
+    
+    if($objReservation->placeRevervation()){
     Helper::redirect('/?page=reserved');
-//    }else{
-//        Helper::redirect('/?page=reserve-failed');
-//    }
+    }else{
+        Helper::redirect('/?page=reserve-failed');
+    }
 
 
 }
@@ -43,6 +55,9 @@ require_once("_header.php");
 
 <h1>Place reservation</h1>
 
+<?php
+if(!empty($out)){
+?>
 
 <form action="" method="post" id="frm_ph">
 
@@ -90,5 +105,9 @@ require_once("_header.php");
 
 
 </form>
+
+<?php}else{
+    echo '<p>Your reservation is currently empty</p>';
+} ?>
 
 <?php require_once("_footer.php"); ?>
