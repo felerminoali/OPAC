@@ -6,7 +6,7 @@
  * Date: 12/9/2016
  * Time: 10:14 AM
  */
-class Borrow
+class Borrow extends Application
 {
 
     private $_table = 'borrowed_items';
