@@ -96,7 +96,7 @@ class Helper {
                 // 2010-01-01-09-30-56
                 return date('Y-m-d-H-i-s', $date);
             default :
-                return date('Y-m-d H:i:s', $date);
+                return date('Y-m-d-H:i:s', $date);
         }
     }
 

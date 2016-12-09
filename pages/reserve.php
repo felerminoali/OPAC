@@ -10,7 +10,6 @@ Login::restrictFront();
 
 
 $objSForm = new SForm();
-$objValid = new Validation($objSForm);
 $objReservation = new Reservation();
 
 $session = Session::getSession('basket');
@@ -29,15 +28,13 @@ if (!empty($session)) {
 
 if ($objSForm->isPost('pickuplocation')) {
     
-    $objValid->_expected = array(
-        'user',
-        'pickuplocation',
-        'notes'
-    );
-
-    $objValid->_post['dateRevesed'] = Helper::setDate();
     
-    if($objReservation->placeRevervation($objValid->_post, $out)){
+    $reservation['user'] = $objSForm->getPost('user');
+    $reservation['pickuplocation'] = $objSForm->getPost('pickuplocation');
+    $reservation['notes'] = $objSForm->getPost('notes');
+    $reservation['dateRevesed'] = Helper::setDate();
+    
+    if($objReservation->placeRevervation($reservation, $out)){
         Helper::redirect('/?page=reserved');
     }else{
         Helper::redirect('/?page=reserve-failed');
