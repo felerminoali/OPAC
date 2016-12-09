@@ -27,7 +27,7 @@ $business = $objBusiness->getBusiness();
             if (Login::isLogged(Login::$_login_front)) {
                 echo '<div id="logged_as">Logged in as <strong>';
                 echo Login::getFullNameFront(Session::getSession(Login::$_login_front));
-                echo '</strong> | <a href="/?page=orders">My orders</a>';
+                echo '</strong> | <a href="/?page=orders">My reservation</a>';
                 echo ' | <a href="/?page=logout">Logout</a>';
                 echo '</div>';
             } else {
