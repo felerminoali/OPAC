@@ -64,10 +64,10 @@ $business = $objBusiness->getBusiness();
                     </a>
                 </li>
                 <li>
-                    <a href="/?page=renew"
+                    <a href="/?page=Loans"
                         <?php
                         echo Helper::getActive(
-                            array('page' => 'renew')
+                            array('page' => 'loans')
                         );
                         ?>>
                         Renew

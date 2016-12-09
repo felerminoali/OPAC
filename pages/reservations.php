@@ -11,6 +11,8 @@ $objCatalogue = new Catalogue();
 
 require_once("_header.php"); ?>
 
+<h1>Reservation History</h1>
+
 <?php if (!empty($reservations)) { ?>
 
     <?php foreach ($reservations as $reservation) { ?>
