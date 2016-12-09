@@ -29,19 +29,19 @@ if (!empty($session)) {
 
 if ($objSForm->isPost('pickuplocation')) {
     
-//    $objValid->_expected = array(
-//        'user',
-//        'pickuplocation',
-//        'notes'
-//    );
-//
-//    $objValid->_post['dateRevesed'] = Helper::setDate();
-//    
-//    if($objReservation->placeRevervation($objValid->_post, $out)){
+    $objValid->_expected = array(
+        'user',
+        'pickuplocation',
+        'notes'
+    );
+
+    $objValid->_post['dateRevesed'] = Helper::setDate();
+    
+    if($objReservation->placeRevervation($objValid->_post, $out)){
         Helper::redirect('/?page=reserved');
-//    }else{
-//        Helper::redirect('/?page=reserve-failed');
-//    }
+    }else{
+        Helper::redirect('/?page=reserve-failed');
+    }
 }
 
 

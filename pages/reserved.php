@@ -8,4 +8,4 @@
 
 ?>
 
-<h1>Failed</h1>
+<h1>Success</h1>
