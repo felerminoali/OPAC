@@ -26,67 +26,85 @@ class Reservation extends Application
         return $this->db->fetchAll($sql);
     }
 
-    public function placeRevervation($params = null, $array = null)
+    public function getItemByReservation($id = null)
     {
 
-        if (!empty($params) && !empty($array)) {
+        if (!empty($id)) {
 
-            if ($this->addReservation($params)) {
+        $sql = "SELECT * FROM `{$this->_table_1}`
+                WHERE `reservation` = '" . $this->db->escape($id) . "'";
 
-                $reservation_id = $this->db->lastId();
-                
-                foreach ($array as $item) {
+        return $this->db->fetchAll($sql);
+    }
 
-                    $reservation_item['reservation'] = $reservation_id;
-                    $reservation_item['item'] = $item['id'];
-                    
-                    if (!$this->addReservation_items($reservation_item)) {
-                      return false;
-                    }
+}
+
+public
+function placeRevervation($params = null, $array = null)
+{
+
+    if (!empty($params) && !empty($array)) {
+
+        if ($this->addReservation($params)) {
+
+            $reservation_id = $this->db->lastId();
+
+            foreach ($array as $item) {
+
+                $reservation_item['reservation'] = $reservation_id;
+                $reservation_item['item'] = $item['id'];
+
+                if (!$this->addReservation_items($reservation_item)) {
+                    return false;
                 }
-                
-                return true;
-
             }
-        }
 
+            return true;
+
+        }
     }
 
-    public function addReservation($params)
-    {
+}
 
-        if (!empty($params)) {
+public
+function addReservation($params)
+{
 
-            $this->db->prepareInsert($params);
+    if (!empty($params)) {
 
-            return $this->db->insert($this->_table);
-        }
+        $this->db->prepareInsert($params);
 
+        return $this->db->insert($this->_table);
     }
 
-    public function addReservation_items($params)
-    {
+}
 
-        if (!empty($params)) {
+public
+function addReservation_items($params)
+{
 
-            $this->db->prepareInsert($params);
+    if (!empty($params)) {
 
-            return $this->db->insert($this->_table_1);
-        }
+        $this->db->prepareInsert($params);
 
+        return $this->db->insert($this->_table_1);
     }
 
+}
 
-    public function getUserReservations($id = null){
 
-        if(!empty($id)){
-            $sql = "SELECT * FROM `{$this->_table}`
+public
+function getUserReservations($id = null)
+{
+
+    if (!empty($id)) {
+        $sql = "SELECT * FROM `{$this->_table}`
                       WHERE `user` = '" . $this->db->escape($id) . "'
                        AND `canceled` = 0
                       ORDER BY `dateRevesed` DESC";
 
-            return $this->db->fetchAll($sql);
-        }
-
+        return $this->db->fetchAll($sql);
     }
+
+}
 }
