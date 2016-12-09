@@ -10,7 +10,7 @@ Login::restrictFront();
 
 
 $objSForm = new SForm();
-//$objValid = new Validation($objSForm);
+$objValid = new Validation($objSForm);
 $objReservation = new Reservation();
 
 $session = Session::getSession('basket');
@@ -27,22 +27,22 @@ if (!empty($session)) {
 }
 
 
-//if ($objSForm->isPost('library')) {
-//    
-//    $objValid->_expected = array(
-//        'user',
-//        'pickuplocation',
-//        'notes'
-//    );
-//
-//    $objValid->_post['dateRevesed'] = Helper::setDate();
-//    
-//    if($objReservation->placeRevervation($objValid->_post, $out)){
-//    Helper::redirect('/?page=reserved');
-//    }else{
-//        Helper::redirect('/?page=reserve-failed');
-//    }
-//}
+if ($objSForm->isPost('library')) {
+    
+    $objValid->_expected = array(
+        'user',
+        'pickuplocation',
+        'notes'
+    );
+
+    $objValid->_post['dateRevesed'] = Helper::setDate();
+    
+    if($objReservation->placeRevervation($objValid->_post, $out)){
+    Helper::redirect('/?page=reserved');
+    }else{
+        Helper::redirect('/?page=reserve-failed');
+    }
+}
 
 
 require_once("_header.php");
