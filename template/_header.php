@@ -63,6 +63,16 @@ $business = $objBusiness->getBusiness();
                         Catalogue
                     </a>
                 </li>
+                <li>
+                    <a href="/?page=renew"
+                        <?php
+                        echo Helper::getActive(
+                            array('page' => 'renew')
+                        );
+                        ?>>
+                        Renew
+                    </a>
+                </li>
                 
             </ul>
         <?php } else { ?>

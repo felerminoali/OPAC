@@ -17,7 +17,13 @@ require_once("_header.php"); ?>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
             <tr>
-                <th colspan="5" class="ta_c"><strong>Reservation ID: <?php echo $reservation['id'];?></strong></th>
+                <th colspan="5" class="ta_c">
+                    <h4>
+                        <strong>
+                            Reservation ID: <?php echo $reservation['id']; ?>
+                        </strong>
+                    </h4>
+                </th>
             </tr>
             <tr>
                 <th>Item</th>
