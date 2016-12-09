@@ -27,7 +27,7 @@ if (!empty($session)) {
 }
 
 
-if ($objSForm->isPost('library')) {
+if ($objSForm->isPost('pickuplocation')) {
     
 //    $objValid->_expected = array(
 //        'user',
