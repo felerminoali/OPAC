@@ -21,6 +21,8 @@ class Borrow
                  AND `checked_in` = 0";
 
         $result = $this->db->fetchOne($sql);
+        
+        $this->save_to_test_log($sql);
 
         if (!empty($result)) {
             $this->_id = $result['id'];
@@ -45,6 +47,13 @@ class Borrow
         }
         return false;
         
+    }
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
