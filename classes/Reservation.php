@@ -64,12 +64,12 @@ class Reservation extends Application
 
     }
 
-    public function addReservation_items($params)
+    public function addReservation_items($reservation_item)
     {
 
-        if (!empty($params)) {
+        if (!empty($reservation_item)) {
 
-            $this->db->prepareInsert($params);
+            $this->db->prepareInsert($reservation_item);
 
             return $this->db->insert($this->_table_1);
         }
