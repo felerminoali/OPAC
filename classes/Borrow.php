@@ -33,7 +33,7 @@ class Borrow
     public function getBorrow($id)
     {
 
-        if ($this->getBorrow($id)) {
+        if ($this->isBorrowed($id)) {
 
             $sql = "SELECT * FROM `{$this->_table}`
                  WHERE 
