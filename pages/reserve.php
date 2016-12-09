@@ -15,7 +15,6 @@ $objReservation = new Reservation();
 if ($objSForm->isPost('library')) {
 
 
-
     $objBasket = new Basket();
 
     $out = array();
@@ -28,20 +27,17 @@ if ($objSForm->isPost('library')) {
         }
     }
 
-    if($objReservation->placeRevervation()){
-        Helper::redirect('/?page=reserved');
-    }else{
-        Helper::redirect('/?page=reserve-failed');
-    }
-
+//    if($objReservation->placeRevervation()){
+    Helper::redirect('/?page=reserved');
+//    }else{
+//        Helper::redirect('/?page=reserve-failed');
+//    }
 
 
 }
 
 
-
-
-require_once ("_header.php");
+require_once("_header.php");
 ?>
 
 
@@ -50,10 +46,9 @@ require_once ("_header.php");
 
 <form action="" method="post" id="frm_ph">
 
-    <input type="hidden" name="user" value="<?php echo Session::getSession(Login::$_login_front);?>">
+    <input type="hidden" name="user" value="<?php echo Session::getSession(Login::$_login_front); ?>">
 
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
-
 
 
         <?php
@@ -64,7 +59,7 @@ require_once ("_header.php");
             <tr>
                 <th><label for="pickuplocation">Pickup Location: * </label></th>
                 <td>
-                    <?php  echo $objSForm->getLibrariesSelect($libraries, 'pickuplocation', null, false); ?>
+                    <?php echo $objSForm->getLibrariesSelect($libraries, 'pickuplocation', null, false); ?>
                 </td>
             </tr>
         <?php } ?>
@@ -74,8 +69,9 @@ require_once ("_header.php");
                 <label for="notes">Notes: </label>
             </th>
             <td>
-<!--                <input type="text" name="notes" id="notes" class="fld" value="--><?php //echo $objForm->stickyText('notes'); ?><!--"/>-->
-                <textarea name='notes' id='notes'></textarea><br />
+                <!--                <input type="text" name="notes" id="notes" class="fld" value="-->
+                <?php //echo $objForm->stickyText('notes'); ?><!--"/>-->
+                <textarea name='notes' id='notes'></textarea><br/>
             </td>
         </tr>
 
@@ -85,14 +81,14 @@ require_once ("_header.php");
             <td>
                 <label for="btn" class="sbm sbm_blue fl_l">
                     <input type="submit" id="btn"
-                           class="btn" value="Submit" />
+                           class="btn" value="Submit"/>
                 </label>
             </td>
         </tr>
 
-        </table>
+    </table>
 
 
 </form>
 
-<?php require_once ("_footer.php"); ?>
+<?php require_once("_footer.php"); ?>
