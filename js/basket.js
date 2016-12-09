@@ -7,6 +7,10 @@ $(document).ready(function () {
             $('.remove_basket').bind('click', removeFromBasket);
         }
 
+        if ($('.renew_btn').length > 0) {
+            $('.renew_btn').bind('click', renewLoans);
+        }
+        
         if ($(".update_basket").length > 0) {
             $(".update_basket").bind('click', updateBasket);
         }
@@ -55,7 +59,6 @@ $(document).ready(function () {
     }
 
 
-
     if ($(".add_to_basket").length > 0) {
         $(".add_to_basket").click(function () {
 
@@ -89,7 +92,6 @@ $(document).ready(function () {
             return false;
         });
     }
-
 
 
     function refreshBigBasket() {
@@ -127,6 +129,20 @@ $(document).ready(function () {
             });
         });
 
+    }
+
+    if ($(".renew_btn").length > 0) {
+        $(".renew_btn").click(function () {
+            
+            renewLoans();
+            
+        });
+    }
+    
+    function renewLoans() {
+
+        alert('renew');
+        
     }
 
 });

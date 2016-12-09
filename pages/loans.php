@@ -19,9 +19,9 @@ require_once("_header.php"); ?>
             <tr>
                 <th></th>
                 <th>Item</th>
-                <th class="ta_r">Loan Date</th>
-                <th class="ta_r">Due Date</th>
-                <th class="ta_r">Renew</th>
+                <th class="ta_r col_15">Loan Date</th>
+                <th class="ta_r col_15">Due Date</th>
+                <th class="ta_r col_15">Renew</th>
             </tr>
 
             <?php foreach ($loans as $loan) { ?>
@@ -44,7 +44,7 @@ require_once("_header.php"); ?>
                         <?php echo Helper::setDate(1, $loan['duedate']); ?>
                     </td>
                     <td class="ta_r">
-                        <div class="sbm sbm_blue fl_r">
+                        <div class="sbm sbm_blue fl_r renew_btn">
                             <a href="#" class="btn">Renew</a>
                         </div>
                     </td>
