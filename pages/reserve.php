@@ -13,23 +13,20 @@ $objSForm = new SForm();
 $objValid = new Validation($objSForm);
 $objReservation = new Reservation();
 
-if ($objSForm->isPost('library')) {
+$objBasket = new Basket();
 
+$out = array();
 
-    
+if (!empty($session)) {
+    $objCatalogue = new Catalogue();
 
-    $objBasket = new Basket();
-
-    $out = array();
-
-    if (!empty($session)) {
-        $objCatalogue = new Catalogue();
-
-        foreach ($session as $key => $value) {
-            $out[$key] = $objCatalogue->getItem($key);
-        }
+    foreach ($session as $key => $value) {
+        $out[$key] = $objCatalogue->getItem($key);
     }
-    
+}
+
+
+if ($objSForm->isPost('library')) {
     
     $objValid->_expected = array(
         'user',
