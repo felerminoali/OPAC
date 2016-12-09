@@ -1,9 +1,7 @@
 <?php
 
-
 $objBusiness = new Business();
 $business = $objBusiness->getBusiness();
-
 ?>
 
 
