@@ -2,12 +2,13 @@
 Login::restrictFront();
 
 $objBorrow = new Borrow();
+$objCatalog = new Catalogue();
 
 $loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
 
-require_once ("_header.php"); ?>
+require_once("_header.php"); ?>
 
-<h1>Current Loans</h1>
+    <h1>Current Loans</h1>
 
 <?php if (!empty($loans)) { ?>
 
@@ -15,7 +16,6 @@ require_once ("_header.php"); ?>
     <div>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
-
 
             <tr>
                 <th></th>
@@ -25,34 +25,42 @@ require_once ("_header.php"); ?>
                 <th>Renew</th>
             </tr>
 
-            <?php foreach ($loans as $loan){ ?>
-            <tr>
-                <td>
-                    <input type="checkbox" name="loan_items" id="<?php echo $loan['id'].'_'.$loan['item'];?>">
-                </td>
-                <td>
-                    <?php echo $loan['loandate'];?>
-                </td>
-                <td>
-                    <?php echo $loan['duedate'];?>
-                </td>
-                <td>
-                    <div class="sbm sbm_blue fl_r">
-                        <a href="#" class="btn">Renew</a>
-                    </div>
-                </td>
-            </tr>
-        
-        <?php } ?>
+            <?php foreach ($loans as $loan) { ?>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>">
+                    </td>
+
+                    <td>
+                        <?php
+                        $item = $objCatalog->getItem($loan['item']); ?>
+                        <a href="/?page=catalogue-item&amp;id=<?php echo $item['id']; ?>">
+                            <?php echo Helper::encodeHTML($item['title']); ?>
+                        </a>
+                    </td>
+                    <td class="ta_r">
+                        <?php echo $loan['loandate']; ?>
+                    </td>
+                    <td class="ta_r">
+                        <?php echo $loan['duedate']; ?>
+                    </td>
+                    <td class="ta_r">
+                        <div class="sbm sbm_blue fl_r">
+                            <a href="#" class="btn">Renew</a>
+                        </div>
+                    </td>
+                </tr>
+
+            <?php } ?>
         </table>
 
 
     </div>
-        
-        
-<?php }else{
+
+
+<?php } else {
     echo "<p>No loan found</p>";
 } ?>
 
 
-<?php require_once ("_footer.php"); ?>
+<?php require_once("_footer.php"); ?>
