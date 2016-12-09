@@ -51,7 +51,7 @@ require_once("_header.php");
 
 <h1>Place reservation</h1>
 
-<?php if (!empty($out)) { ?>
+<?php //if (!empty($out)) { ?>
 
 <form action="" method="post" id="frm_ph">
 
@@ -98,8 +98,6 @@ require_once("_header.php");
 
 </form>
 
-<?php}else{
-    echo '<p>Your reservation is currently empty</p>';
-} ?>
+
 
 <?php require_once("_footer.php"); ?>
