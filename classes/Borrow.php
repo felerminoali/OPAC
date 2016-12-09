@@ -22,15 +22,14 @@ class Borrow
 
         $this->save_to_test_log($sql);
         
-//        $result = $this->db->fetchOne($sql);
-//
-//        if (!empty($result)) {
-//            $this->_id = $result['id'];
-//            return true;
-//        }
+        $result = $this->db->fetchOne($sql);
 
-//        return false;
-        return true;
+        if (!empty($result)) {
+            $this->_id = $result['id'];
+            return true;
+        }
+
+        return false;
     }
 
     public function getBorrow($id)

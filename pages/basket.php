@@ -55,7 +55,7 @@ require_once('_header.php');
 
                         $borrow = $objBorrow->getBorrow($item['id']);
 
-                        echo Helper::setDate(1,$borrow['duedate']);
+//                        echo Helper::setDate(1,$borrow['duedate']);
 
 
 //                        if(!empty($borrow)){
