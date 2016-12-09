@@ -112,6 +112,10 @@ class DBase {
     public function prepareInsert($params = null) {
 
         if (!empty($params)) {
+
+            $this->_insert_keys = array();
+            $this->_insert_values = array();
+            
             foreach ($params as $key => $value) {
                 $this->_insert_keys[] = $key;
                 $this->_insert_values[] = $this->escape($value);
