@@ -13,7 +13,6 @@ require_once("_header.php"); ?>
 <?php if (!empty($loans)) { ?>
 
 
-    <form>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
 
@@ -39,10 +38,10 @@ require_once("_header.php"); ?>
                         </a>
                     </td>
                     <td class="ta_r">
-                        <?php echo $loan['loandate']; ?>
+                        <?php echo Helper::setDate(1, $loan['loandate']); ?>
                     </td>
                     <td class="ta_r">
-                        <?php echo $loan['duedate']; ?>
+                        <?php echo Helper::setDate(1, $loan['duedate']); ?>
                     </td>
                     <td class="ta_r">
                         <div class="sbm sbm_blue fl_r">
@@ -55,7 +54,6 @@ require_once("_header.php"); ?>
         </table>
 
 
-    </form>
 
 
 <?php } else {
