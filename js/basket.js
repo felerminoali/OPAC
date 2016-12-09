@@ -7,9 +7,9 @@ $(document).ready(function () {
             $('.remove_basket').bind('click', removeFromBasket);
         }
 
-        if ($('.renew_btn').length > 0) {
-            $('.renew_btn').bind('click', renewLoans);
-        }
+        // if ($('.renew_btn').length > 0) {
+        //     $('.renew_btn').bind('click', renewLoans);
+        // }
         
         if ($(".update_basket").length > 0) {
             $(".update_basket").bind('click', updateBasket);
