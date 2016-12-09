@@ -13,16 +13,16 @@ require_once("_header.php"); ?>
 <?php if (!empty($loans)) { ?>
 
 
-    <div>
+    <form>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
 
             <tr>
                 <th></th>
                 <th>Item</th>
-                <th>Loan Date</th>
-                <th>Due Date</th>
-                <th>Renew</th>
+                <th class="ta_r">Loan Date</th>
+                <th class="ta_r">Due Date</th>
+                <th class="ta_r">Renew</th>
             </tr>
 
             <?php foreach ($loans as $loan) { ?>
@@ -55,7 +55,7 @@ require_once("_header.php"); ?>
         </table>
 
 
-    </div>
+    </form>
 
 
 <?php } else {
