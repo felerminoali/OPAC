@@ -80,4 +80,4 @@ if (!empty($id)) {
     }
 } else {
     require_once('error.php');
-}
+}?>
