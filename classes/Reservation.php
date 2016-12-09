@@ -24,4 +24,8 @@ class Reservation extends Application
 
         return $this->db->fetchAll($sql);
     }
+    
+    public function placeRevervation(){
+        return true;
+    }
 }

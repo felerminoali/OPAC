@@ -9,12 +9,12 @@
 class SForm
 {
 
-    public function getLibrariesSelect($libraries = null, $record = null, $addFirst = true)
+    public function getLibrariesSelect($libraries = null, $id = null, $record = null, $addFirst = true)
     {
 
         if (!empty($libraries)) {
 
-            $out = "<select name=\"library\" id=\"library\" class=\"sel\">";
+            $out = "<select name='.$id.' id='.$id.' class=\"sel\">";
 
             if ($addFirst) {
                 $out .= "<option value=\"\">All libraries&hellip;</option>";

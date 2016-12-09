@@ -10,6 +10,36 @@ Login::restrictFront();
 
 
 $objSForm = new SForm();
+$objReservation = new Reservation();
+
+if ($objSForm->isPost('library')) {
+
+
+
+    $objBasket = new Basket();
+
+    $out = array();
+
+    if (!empty($session)) {
+        $objCatalogue = new Catalogue();
+
+        foreach ($session as $key => $value) {
+            $out[$key] = $objCatalogue->getItem($key);
+        }
+    }
+
+    if($objReservation->placeRevervation()){
+        Helper::redirect('/?page=reserved');
+    }else{
+        Helper::redirect('/?page=reserve-failed');
+    }
+
+
+
+}
+
+
+
 
 require_once ("_header.php");
 ?>
@@ -19,6 +49,8 @@ require_once ("_header.php");
 
 
 <form action="">
+
+    <input type="hidden" name="user" value="<?php echo Session::getSession(Login::$_login_front);?>">
 
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
 
@@ -30,9 +62,9 @@ require_once ("_header.php");
         if (!empty($libraries)) {
             ?>
             <tr>
-                <th><label for="library">Pickup Location: * </label></th>
+                <th><label for="pickuplocation">Pickup Location: * </label></th>
                 <td>
-                    <?php  echo $objSForm->getLibrariesSelect($libraries, null, false); ?>
+                    <?php  echo $objSForm->getLibrariesSelect($libraries, 'pickuplocation', null, false); ?>
                 </td>
             </tr>
         <?php } ?>
@@ -43,12 +75,24 @@ require_once ("_header.php");
             </th>
             <td>
 <!--                <input type="text" name="notes" id="notes" class="fld" value="--><?php //echo $objForm->stickyText('notes'); ?><!--"/>-->
-                <input type="text" name="notes" id="notes" class="fld" value=""/>
-                
+                <textarea name='notes' id='notes'></textarea><br />
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>&#160;</th>
+            <td>
+                <label for="btn" class="sbm sbm_blue fl_l">
+                    <input type="submit" id="btn"
+                           class="btn" value="Submit" />
+                </label>
             </td>
         </tr>
 
         </table>
+
+
 </form>
 
 <?php require_once ("_footer.php"); ?>
