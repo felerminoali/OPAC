@@ -110,4 +110,5 @@ require_once('_header.php');
 } else { ?>
     <p>Your reservation is currently empty</p>
 <?php } ?>
+    <br/>
 <?php require_once('_footer.php'); ?>
