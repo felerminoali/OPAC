@@ -9,7 +9,7 @@
 class SForm
 {
 
-    public function getLibrariesSelect($libraries = null, $id = null, $record = null, $addFirst = true)
+    public function getLibrariesSelect($libraries = null, $id=null, $record = null, $addFirst = true)
     {
 
         if (!empty($libraries)) {

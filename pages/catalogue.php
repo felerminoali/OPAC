@@ -63,7 +63,7 @@ require_once("_header.php");
                             <tr>
                                 <th><label for="library">Library:</label></th>
                                 <td>
-                                    <?php  echo $objSForm->getLibrariesSelect($libraries, 'country', !empty($param_library) ? stripslashes($param_library) : null); ?>
+                                    <?php  echo $objSForm->getLibrariesSelect($libraries, 'library', !empty($param_library) ? stripslashes($param_library) : null); ?>
                                 </td>
                             </tr>
                         <?php } ?>
