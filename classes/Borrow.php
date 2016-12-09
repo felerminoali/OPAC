@@ -11,42 +11,21 @@ class Borrow extends Application
 
     private $_table = 'borrowed_items';
 
-    public function isBorrowed($id)
+    public function getBorrow($id)
     {
-
         $sql = "SELECT * FROM `{$this->_table}`
                  WHERE 
                   `{$this->_table}`.`item` ='" . $this->db->escape($id) . "'
                  AND `checked_in` = 0";
 
-
-        $this->save_to_test_log($sql);
-        
         $result = $this->db->fetchOne($sql);
 
         if (!empty($result)) {
-            $this->_id = $result['id'];
-            return true;
+            return $result;
         }
 
         return false;
-    }
 
-    public function getBorrow($id)
-    {
-
-        if ($this->isBorrowed($id)) {
-
-            $sql = "SELECT * FROM `{$this->_table}`
-                 WHERE 
-                  `{$this->_table}`.`item` ='" . $this->db->escape($id) . "'
-                 AND `checked_in` = 0";
-
-            return $this->db->fetchOne($sql);
-
-        }
-        return false;
-        
     }
 
     function save_to_test_log($text)

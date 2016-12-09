@@ -55,35 +55,29 @@ require_once('_header.php');
 
                         $borrow = $objBorrow->getBorrow($item['id']);
 
-//                        echo Helper::setDate(1,$borrow['duedate']);
-
-
                         if(!empty($borrow)){
-                            $current_date = new DateTime($borrow['duedate']);
+                            // Due date if this catalogue was borrowed
+                            $start_date = new DateTime($borrow['duedate']);
                         }else{
-                            $current_date = new DateTime();
+                            // Current date if this catalogue was not borrowed
+                            $start_date = new DateTime();
                         }
 
-//                        $no_of_waiting_days = $cat['loanPeriod'];
-//                        $queque = $objCatalogue->getWaintQueque();
-//
-//                        $i = 0;
-//
-//                        foreach () {
-//                            $array[$id] = $i;
-//                            $i++;
-//                        }
-//
-//                        $total_waiting_day = $array[$item['id']] * $no_of_waiting_days;
-//
-//                        if ($total_waiting_day != 0) {
-//                            $current_date->modify('+ ' . $total_waiting_day . ' days');
-//                        }
+                        $total_waiting_day = 0;
+                        $objReservation = new Reservation();
+                        $queue_list = $objReservation->getResevationsByItem($item['id']);
 
-                        $total_waiting_day = 2;
-                        $current_date->modify('+ ' . $total_waiting_day . ' days');
 
-                        echo $current_date->format('d/m/Y');
+                        if(!empty($queue_list)){
+                            $no_of_waiting_days = $cat['loanPeriod'];
+                            $total_waiting_day = $no_of_waiting_days * count($queue_list);
+                        }
+
+                        if($total_waiting_day !=0){
+                            $start_date->modify('+ ' . $total_waiting_day . ' days');
+                        }
+
+                        echo $start_date->format('d/m/Y');
 
                         ?>
                     </td>
