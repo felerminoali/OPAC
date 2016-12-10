@@ -160,6 +160,8 @@ if (!empty($id)) {
             <?php
 
             $feedback_comments = $objReservation->getCommentsByReservation($reservation['id']);
+            
+            var_dump($feedback_comments);
 
             if (!empty($feedback_comments)) {
 
