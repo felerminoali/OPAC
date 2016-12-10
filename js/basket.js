@@ -141,7 +141,8 @@ $(document).ready(function () {
     
     function renewLoans() {
 
-        alert('renew');
+        // alert('renew');
+        $(".loan_item").prop("checked", true);
         
     }
 
