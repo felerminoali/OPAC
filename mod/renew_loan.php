@@ -7,38 +7,38 @@ if(isset($_POST['loans'])){
     
     $loans = array();
     
+    // split the array 
     foreach ($loans_param_array as $loan_element) {
         $l = explode("_",$loan_element);
-        
         $loans[] = $l; 
         $l = null;
     }
 
-    $out = '';
+//    $out = '';
+    $array = array();
     foreach ($loans as $loan){
 
-        $out .= ' | id: '.$loan[0];
-        $out .= ' item: '.$loan[1];
-        $out .= ' reservation: '.$loan[2];
+//        $out .= ' | id: '.$loan[0];
+//        $out .= ' item: '.$loan[1];
+//        $out .= ' reservation: '.$loan[2];
+
+        $id = $loan[0];
+        $array['item'] = $loan[1];
+        $array['reservation'] = $loan[2];
+        $array['loandate'] = Helper::setDate();
+
+
+        $objLoan = new Loan();
+        $objLoan->renewLoan($array,$id);
+        
     }
     
-
-
-
-//    $array['item'] = $_POST['item'];
-//    $array['reservation'] = $_POST['reservation'];
-//    $array['loandate'] = Helper::setDate();
-//
-    
-//    $objLoan = new Loan();
-//    $objLoan->renewLoan($array,$loan);
-
 //    $out = 'id: '.$l[0];
 //    $out .= ' item: '.$array['item'];
 //    $out .= ' reservation: '.$array['reservation'];
 //    $out .= ' loandate: '.$array['loandate'];
     
-    save_to_test_log($out);
+//    save_to_test_log($out);
 
 }
 
