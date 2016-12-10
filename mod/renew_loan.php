@@ -15,6 +15,7 @@ if(isset($_POST['loans'])){
         $out .= 'id: '.$l[0];
         $out .= 'item: '.$l[1];
         $out .= 'reservation: '.$l[2];
+        $l = null;
     }
 
 
