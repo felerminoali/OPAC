@@ -39,7 +39,11 @@ require_once("_header.php"); ?>
             <?php foreach ($loans as $loan) { ?>
                 <tr>
                     <td>
-                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>" class="case">
+                        <input type="checkbox" 
+                               name="loan_items" 
+                               id="<?php echo $loan['id'] . '_' . $loan['item']; ?>"
+                               value="<?php echo $loan['id'] . '_' . $loan['item']; ?>"
+                               class="case">
                     </td>
 
                     <td>
