@@ -157,7 +157,7 @@ class Reservation extends Application
             if (!empty($reservation)) {
                 $sql = "SELECT * FROM `{$this->_table_2}`
                 WHERE `reservation`= '" . $this->db->escape($reservation) . "'
-                ORDER BY `date_posted` DESC";
+                ORDER BY `date_posted` ASC";
 
                 return $this->db->fetchAll($sql);
             }
