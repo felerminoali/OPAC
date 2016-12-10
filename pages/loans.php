@@ -18,8 +18,7 @@ require_once("_header.php"); ?>
             <td >
                 <div class="sbm sbm_blue fl_r">
 <!--                    <a href="#" class="btn">Select All</a>-->
-                    <input type="checkbox" id="checkAll" class="selectAll_btn">
-                    <span>Check All</span>
+                    <input type="button" id="checkAll" value="Select/Unselect All ">
                 </div>
             </td>
             <td >
@@ -44,7 +43,7 @@ require_once("_header.php"); ?>
             <?php foreach ($loans as $loan) { ?>
                 <tr>
                     <td>
-                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>">
+                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>" class="loan_item">
                     </td>
 
                     <td>

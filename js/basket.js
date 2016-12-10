@@ -146,12 +146,26 @@ $(document).ready(function () {
     }
 
 
-    if ($(".selectAll_btn").length > 0) {
-        $(".selectAll_btn").click(function () {
+    $("#checkAll").attr("data-type", "uncheck");
 
-            $('input:checkbox').not(this).prop('checked', this.checked);
-        });
-    }
+
+    $("#checkAll").attr("data-type", "check");
+    $("#checkAll").click(function() {
+        if ($("#checkAll").attr("data-type") === "check") {
+            $(".loan_item").prop("checked", true);
+            $("#checkAll").attr("data-type", "uncheck");
+        } else {
+            $(".loan_item").prop("checked", false);
+            $("#checkAll").attr("data-type", "check");
+        }
+    });
+
+    // if ($(".selectAll_btn").length > 0) {
+    //     $(".selectAll_btn").click(function () {
+    //
+    //         $('input:checkbox').not(this).prop('checked', this.checked);
+    //     });
+    // }
 
     // function selectAll() {
     //
