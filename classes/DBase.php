@@ -31,17 +31,11 @@ class DBase {
 
 
         $this->_conndb = mysqli_connect($this->_host, $this->_user, $this->_password, $this->_name);
-//        $this->_conndb = mysql_connect($this->_host, $this->_user, $this->_password);
 
 
         if (!$this->_conndb) {
-            die("Database connection failed: <br />");
+            die("Database connection failed: Please try to <strong>refresh</strong> this page - or - try again later <br />");
         }
-
-//        $_select = mysql_select_db($this->_name, $this->_conndb);
-//        if (!$_select) {
-//            die("Database connection failed: <br />" . mysql_error());
-//        }
 
         mysqli_set_charset($this->_conndb, "utf8");
         
