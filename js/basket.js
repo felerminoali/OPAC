@@ -158,8 +158,10 @@ $(document).ready(function () {
         //     $(".loan_item").prop("checked", false);
         //     $("#checkAll").attr("data-type", "check");
         // }
+
+        $(".loan_item").prop("checked", true);
         
-        alert('select all');
+        // alert('select all');
     });
 
     // if ($(".selectAll_btn").length > 0) {
