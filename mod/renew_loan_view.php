@@ -17,9 +17,9 @@ $loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
 <h1>Current Loans</h1>
 
 <?php if (!empty($loans)) { ?>
-<div id="loan_list">
 
-    <form id="frm_load">
+
+    
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
             <tr>
@@ -71,8 +71,7 @@ $loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
             <?php } ?>
         </table>
 
-    </form>
-</div>
+    
 <?php } else {
     echo "<p>No loan found</p>";
 } ?>
