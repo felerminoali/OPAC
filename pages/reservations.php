@@ -103,16 +103,14 @@ require_once("_header.php"); ?>
             <?php } ?>
         </table>
 
-        <div class="fl_l">
-            <a href="javascript:history.go(-1)">Go back</a>
-        </div>
-
-        
-
         <br/>
         <br/>
 
     <?php } ?>
+
+    <div class="fl_l">
+        <a href="javascript:history.go(-1)">Go back</a>
+    </div>
 
 <?php } else {
     echo 'There no reservations';
