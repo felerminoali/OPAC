@@ -28,6 +28,15 @@ if (!empty($id)) {
         <h1>Reservation</h1>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+
+            <tr>
+                <td>
+                    <div class="fl_l">
+                        <a href="javascript:history.go(-1)">Go back</a>
+                    </div>
+                </td>
+            </tr>
+
             <tr>
                 <td>
                     <div class="sbm sbm_blue fl_l cancel_reservation">
@@ -121,10 +130,9 @@ if (!empty($id)) {
             <?php } ?>
         </table>
 
-        <div class="fl_l">
-            <a href="javascript:history.go(-1)">Go back</a>
-        </div>
 
+        <br/>
+        <br/>
 
         <table>
 
@@ -132,11 +140,11 @@ if (!empty($id)) {
 
                 <td>
 
-                    <div class='container'>
+                    <div style="background-color: #dad8e4;">
                         <strong>Your comments</strong>
-                        <div class='section friendly'>
-                            <textarea name="comments" rows="15" cols="50"></textarea>
-                        </div>
+
+                        <textarea name="comments" rows="15" cols="50"></textarea>
+
                     </div>
                 </td>
 
