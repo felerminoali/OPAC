@@ -9,11 +9,13 @@
 
 Login::restrictFront();
 
+
 $id = Url::getParam('id');
 
 if (!empty($id)) {
 
     
+
     $objReservation = new Reservation();
     $reservation = $objReservation->getReservation($id);
 
@@ -54,8 +56,9 @@ if (!empty($id)) {
 
             <?php
 
-
             $items = $objReservation->getItemByReservation($reservation['id']);
+            
+            var_dump($items);
 
             foreach ($items as $item_res) {
                 $item = $objCatalogue->getItem($item_res['item'])
