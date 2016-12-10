@@ -29,25 +29,25 @@ class Loan
     public function checkOut($array){
 
         // Due according to catalog category
-//        $dueDate = new DateTime(Helper::setDate());
-//
-//        $objCatalogue = new Catalogue();
-//        $item_details = $objCatalogue->getItem($array['item']);
-//        $cat = $objCatalogue->getCategory($item_details['category']);
-//        $loanPeriod = $cat['loanPeriod'];
-//
-//        $dueDate->modify('+ ' . $loanPeriod . ' days');
-//        $array['duedate'] = $dueDate;
-//
-//        $objLoan = new Borrow();
-//        $objLoan->addLoan($array);
+        $dueDate = new DateTime(Helper::setDate());
+
+        $objCatalogue = new Catalogue();
+        $item_details = $objCatalogue->getItem($array['item']);
+        $cat = $objCatalogue->getCategory($item_details['category']);
+        $loanPeriod = $cat['loanPeriod'];
+
+        $dueDate->modify('+ ' . $loanPeriod . ' days');
+        $array['duedate'] = $dueDate;
+
+        $objLoan = new Borrow();
+        $objLoan->addLoan($array);
         
-        $out = ' | item: '.$array['item'];
-        $out .= ' due: '.$array['duedate'];
-        $out .= ' loandate: '.$array['loandate'];
-        $out .= ' reservation: '.$array['reservation'];
-        
-        $this->save_to_test_log($out);
+//        $out = ' | item: '.$array['item'];
+//        $out .= ' due: '.$array['duedate'];
+//        $out .= ' loandate: '.$array['loandate'];
+//        $out .= ' reservation: '.$array['reservation'];
+//        
+//        $this->save_to_test_log($out);
         
     }
 
