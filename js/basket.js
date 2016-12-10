@@ -35,7 +35,7 @@ $(document).ready(function () {
             
             $.ajax({
                 type: 'POST',
-                url: '/mod/renew_loan.php',
+                url: '/mod/submit_comment.php',
                 data: ({reservation: reservation, comment:comment}),
                 success: function (data) {
                      // refreshReservation(reservation);
