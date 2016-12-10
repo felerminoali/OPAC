@@ -41,7 +41,7 @@ class Loan
 
         $objLoan = new Borrow();
 
-        var_dump($array);
+//        var_dump($array);
         
 //        $objLoan->addLoan($array);
         
