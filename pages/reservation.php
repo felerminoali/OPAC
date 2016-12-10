@@ -134,15 +134,19 @@ if (!empty($id)) {
         <br/>
 
         <h1>Feedback comments</h1>
+
+        <div class="sbm sbm_blue fl_l submit_comment">
+            <a href="#" class="btn">Submit</a>
+        </div>
+
         <table>
 
             <tr>
-
                 <td>
                     <strong>Your comments</strong>
                 </td>
                 <td>
-                    <textarea name="comments" rows="15" cols="80"></textarea>
+                    <textarea name="comments" rows="8" cols="75"></textarea>
                 </td>
 
             </tr>
