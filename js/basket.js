@@ -143,7 +143,7 @@ $(document).ready(function () {
 
         // alert('renew');
 
-        // if ($(".case").length > 0) {
+        if ($(".case:checked").length > 0) {
         //     $(".case input:checked").each(function () {
         //
         //         var values = $(this).val();
@@ -152,10 +152,10 @@ $(document).ready(function () {
         //         alert('loan: ' + item[0] + ' item:' + item[1]);
         //
         //     });
-        // } else {
-        //     alert("Nothing selected");
-        alert($(".case").length);
-        // }
+        } else {
+            alert("Nothing selected");
+        // alert($(".case:checked").length);
+        }
     }
 
 
