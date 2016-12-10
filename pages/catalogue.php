@@ -36,7 +36,7 @@ require_once("_header.php");
 
     <div class='container'>
         <div class='section friendly'>
-            <h1><strong>SEARCH | </strong>&nbsp;&nbsp;&nbsp;Catalogues</h1>
+            <h1><strong>SEARCH | </strong>&nbsp;&nbsp;&nbsp;Catalog</h1>
             <div class='article'>
 
                 <form action="" method="get">
@@ -179,7 +179,21 @@ if (!empty($rows)) {
                     ?>;
                 </p>
 
-                <p><?php echo Basket::activeButton($row['id']); ?> </p>
+                <p><?php
+
+                    $user = Session::getSession(Login::$_login_front);
+                    $objReservation = new Reservation();
+                    $reservation = $objReservation->getReservationsByUserAndItem($user, $row['id']);
+
+                    if(!empty($reservations)){
+                        echo Basket::activeButton($row['id']);
+                    }else{
+                        echo '<p><a href="#" class="red">Already Reserved: Click to check your reservation</a></p>';
+                    }
+                     
+                    
+                    ?>
+                </p>
             </div>
         </div>
         <?php

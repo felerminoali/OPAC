@@ -54,21 +54,23 @@ class LoanBussinessRule
 
     public function is_renewable($item = null, $user = null)
     {
-
         if (!empty($item) && !empty($user)) {
 
+            /* Business Rule:
+             *  user can not renew if:
+             *     1. Item was reserved by another borrower
+             *     2. Maximum number of renew reached
+             *     3. Item isn't available
+             * */
             if (!$this->is_reserved($item) && !$this->is_maximum_loan($item, $user) && $this->is_item_available($item)) {
                 return true;
             }
         }
-
-
         return false;
     }
 
     private function is_reserved($id = null)
     {
-
         if (!empty($id)) {
 
             $objReservation = new Reservation();
@@ -83,7 +85,6 @@ class LoanBussinessRule
 
     private function is_maximum_loan($item = null, $user = null)
     {
-
         if (!empty($item) && !empty($user)) {
             $objBusiness = new Business();
             $opac_config = $objBusiness->getBusiness();
@@ -101,7 +102,6 @@ class LoanBussinessRule
 
         return false;
     }
-
 
     private function is_item_available($id)
     {

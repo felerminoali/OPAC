@@ -57,7 +57,7 @@ $business = $objBusiness->getBusiness();
                     <a href="/?page=catalogue"
                         <?php
                         echo Helper::getActive(
-                            array('page' => 'catalogue')
+                            array('page' => 'catalog')
                         );
                         ?>>
                         Catalogue
@@ -73,7 +73,17 @@ $business = $objBusiness->getBusiness();
                         Loans
                     </a>
                 </li>
-                
+
+                <li>
+                    <a href="/?page=account"
+                        <?php
+                        echo Helper::getActive(
+                            array('page' => 'account')
+                        );
+                        ?>>
+                        My Account
+                    </a>
+                </li>
             </ul>
         <?php } else { ?>
             &nbsp;
