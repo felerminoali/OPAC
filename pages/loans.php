@@ -65,9 +65,6 @@ require_once("_header.php"); ?>
             <?php } ?>
         </table>
 
-
-
-
 <?php } else {
     echo "<p>No loan found</p>";
 } ?>
