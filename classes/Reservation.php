@@ -156,7 +156,7 @@ class Reservation extends Application
 
             if (!empty($id)) {
                 $sql = "SELECT * FROM `{$this->_table_2}`
-                WHERE `reservation`= '" . $this->db->escape($id) . "'
+                WHERE `reservation`= '" . $this->db->escape($reservation) . "'
                 ORDER BY `date_posted` DESC";
 
                 return $this->db->fetchAll($sql);
