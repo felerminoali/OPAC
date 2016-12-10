@@ -28,8 +28,15 @@ $(document).ready(function () {
     function submitComment() {
         
         var comment = $('#comments').val();
+
+        if(comment){
+            alert(comment);    
+        }else{
+            alert('Please do not provide empty comment.');
+        }
         
-        alert(comment);
+
+
     }
 
     function selectAll() {
