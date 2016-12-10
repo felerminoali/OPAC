@@ -40,14 +40,14 @@ class Loan
         $array['duedate'] = $dueDate;
 
         $objLoan = new Borrow();
-        $objLoan->addLoan($array);
+//        $objLoan->addLoan($array);
         
-//        $out = ' | item: '.$array['item'];
-//        $out .= ' due: '.$array['duedate'];
-//        $out .= ' loandate: '.$array['loandate'];
+        $out = ' | item: '.$array['item'];
+        $out .= ' due: '.Helper::setDate(1,$array['duedate']);
+        $out .= ' loandate: '.Helper::setDate(1,$array['loandate']);
 //        $out .= ' reservation: '.$array['reservation'];
 //        
-//        $this->save_to_test_log($out);
+        $this->save_to_test_log($out);
         
     }
 
