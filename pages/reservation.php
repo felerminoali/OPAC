@@ -38,7 +38,7 @@ if (!empty($id)) {
                     </div>
                 </td>
                 <td>
-                    <div class="sbm sbm_blue fl_l cancel_reservation">
+                    <div class="sbm sbm_blue fl_r cancel_reservation">
                         <a href="#" class="btn">Cancel</a>
                     </div>
                 </td>
