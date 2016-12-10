@@ -31,10 +31,10 @@ if ($objSForm->isPost('pickuplocation')) {
     
     $reservation['user'] = $objSForm->getPost('user');
     $reservation['pickuplocation'] = $objSForm->getPost('pickuplocation');
-    $reservation['notes'] = $objSForm->getPost('notes');
+    $comment = $objSForm->getPost('notes');
     $reservation['dateRevesed'] = Helper::setDate();
     
-    if($objReservation->placeRevervation($reservation, $out)){
+    if($objReservation->placeRevervation($reservation, $out, $comment)){
         Session::clear('basket');
         Helper::redirect('/?page=reserved');
     }else{

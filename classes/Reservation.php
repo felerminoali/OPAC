@@ -11,6 +11,7 @@ class Reservation extends Application
 
     private $_table = 'reservation';
     private $_table_1 = 'reservation_items';
+    private $_table_2 = 'feedback_comments';
 
     public function getResevationsByItem($id)
     {
@@ -39,16 +40,24 @@ class Reservation extends Application
 
     }
 
-    public function placeRevervation($params = null, $array = null)
+    public function placeRevervation($params = null, $items_array = null, $comment = null)
     {
 
-        if (!empty($params) && !empty($array)) {
+        if (!empty($params) && !empty($items_array)) {
 
             if ($this->addReservation($params)) {
 
                 $reservation_id = $this->db->lastId();
 
-                foreach ($array as $item) {
+                $comment_array['reservation'] =  $reservation_id;
+                $comment_array['comment'] =  $comment;
+                
+
+                if(!$this->addFeedBackComments($comment_array)){
+                    return false;
+                }
+
+                foreach ($items_array as $item) {
 
                     $reservation_item['reservation'] = $reservation_id;
                     $reservation_item['item'] = $item['id'];
@@ -57,6 +66,10 @@ class Reservation extends Application
                         return false;
                     }
                 }
+
+
+
+
 
                 return true;
 
@@ -129,5 +142,17 @@ class Reservation extends Application
                 WHERE `id`= '" . $this->db->escape($id) . "'";
             return $this->db->fetchOne($sql);
         }
+    }
+
+    public function addFeedBackComments($params)
+    {
+
+        if (!empty($params)) {
+
+            $this->db->prepareInsert($params);
+
+            return $this->db->insert($this->_table_2);
+        }
+
     }
 }
