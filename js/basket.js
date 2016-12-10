@@ -146,18 +146,20 @@ $(document).ready(function () {
     }
 
 
-    $("#checkAll").attr("data-type", "uncheck");
+    // $("#checkAll").attr("data-type", "uncheck");
 
 
     $("#checkAll").attr("data-type", "check");
     $("#checkAll").click(function() {
-        if ($("#checkAll").attr("data-type") === "check") {
-            $(".loan_item").prop("checked", true);
-            $("#checkAll").attr("data-type", "uncheck");
-        } else {
-            $(".loan_item").prop("checked", false);
-            $("#checkAll").attr("data-type", "check");
-        }
+        // if ($("#checkAll").attr("data-type") === "check") {
+        //     $(".loan_item").prop("checked", true);
+        //     $("#checkAll").attr("data-type", "uncheck");
+        // } else {
+        //     $(".loan_item").prop("checked", false);
+        //     $("#checkAll").attr("data-type", "check");
+        // }
+        
+        alert('select all');
     });
 
     // if ($(".selectAll_btn").length > 0) {
