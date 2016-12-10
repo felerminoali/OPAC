@@ -144,7 +144,8 @@ $(document).ready(function () {
         // alert('renew');
 
         if ($(".case:checked").length > 0) {
-            $(".case input:checked").each(function () {
+
+            $(":checked").each(function () {
         
                 var values = $(this).val();
                 var item = values.split('_');
@@ -152,6 +153,7 @@ $(document).ready(function () {
                 alert('loan: ' + item[0] + ' item:' + item[1]);
         
             });
+            
         } else {
             alert("Nothing selected");
         }
