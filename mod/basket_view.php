@@ -63,12 +63,12 @@ if (!empty($session)) {
                 <td class="ta_r">
                     <?php
 
-                    $objBorrow = new Borrow();
-                    $borrow = $objBorrow->getBorrow($item['id']);
+                    $objLoan = new Loan();
+                    $loan = $objLoan->getLoan($item['id']);
 
-                    if(!empty($borrow)){
+                    if(!empty($loan)){
                         // Due date if this catalogue was borrowed
-                        $start_date = new DateTime($borrow['duedate']);
+                        $start_date = new DateTime($loan['duedate']);
                     }else{
                         // Current date if this catalogue was not borrowed
                         $start_date = new DateTime();

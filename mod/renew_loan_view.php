@@ -8,10 +8,10 @@
 
 require_once('../inc/autoload.php');
 
-$objBorrow = new Borrow();
+$objLoan = new Loan();
 $objCatalog = new Catalogue();
 
-$loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
+$loans = $objLoan->getLoanByUser(Session::getSession(Login::$_login_front));
  ?>
 
 <?php if (!empty($loans)) { ?>

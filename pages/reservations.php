@@ -75,8 +75,8 @@ require_once("_header.php"); ?>
                     <td class="ta_r">
                         <?php
 
-                        $objBorrow = new Borrow();
-                        $borrow = $objBorrow->getBorrow($item['id']);
+                        $objBorrow = new Loan();
+                        $borrow = $objBorrow->getLoan($item['id']);
 
                         if (!empty($borrow)) {
                             // Due date if this catalogue was borrowed

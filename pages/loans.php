@@ -1,10 +1,10 @@
 <?php
 Login::restrictFront();
 
-$objBorrow = new Borrow();
+$objBorrow = new Loan();
 $objCatalog = new Catalogue();
 
-$loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
+$loans = $objBorrow->getLoanByUser(Session::getSession(Login::$_login_front));
 
 require_once("_header.php"); ?>
 

@@ -23,7 +23,7 @@ if(isset($_POST['loans'])){
         $array['loandate'] = Helper::setDate();
 
 
-        $objLoan = new Loan();
+        $objLoan = new LoanBussinessRule();
         $objLoan->renewLoan($array,$id);
         
     }
