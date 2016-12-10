@@ -14,8 +14,6 @@ $objCatalog = new Catalogue();
 $loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
  ?>
 
-<h1>Current Loans</h1>
-
 <?php if (!empty($loans)) { ?>
 
 

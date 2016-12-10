@@ -7,20 +7,28 @@ $(document).ready(function () {
             $('.remove_basket').bind('click', removeFromBasket);
         }
 
-        // if ($('.renew_btn').length > 0) {
-        //     $('.renew_btn').bind('click', renewLoans);
-        // }
-
-        if ($(".update_basket").length > 0) {
-            $(".update_basket").bind('click', updateBasket);
+        if ($(".case:checked").length > 0) {
+            $(".case").bind('click', viceVersa);
         }
-        if ($('.fld_qty').length > 0) {
-            $('.fld_qty').bind('keypress', function (e) {
-                var code = e.keyCode ? e.keyCode : e.which;
-                if (code == 13) {
-                    updateBasket();
-                }
-            });
+
+        if ($('#selectall').length > 0) {
+            $('#selectall').bind('click', selectAll);
+        }
+    }
+
+
+    function selectAll() {
+        // add multiple select / deselect functionality
+        $('.case').attr('checked', $(this).checked);
+    }
+
+    // if all checkbox are selected, check the selectall checkbox
+    // and viceversa
+    function viceVersa() {
+        if ($(".case").length == $(".case:checked").length) {
+            $("#selectall").attr("checked", "checked");
+        } else {
+            $("#selectall").removeAttr("checked");
         }
     }
 
@@ -110,32 +118,9 @@ $(document).ready(function () {
     }
 
 
-    function updateBasket() {
-        $('#frm_basket :input').each(function () {
-            var sid = $(this).attr('id').split('-');
-            var val = $(this).val();
-
-            $.ajax({
-                type: 'POST',
-                url: '/mod/basket_qty.php',
-                data: ({id: sid[1], qty: val}),
-                success: function () {
-                    refreshSmallBasket();
-                    refreshBigBasket();
-                },
-                error: function () {
-                    alert('An error has occurred');
-                }
-            });
-        });
-
-    }
-
     if ($(".renew_btn").length > 0) {
         $(".renew_btn").click(function () {
-
             renewLoans();
-
         });
     }
 
@@ -154,7 +139,7 @@ $(document).ready(function () {
             $.ajax({
                 type: 'POST',
                 url: '/mod/renew_loan.php',
-                data: ({loans:myCheckboxes}),
+                data: ({loans: myCheckboxes}),
                 success: function (data) {
                     refreshLoan();
                 },
@@ -163,7 +148,7 @@ $(document).ready(function () {
                 }
             });
             return false;
-            
+
         } else {
             alert("Nothing selected");
         }
@@ -185,27 +170,8 @@ $(document).ready(function () {
             }
         });
 
-        
+
     }
-    
-    
-    
-    // add multiple select / deselect functionality
-    $("#selectall").click(function () {
-        $('.case').attr('checked', this.checked);
-    });
-
-    // if all checkbox are selected, check the selectall checkbox
-    // and viceversa
-    $(".case").click(function () {
-
-        if ($(".case").length == $(".case:checked").length) {
-            $("#selectall").attr("checked", "checked");
-        } else {
-            $("#selectall").removeAttr("checked");
-        }
-
-    });
 
 
 });
