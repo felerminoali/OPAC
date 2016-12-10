@@ -133,6 +133,7 @@ if (!empty($id)) {
         <br/>
         <br/>
 
+        <h1>Feedback comments</h1>
         <table>
 
             <tr>
@@ -140,32 +141,32 @@ if (!empty($id)) {
                 <td>
                     <strong>Your comments</strong>
                 </td>
-                <td style="background-color: #dad8e4;">
-                    <textarea name="comments" rows="15" cols="50"></textarea>
+                <td>
+                    <textarea name="comments" rows="15" cols="80"></textarea>
                 </td>
 
             </tr>
 
             <tr>
-                <td>
+                <td colspan="2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </td>
