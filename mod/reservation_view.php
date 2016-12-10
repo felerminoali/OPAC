@@ -178,8 +178,8 @@ if (!empty($id)) {
         <?php
 
     } else {
-        echo '<p>An error has occured 1</p>';
+        echo '<h1>Error</h1><p>An error has occured 1</p>';
     }
 } else {
-    echo '<p>An error has occured 2</p>';
+    echo '<h1>Error</h1> <p>An error has occured 2</p>';
 } ?>
