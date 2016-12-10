@@ -37,7 +37,7 @@ class Loan
         $loanPeriod = $cat['loanPeriod'];
 
         $dueDate->modify('+ ' . $loanPeriod . ' days');
-        $array['duedate'] = Helper::setDate($dueDate);
+        $array['duedate'] = $dueDate->format('Y-m-d-H:i:s');
 
         $objLoan = new Borrow();
         $objLoan->addLoan($array);
