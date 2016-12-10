@@ -66,13 +66,7 @@ class Reservation extends Application
                         return false;
                     }
                 }
-
-
-
-
-
                 return true;
-
             }
         }
 
@@ -152,6 +146,22 @@ class Reservation extends Application
             $this->db->prepareInsert($params);
 
             return $this->db->insert($this->_table_2);
+        }
+    }
+
+
+    public function getCommentsByReservation($reservation = null){
+
+        if(!empty($reservation)){
+
+            if (!empty($id)) {
+                $sql = "SELECT * FROM `{$this->_table_2}`
+                WHERE `reservation`= '" . $this->db->escape($id) . "'
+                ORDER BY `date_posted` DESC";
+
+                return $this->db->fetchAll($sql);
+            }
+
         }
 
     }

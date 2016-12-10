@@ -136,7 +136,6 @@ if (!empty($id)) {
         <h1>Feedback comments</h1>
 
 
-
         <table>
 
             <tr>
@@ -157,30 +156,24 @@ if (!empty($id)) {
                 </td>
             </tr>
 
-            <tr>
-                <td colspan="2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                </td>
-            </tr>
+
+            <?php
+
+            $feedback_comments = $objReservation->getCommentsByReservation($reservation['id']);
+
+            if (!empty($feedback_comments)) {
+
+                foreach ($feedback_comments as $comment) {
+                    ?>
+                    <tr>
+                        <td colspan="2">
+                            <p><?php echo $comment['comment']; ?></p>
+                        </td>
+                    </tr>
+
+                <?php }
+            } ?>
+
 
         </table>
 
