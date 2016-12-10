@@ -16,8 +16,10 @@ require_once("_header.php"); ?>
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         <tr>
             <td >
-                <div class="sbm sbm_blue fl_r selectAll_btn">
-                    <a href="#" class="btn">Select All</a>
+                <div class="sbm sbm_blue fl_r">
+<!--                    <a href="#" class="btn">Select All</a>-->
+                    <input type="checkbox" id="checkAll" class="selectAll_btn">
+                    <span>Check All</span>
                 </div>
             </td>
             <td >

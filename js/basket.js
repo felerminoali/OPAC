@@ -149,16 +149,15 @@ $(document).ready(function () {
     if ($(".selectAll_btn").length > 0) {
         $(".selectAll_btn").click(function () {
 
-            selectAll();
-
+            $('input:checkbox').not(this).prop('checked', this.checked);
         });
     }
 
-    function selectAll() {
-
-        $('input:checkbox').not(this).prop('checked', this.checked);
-
-    }
+    // function selectAll() {
+    //
+    //   
+    //
+    // }
 
 
 });
