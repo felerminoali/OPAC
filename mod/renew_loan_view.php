@@ -16,9 +16,6 @@ $loans = $objBorrow->getBorrowByUser(Session::getSession(Login::$_login_front));
 
 <?php if (!empty($loans)) { ?>
 
-
-    
-
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
             <tr>
                 <td >
