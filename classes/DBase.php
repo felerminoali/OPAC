@@ -140,6 +140,7 @@ class DBase {
 
     public function prepareUpdate($array = null) {
         if (!empty($array)) {
+            $this->_update_sets = array();
             foreach ($array as $key => $value) {
                 $this->_update_sets[] = "`{$key}` = '" . $this->escape($value) . "'";
             }

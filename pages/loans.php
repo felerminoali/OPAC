@@ -41,8 +41,8 @@ require_once("_header.php"); ?>
                     <td>
                         <input type="checkbox" 
                                name="loan_items" 
-                               id="<?php echo $loan['id'] . '_' . $loan['item']; ?>"
-                               value="<?php echo $loan['id'] . '_' . $loan['item']; ?>"
+                               id="<?php echo $loan['id'] . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
+                               value="<?php echo $loan['id'] . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
                                class="case">
                     </td>
 

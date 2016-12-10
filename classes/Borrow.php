@@ -56,6 +56,27 @@ class Borrow extends Application
         }
     }
 
+    public function updateLoan($array = null, $id = null)
+    {
+        if (!empty($array) && !empty($id)) {
+            $this->db->prepareUpdate($array);
+            if ($this->db->update($this->_table, $id)) {
+                return true;
+            }
+            return false;
+        }
+    }
+    
+    public function addLoan($params){
+
+        if (!empty($params)) {
+            
+            $this->db->prepareInsert($params);
+            return $this->db->insert($this->_table);
+            
+        }
+    }
+
 
 
     function save_to_test_log($text)
