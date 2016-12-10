@@ -13,15 +13,30 @@ require_once("_header.php"); ?>
 <?php if (!empty($loans)) { ?>
 
 
+    <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+        <tr>
+            <td >
+                <div class="sbm sbm_blue fl_r select_btn">
+                    <a href="#" class="btn">Select All</a>
+                </div>
+            </td>
+            <td >
+                <div class="sbm sbm_blue fl_l renew_btn">
+                    <a href="#" class="btn">Renew</a>
+                </div>
+            </td>
+        </tr>
 
-        <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+    </table>
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
 
             <tr>
                 <th></th>
                 <th>Item</th>
                 <th class="ta_r col_15">Loan Date</th>
                 <th class="ta_r col_15">Due Date</th>
-                <th class="ta_r col_15">Renew</th>
             </tr>
 
             <?php foreach ($loans as $loan) { ?>
@@ -43,11 +58,7 @@ require_once("_header.php"); ?>
                     <td class="ta_r">
                         <?php echo Helper::setDate(1, $loan['duedate']); ?>
                     </td>
-                    <td class="ta_r">
-                        <div class="sbm sbm_blue fl_r renew_btn">
-                            <a href="#" class="btn">Renew</a>
-                        </div>
-                    </td>
+
                 </tr>
 
             <?php } ?>
