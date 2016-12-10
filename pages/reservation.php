@@ -137,10 +137,9 @@ if (!empty($id)) {
 
             <tr>
 
-                <td
-                "background-color: #dad8e4;">
-                <strong>Your comments</strong>
-                <textarea name="comments" rows="15" cols="50"></textarea>
+                <td style="background-color: #dad8e4;">
+                    <strong>Your comments</strong>
+                    <textarea name="comments" rows="15" cols="50"></textarea>
                 </td>
 
             </tr>
