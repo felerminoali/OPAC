@@ -12,9 +12,9 @@ if(isset($_POST['loans'])){
     foreach ($loans as $loan) {
         $l = explode("_",$loan);
 
-        $out .= 'id: '.$l[0];
-        $out .= 'item: '.$l[1];
-        $out .= 'reservation: '.$l[2];
+        $out .= ' | id: '.$l[0];
+        $out .= ' item: '.$l[1];
+        $out .= ' reservation: '.$l[2];
         $l = null;
     }
 
