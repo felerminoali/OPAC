@@ -95,6 +95,21 @@ class Catalogue extends Application
             return $this->db->fetchOne($sql);
         }
     }
+    
+    
+    public function is_item_available($id = null){
+        if(!empty($id)){
+
+            $item = $this->getItem($id);
+
+            if(!empty($item)){
+                if($item['available'] == 1){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     function save_to_test_log($text)
     {

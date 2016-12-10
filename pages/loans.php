@@ -1,10 +1,11 @@
 <?php
 Login::restrictFront();
 
-$objBorrow = new Loan();
+$objLoan = new Loan();
 $objCatalog = new Catalogue();
 
-$loans = $objBorrow->getLoanByUser(Session::getSession(Login::$_login_front));
+$user = Session::getSession(Login::$_login_front);
+$loans = $objLoan->getLoanByUser($user);
 
 require_once("_header.php"); ?>
 
@@ -39,11 +40,18 @@ require_once("_header.php"); ?>
             <?php foreach ($loans as $loan) { ?>
                 <tr>
                     <td>
+
+                        <?php
+                            $objLoanBR = new LoanBussinessRule();
+
+                        if($objLoanBR->is_renewable($loan['item'], $user)) {
+                        ?>
                         <input type="checkbox" 
                                name="loan_items" 
                                id="<?php echo $loan['id'] . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
                                value="<?php echo $loan['id'] . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
                                class="case">
+                            <?php } ?>
                     </td>
 
                     <td>

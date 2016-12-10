@@ -77,6 +77,24 @@ class Loan extends Application
         }
     }
 
+    public function getQtdRenewalsByUser($item = null, $user=null){
+
+        if(!empty($item) && !empty($user)){
+
+            $sql = "SELECT 
+                        `{$this->_table_1}`.`user`, `{$this->_table}`.item, COUNT(`{$this->_table}`.id) AS `qty`
+                    FROM 
+                        `{$this->_table}`, `{$this->_table_1}`
+                    WHERE
+                        `{$this->_table_1}`.`id` = `{$this->_table}`.`reservation`
+                    AND `{$this->_table_1}`.`user` ='" . $this->db->escape($user) . "'
+                        `{$this->_table}`.`item` ='" . $this->db->escape($item) . "'
+                    AND `renewal` = 1";
+
+            return $this->db->fetchOne($sql);
+
+        }
+    }
 
 
     function save_to_test_log($text)

@@ -171,9 +171,10 @@ if (!empty($rows)) {
                 <?php } ?>
                 <p>
                     <?php
-                    $item_status = $objCatalogue->getStatus($row['status']);
+                    
+                    $message = $objCatalogue->is_item_available($row['id']) ? 'Available' : 'Not Available';
                     $out = '<strong>'.$item_cat['name'].'</strong>';
-                    $out .= ': ' . $item_status['status'];
+                    $out .= ': ' . $message;
                     echo $out;
                     ?>;
                 </p>
