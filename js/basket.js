@@ -30,7 +30,10 @@ $(document).ready(function () {
         var comment = $('#comments').val();
 
         if(comment){
-            alert(comment);    
+            
+            var reservation = $('#comments').attr('rel');
+            
+            alert(comment+" reservation"+reservation);    
         }else{
             alert('Please do not provide empty comment.');
         }
