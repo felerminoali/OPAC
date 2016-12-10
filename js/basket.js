@@ -14,6 +14,10 @@ $(document).ready(function () {
         if ($('#selectall').length > 0) {
             $('#selectall').bind('click', selectAll);
         }
+
+        if ($(".renew_btn").length > 0) {
+            $(".renew_btn").bind('click', renewLoans);
+        }
     }
 
 
@@ -118,15 +122,9 @@ $(document).ready(function () {
     }
 
 
-    if ($(".renew_btn").length > 0) {
-        $(".renew_btn").click(function () {
-            renewLoans();
-        });
-    }
+    
 
     function renewLoans() {
-
-        // alert('renew');
 
         if ($(".case:checked").length > 0) {
 
