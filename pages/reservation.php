@@ -131,8 +131,13 @@ if (!empty($id)) {
             <tr>
 
                 <td>
-                    Your comments:<br>
-                    <textarea name="comments" rows="15" cols="50"></textarea>
+
+                    <div class='container'>
+                        <strong>Your comments</strong>
+                        <div class='section friendly'>
+                            <textarea name="comments" rows="15" cols="50"></textarea>
+                        </div>
+                    </div>
                 </td>
 
             </tr>
