@@ -159,7 +159,8 @@ $(document).ready(function () {
         //     $("#checkAll").attr("data-type", "check");
         // }
 
-        $(".loan_item").prop("checked", true);
+        // $(".loan_item").prop("checked", true);
+        $('input:checkbox').prop("checked", true);
         
         // alert('select all');
     });
