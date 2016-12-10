@@ -11,6 +11,8 @@ require_once('../inc/autoload.php');
 
 $id = Url::getParam('id');
 
+var_dump($id);
+
 if (!empty($id)) {
 
     $objReservation = new Reservation();
@@ -182,5 +184,3 @@ if (!empty($id)) {
 } else {
     require_once('error.php');
 } ?>
-
-?>
