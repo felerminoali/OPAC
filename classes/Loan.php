@@ -12,8 +12,8 @@ class Loan
     public function renewLoan($array = null, $id = null){
         if(!empty($array) && ($id)) {
             
-            $param['checked_in'] = 1;
-            $this->checkIn($param, $id);
+//            $param['checked_in'] = 1;
+//            $this->checkIn($param, $id);
             
             $this->checkOut($array);
         }
@@ -40,10 +40,7 @@ class Loan
         $array['duedate'] = $dueDate;
 
         $objLoan = new Borrow();
-
-//        var_dump($array);
-        
-//        $objLoan->addLoan($array);
+        $objLoan->addLoan($array);
         
         
         
