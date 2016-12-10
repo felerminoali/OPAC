@@ -1,30 +1,45 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: feler
+ * Date: 12/10/2016
+ * Time: 11:28 PM
+ */
 
 
 Login::restrictFront();
 
-$objReservation = new Reservation();
-$reservations = $objReservation->getUserReservations(Session::getSession(Login::$_login_front));
+$id = Url::getParam('id');
 
-$objCatalogue = new Catalogue();
+if (!empty($id)) {
 
+    
+    $objReservation = new Reservation();
+    $reservation = $objReservation->getReservation($id);
 
-require_once("_header.php"); ?>
+    if (!empty($reservation)) {
 
-<h1>Reservation History</h1>
+        require_once('_header.php');
+        ?>
 
-<?php if (!empty($reservations)) { ?>
-
-    <?php foreach ($reservations as $reservation) { ?>
+        <h1>Reservation</h1>
+        
+        <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+            <tr>
+                <td >
+                    <div class="sbm sbm_blue fl_l cancel_reservation">
+                        <a href="#" class="btn">Cancel</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
             <tr>
                 <th colspan="5" class="ta_c">
                     <h4>
                         <strong>
-                            <a href="/?page=reservation&amp;id=<?php echo $reservation['id']; ?>"">
                             Reservation ID: <?php echo $reservation['id']; ?>
-                            </a>
                         </strong>
                     </h4>
                 </th>
@@ -103,13 +118,12 @@ require_once("_header.php"); ?>
             <?php } ?>
         </table>
 
-        <br/>
-        <br/>
 
-    <?php } ?>
-
-<?php } else {
-    echo 'There no reservations';
-} ?>
-
-<?php require_once("_footer.php"); ?>
+    <?php
+        require_once('_footer.php');
+    } else {
+    require_once('error.php');
+}
+} else {
+    require_once('error.php');
+}?>

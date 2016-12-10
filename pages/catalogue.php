@@ -43,7 +43,7 @@ require_once("_header.php");
                     <?php echo Url::getParams4Search(array('search'), Paging::$_key); ?>
                     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
                         <tr>
-                            <th><label for="search">Library catalogue:</label></th>
+                            <th><label for="search">Library catalog:</label></th>
                             <td>
                                 <input type="text" name="search" value="<?php echo stripslashes($search); ?>" class="fld">
                             </td>
