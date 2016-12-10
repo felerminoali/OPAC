@@ -122,6 +122,11 @@ if (!empty($id)) {
             <?php } ?>
         </table>
 
+        <div class="fl_l">
+            <a href="javascript:history.go(-1)">Go back</a>
+        </div>
+
+        
 
     <?php
         require_once('_footer.php');
