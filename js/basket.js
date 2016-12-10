@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     function selectAll() {
         // add multiple select / deselect functionality
-        $('.case').attr('checked', $(this).checked);
+        $('.case').attr('checked', this.checked);
     }
 
     // if all checkbox are selected, check the selectall checkbox
