@@ -12,18 +12,20 @@ class Loan
     public function renewLoan($array = null, $id = null){
         if(!empty($array) && ($id)) {
             
-//            $param['checked_in'] = 1;
-//            $this->checkIn($param, $id);
-            
-            $this->checkOut($array);
+            $param['checked_in'] = 1;
+            if($this->checkIn($param, $id)){
+                if($this->checkOut($array)){
+                    return true;
+                }    
+            }
         }
+        return false;
     }
     
     public function checkIn($array, $id){
-
         // check in 
         $objLoan = new Borrow();
-        $objLoan->updateLoan($array, $id);
+        return $objLoan->updateLoan($array, $id);
     }
     
     public function checkOut($array){
@@ -40,23 +42,9 @@ class Loan
         $array['duedate'] = $dueDate->format('Y-m-d-H:i:s');
 
         $objLoan = new Borrow();
-        $objLoan->addLoan($array);
-        
-//        $out = ' | item: '.$array['item'];
-//        $out .= ' due: '.$array['duedate'];
-//        $out .= ' loandate: '.$array['loandate'];
-//        $out .= ' reservation: '.$array['reservation'];
-//        
-//        $this->save_to_test_log($out);
-        
+        return $objLoan->addLoan($array);
     }
 
 
-    function save_to_test_log($text)
-    {
-        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-        fwrite($fp, $text);
-        fclose($fp);
-    }
 
 }
