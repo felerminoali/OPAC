@@ -13,14 +13,10 @@ require_once("_header.php"); ?>
 <?php if (!empty($loans)) { ?>
 
 
+    <form id="frm_load">
+
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
         <tr>
-            <td >
-                <div class="sbm sbm_blue fl_r">
-<!--                    <a href="#" class="btn">Select All</a>-->
-                    <input type="button" id="checkAll" value="Select/Unselect All ">
-                </div>
-            </td>
             <td >
                 <div class="sbm sbm_blue fl_l renew_btn">
                     <a href="#" class="btn">Renew</a>
@@ -34,7 +30,7 @@ require_once("_header.php"); ?>
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
 
             <tr>
-                <th></th>
+                <th><input type="checkbox" id="selectall"/></th>
                 <th>Item</th>
                 <th class="ta_r col_15">Loan Date</th>
                 <th class="ta_r col_15">Due Date</th>
@@ -43,7 +39,7 @@ require_once("_header.php"); ?>
             <?php foreach ($loans as $loan) { ?>
                 <tr>
                     <td>
-                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>" class="loan_item">
+                        <input type="checkbox" name="loan_items" id="<?php echo $loan['id'] . '_' . $loan['item']; ?>" class="case">
                     </td>
 
                     <td>
@@ -64,6 +60,8 @@ require_once("_header.php"); ?>
 
             <?php } ?>
         </table>
+
+    </form>
 
 <?php } else {
     echo "<p>No loan found</p>";

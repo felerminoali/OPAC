@@ -141,42 +141,28 @@ $(document).ready(function () {
     
     function renewLoans() {
 
-        // alert('renew');
-        $(".loan_item").prop("checked", true);
+        alert('renew');
+        // $(".loan_item").prop("checked", true);
         
     }
 
 
-    // $("#checkAll").attr("data-type", "uncheck");
-    // $("#checkAll").attr("data-type", "check");
-
-    $("#checkAll").click(function() {
-        // if ($("#checkAll").attr("data-type") === "check") {
-        //     $(".loan_item").prop("checked", true);
-        //     $("#checkAll").attr("data-type", "uncheck");
-        // } else {
-        //     $(".loan_item").prop("checked", false);
-        //     $("#checkAll").attr("data-type", "check");
-        // }
-
-        $(".loan_item").prop("checked", true);
-        // $('input:checkbox').prop("checked", true);
-        
-        // alert('select all');
+    // add multiple select / deselect functionality
+    $("#selectall").click(function () {
+        $('.case').attr('checked', this.checked);
     });
 
-    // if ($(".selectAll_btn").length > 0) {
-    //     $(".selectAll_btn").click(function () {
-    //
-    //         $('input:checkbox').not(this).prop('checked', this.checked);
-    //     });
-    // }
+    // if all checkbox are selected, check the selectall checkbox
+    // and viceversa
+    $(".case").click(function(){
 
-    // function selectAll() {
-    //
-    //   
-    //
-    // }
+        if($(".case").length == $(".case:checked").length) {
+            $("#selectall").attr("checked", "checked");
+        } else {
+            $("#selectall").removeAttr("checked");
+        }
+
+    });
 
 
 });
