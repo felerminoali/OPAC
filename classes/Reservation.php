@@ -112,9 +112,9 @@ class Reservation extends Application
             $sql = "SELECT * FROM `{$this->_table}`, `{$this->_table_1}`
                       WHERE 
                       `{$this->_table}`.id = `{$this->_table_1}`.reservation
-                      and `{$this->_table_1}`.item = '" . $this->db->escape($item) . "' 
-                      `user` = '" . $this->db->escape($user) . "'
-                       AND `canceled` = 0";
+                      AND `{$this->_table_1}`.item = '" . $this->db->escape($item) . "' 
+                      AND `user` = '" . $this->db->escape($user) . "'
+                      AND `canceled` = 0";
 
             return $this->db->fetchOne($sql);
         }
