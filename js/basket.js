@@ -145,42 +145,45 @@ $(document).ready(function () {
 
         if ($(".case:checked").length > 0) {
 
+            var myCheckboxes = new Array();
+
             $(".case:checked").each(function () {
         
-                var values = $(this).val();
-                var item = values.split('_');
-        
-                // alert('loan: ' + item[0] + ' item:' + item[1]);
+                // var values = $(this).val();
+                // var item = values.split('_');
 
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/mod/renew_loan.php',
-                    data: ({loan: item[0], item: item[1], reservation:item[2]}),
-                    success: function (data) {
-                        alert("Sucess");
-                        // var new_id = item[0] + '_' + data.job;
-                        // if (data.job != item[1]) {
-                        //     if (data.job == 0) {
-                        //         trigger.attr("rel", new_id);
-                        //         trigger.text("Remove from basket");
-                        //         trigger.addClass("red");
-                        //     } else {
-                        //         trigger.attr("rel", new_id);
-                        //         trigger.text("Add to basket");
-                        //         trigger.removeClass("red");
-                        //     }
-                        //     refreshSmallBasket();
-                        // }
-                    },
-                    error: function (data) {
-                        alert("An error has occurred");
-                    }
-                });
-                return false;
-                
-        
+                myCheckboxes.push($(this).val());
             });
+
+
+            // alert('loan: ' + item[0] + ' item:' + item[1]);
+
+
+            $.ajax({
+                type: 'POST',
+                url: '/mod/renew_loan.php',
+                data: ({loans:myCheckboxes}),
+                success: function (data) {
+                    alert("Sucess");
+                    // var new_id = item[0] + '_' + data.job;
+                    // if (data.job != item[1]) {
+                    //     if (data.job == 0) {
+                    //         trigger.attr("rel", new_id);
+                    //         trigger.text("Remove from basket");
+                    //         trigger.addClass("red");
+                    //     } else {
+                    //         trigger.attr("rel", new_id);
+                    //         trigger.text("Add to basket");
+                    //         trigger.removeClass("red");
+                    //     }
+                    //     refreshSmallBasket();
+                    // }
+                },
+                error: function (data) {
+                    alert("An error has occurred");
+                }
+            });
+            return false;
             
         } else {
             alert("Nothing selected");
