@@ -116,7 +116,7 @@ class Reservation extends Application
                       AND `user` = '" . $this->db->escape($user) . "'
                       AND `canceled` = 0";
 
-            return $this->db->fetchOne($sql);
+            return $this->db->fetchAll($sql);
         }
 
     }
