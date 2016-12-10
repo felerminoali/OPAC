@@ -56,8 +56,10 @@ $(document).ready(function () {
     function refreshReservation(reservation) {
 
         $.ajax({
+            type: 'POST',
             url: '/mod/reservation_view.php',
             dataType: 'html',
+            data: ({reservation: reservation}),
             success: function (data) {
                 $('#reservation_details').html(data);
                 initBinds();
