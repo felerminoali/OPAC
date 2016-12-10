@@ -9,7 +9,7 @@
 class Borrow extends Application
 {
 
-    private $_table = 'borrowed_items';
+    private $_table = 'loans';
     private $_table_1 = 'reservation';
 
     public function getBorrow($id)
