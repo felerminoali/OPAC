@@ -88,7 +88,7 @@ class Loan extends Application
                     WHERE
                         `{$this->_table_1}`.`id` = `{$this->_table}`.`reservation`
                     AND `{$this->_table_1}`.`user` ='" . $this->db->escape($user) . "'
-                        `{$this->_table}`.`item` ='" . $this->db->escape($item) . "'
+                    AND `{$this->_table}`.`item` ='" . $this->db->escape($item) . "'
                     AND `renewal` = 1";
 
             return $this->db->fetchOne($sql);
