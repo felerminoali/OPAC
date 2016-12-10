@@ -143,7 +143,7 @@ if (!empty($id)) {
                     <strong>Your comments</strong>
                 </td>
                 <td>
-                    <textarea name="comments" rows="8" cols="75"></textarea>
+                    <textarea name="comments" id="comments" rows="8" cols="75"></textarea>
                 </td>
             </tr>
 

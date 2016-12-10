@@ -18,8 +18,19 @@ $(document).ready(function () {
         if ($(".renew_btn").length > 0) {
             $(".renew_btn").bind('click', renewLoans);
         }
+
+        if ($(".submit_comment").length > 0) {
+            $(".submit_comment").bind('click', submitComment);
+        }
     }
 
+    
+    function submitComment() {
+        
+        var comment = $('#comments').val();
+        
+        alert(comment);
+    }
 
     function selectAll() {
         // add multiple select / deselect functionality
