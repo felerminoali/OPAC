@@ -26,7 +26,7 @@ class Loan
         $objLoan->updateLoan($array, $id);
     }
     
-    public function checkOut($array, $id){
+    public function checkOut($array){
 
         // Due according to catalog category
         $dueDate = new DateTime(Helper::setDate());
@@ -40,7 +40,10 @@ class Loan
         $array['duedate'] = $dueDate;
 
         $objLoan = new Borrow();
-        $objLoan->addLoan($array);
+
+        var_dump($array);
+        
+//        $objLoan->addLoan($array);
         
         
         
