@@ -44,7 +44,7 @@ if (!empty($user)) {
         if ($objValid->isValid()) {
 
             if($objUser->updateUser($objValid->_post, $user['id'])){
-                Helper::redirect("/");
+                Helper::redirect("/?page=updated");
             }else{
                 $mess = '<p class="red">There was a problem updating your details. <br />';
                 $mess .= 'Please contact administrator. </p>';
@@ -56,7 +56,7 @@ if (!empty($user)) {
     ?>
 
     <h1>My Account</h1>
-
+<p>Do you wish to update your details?</p>
     <p>Please check your details and click <strong>Next</strong>.</p>
 
     <?php echo !empty($mess) ? $mess : null;?>
