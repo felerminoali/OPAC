@@ -11,7 +11,6 @@ require_once('../inc/autoload.php');
 
 $id = Url::getParam('id');
 
-var_dump($id);
 
 if (!empty($id)) {
 
@@ -179,8 +178,8 @@ if (!empty($id)) {
         <?php
 
     } else {
-        require_once('error.php');
+        echo '<p>An error has occured</p>';
     }
 } else {
-    require_once('error.php');
+    echo '<p>An error has occured</p>';
 } ?>

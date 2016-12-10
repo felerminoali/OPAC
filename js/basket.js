@@ -38,7 +38,7 @@ $(document).ready(function () {
                 url: '/mod/submit_comment.php',
                 data: ({reservation: reservation, comment:comment}),
                 success: function (data) {
-                     // refreshReservation(reservation);
+                     refreshReservation(reservation);
                 },
                 error: function (data) {
                     alert("An error has occurred");
