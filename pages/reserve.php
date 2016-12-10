@@ -76,7 +76,7 @@ require_once("_header.php");
                 <label for="notes">Notes: </label>
             </th>
             <td>
-                <textarea name='notes' id='notes' style="border: 1px"></textarea><br/>
+                <textarea name='notes' id='notes' rows="15" cols="50"></textarea><br/>
             </td>
         </tr>
 

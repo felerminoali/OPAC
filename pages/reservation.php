@@ -14,7 +14,6 @@ $id = Url::getParam('id');
 
 if (!empty($id)) {
 
-    
 
     $objReservation = new Reservation();
     $reservation = $objReservation->getReservation($id);
@@ -27,10 +26,10 @@ if (!empty($id)) {
         ?>
 
         <h1>Reservation</h1>
-        
+
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
             <tr>
-                <td >
+                <td>
                     <div class="sbm sbm_blue fl_l cancel_reservation">
                         <a href="#" class="btn">Cancel</a>
                     </div>
@@ -59,7 +58,7 @@ if (!empty($id)) {
             <?php
 
             $items = $objReservation->getItemByReservation($reservation['id']);
-            
+
 
             foreach ($items as $item_res) {
                 $item = $objCatalogue->getItem($item_res['item'])
@@ -126,13 +125,50 @@ if (!empty($id)) {
             <a href="javascript:history.go(-1)">Go back</a>
         </div>
 
-        
 
-    <?php
+        <table>
+
+            <tr>
+
+                <td>
+                    Your comments:<br>
+                    <textarea name="comments" rows="15" cols="50"></textarea>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </td>
+            </tr>
+
+        </table>
+
+        <?php
         require_once('_footer.php');
     } else {
-    require_once('error.php');
-}
+        require_once('error.php');
+    }
 } else {
     require_once('error.php');
-}?>
+} ?>
