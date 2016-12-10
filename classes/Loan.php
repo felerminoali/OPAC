@@ -14,7 +14,7 @@ class Loan
             
             $param['checked_in'] = 1;
             if($this->checkIn($param, $id)){
-                if($this->checkOut($array)){
+                if($this->checkOut($array, 1)){
                     return true;
                 }    
             }
@@ -28,8 +28,9 @@ class Loan
         return $objLoan->updateLoan($array, $id);
     }
     
-    public function checkOut($array){
+    public function checkOut($array, $is_renewal = 0){
 
+        if(!empty($array)){
         // Due according to catalog category
         $dueDate = new DateTime();
 
@@ -40,9 +41,12 @@ class Loan
 
         $dueDate->modify('+ ' . $loanPeriod . ' days');
         $array['duedate'] = $dueDate->format('Y-m-d-H:i:s');
+        $array['renewal'] = $is_renewal;
 
         $objLoan = new Borrow();
         return $objLoan->addLoan($array);
+
+        }
     }
 
 
