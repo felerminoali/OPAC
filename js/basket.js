@@ -156,7 +156,6 @@ $(document).ready(function () {
                 $.ajax({
                     type: 'POST',
                     url: '/mod/renew_loan.php',
-                    dataType: 'json',
                     data: ({loan: item[0], item: item[1], reservation:item[2]}),
                     success: function (data) {
                         alert("Sucess");
