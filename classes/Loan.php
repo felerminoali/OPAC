@@ -29,7 +29,7 @@ class Loan
     public function checkOut($array){
 
         // Due according to catalog category
-        $dueDate = new DateTime(Helper::setDate());
+        $dueDate = new DateTime();
 
         $objCatalogue = new Catalogue();
         $item_details = $objCatalogue->getItem($array['item']);
