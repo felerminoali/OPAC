@@ -19,6 +19,8 @@ if (!empty($id)) {
     $objReservation = new Reservation();
     $reservation = $objReservation->getReservation($id);
 
+    $objCatalogue = new Catalogue();
+
     if (!empty($reservation)) {
 
         require_once('_header.php');
@@ -58,7 +60,6 @@ if (!empty($id)) {
 
             $items = $objReservation->getItemByReservation($reservation['id']);
             
-            var_dump($items);
 
             foreach ($items as $item_res) {
                 $item = $objCatalogue->getItem($item_res['item'])
