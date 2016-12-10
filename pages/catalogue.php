@@ -185,7 +185,7 @@ if (!empty($rows)) {
                     $objReservation = new Reservation();
                     $reservation = $objReservation->getReservationsByUserAndItem($user, $row['id']);
 
-                    if(empty($reservations)){
+                    if(empty($reservation)){
                         echo Basket::activeButton($row['id']);
                     }else{
                         echo '<p><a href="/?page=reservations" class="red">Item already reserved: Please check your reservation</a></p>';
