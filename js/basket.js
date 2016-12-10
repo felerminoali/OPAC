@@ -143,18 +143,19 @@ $(document).ready(function () {
 
         // alert('renew');
 
-        if ($('.case').length > 0) {
-            $('.case input:checked').each(function () {
-
-                var values = $(this).val();
-                var item = values.split('_');
-
-                alert('loan: ' + item[0] + ' item:' + item[1]);
-
-            });
-        } else {
-            alert("Nothing selected");
-        }
+        // if ($(".case").length > 0) {
+        //     $(".case input:checked").each(function () {
+        //
+        //         var values = $(this).val();
+        //         var item = values.split('_');
+        //
+        //         alert('loan: ' + item[0] + ' item:' + item[1]);
+        //
+        //     });
+        // } else {
+        //     alert("Nothing selected");
+        alert($(".case").length);
+        // }
     }
 
 
