@@ -145,7 +145,7 @@ $(document).ready(function () {
 
         if ($(".case:checked").length > 0) {
 
-            $(":checked").each(function () {
+            $(".case:checked").each(function () {
         
                 var values = $(this).val();
                 var item = values.split('_');
