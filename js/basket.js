@@ -148,36 +148,15 @@ $(document).ready(function () {
             var myCheckboxes = new Array();
 
             $(".case:checked").each(function () {
-        
-                // var values = $(this).val();
-                // var item = values.split('_');
-
                 myCheckboxes.push($(this).val());
             });
-
-
-            // alert('loan: ' + item[0] + ' item:' + item[1]);
-
 
             $.ajax({
                 type: 'POST',
                 url: '/mod/renew_loan.php',
                 data: ({loans:myCheckboxes}),
                 success: function (data) {
-                    alert("Sucess");
-                    // var new_id = item[0] + '_' + data.job;
-                    // if (data.job != item[1]) {
-                    //     if (data.job == 0) {
-                    //         trigger.attr("rel", new_id);
-                    //         trigger.text("Remove from basket");
-                    //         trigger.addClass("red");
-                    //     } else {
-                    //         trigger.attr("rel", new_id);
-                    //         trigger.text("Add to basket");
-                    //         trigger.removeClass("red");
-                    //     }
-                    //     refreshSmallBasket();
-                    // }
+                    refreshLoan();
                 },
                 error: function (data) {
                     alert("An error has occurred");
@@ -191,6 +170,26 @@ $(document).ready(function () {
     }
 
 
+    function refreshLoan() {
+
+        $.ajax({
+            url: '/mod/renew_loan_view.php',
+            dataType: 'html',
+            success: function (data) {
+                $('#loan_list').html(data);
+                initBinds();
+                alert("Renew has completed successfully");
+            },
+            error: function (data) {
+                alert('An error has occurred');
+            }
+        });
+
+        
+    }
+    
+    
+    
     // add multiple select / deselect functionality
     $("#selectall").click(function () {
         $('.case').attr('checked', this.checked);
