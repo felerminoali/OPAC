@@ -147,9 +147,8 @@ $(document).ready(function () {
 
 
     // $("#checkAll").attr("data-type", "uncheck");
+    // $("#checkAll").attr("data-type", "check");
 
-
-    $("#checkAll").attr("data-type", "check");
     $("#checkAll").click(function() {
         // if ($("#checkAll").attr("data-type") === "check") {
         //     $(".loan_item").prop("checked", true);
@@ -159,8 +158,8 @@ $(document).ready(function () {
         //     $("#checkAll").attr("data-type", "check");
         // }
 
-        // $(".loan_item").prop("checked", true);
-        $('input:checkbox').prop("checked", true);
+        $(".loan_item").prop("checked", true);
+        // $('input:checkbox').prop("checked", true);
         
         // alert('select all');
     });
