@@ -7,7 +7,7 @@ $(document).ready(function () {
             $('.remove_basket').bind('click', removeFromBasket);
         }
 
-        if ($(".case:checked").length > 0) {
+        if ($(".case").length > 0) {
             $(".case").bind('click', viceVersa);
         }
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
     // if all checkbox are selected, check the selectall checkbox
     // and viceversa
     function viceVersa() {
-        if (this.length == $(".case:checked").length) {
+        if ($(".case").length == $(".case:checked").length) {
             $("#selectall").attr("checked", "checked");
         } else {
             $("#selectall").removeAttr("checked");
