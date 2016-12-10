@@ -10,7 +10,7 @@ $(document).ready(function () {
         // if ($('.renew_btn').length > 0) {
         //     $('.renew_btn').bind('click', renewLoans);
         // }
-        
+
         if ($(".update_basket").length > 0) {
             $(".update_basket").bind('click', updateBasket);
         }
@@ -133,24 +133,28 @@ $(document).ready(function () {
 
     if ($(".renew_btn").length > 0) {
         $(".renew_btn").click(function () {
-            
+
             renewLoans();
-            
+
         });
     }
-    
+
     function renewLoans() {
 
         // alert('renew');
 
-        $('.case input:checked').each(function () {
+        if ($('.case').length > 0) {
+            $('.case input:checked').each(function () {
 
-            var values = $(this).val();
-            var item = values.split('_');
-            
-            alert('loan: '+item[0]+' item:'+item[1]);
+                var values = $(this).val();
+                var item = values.split('_');
 
-        });
+                alert('loan: ' + item[0] + ' item:' + item[1]);
+
+            });
+        } else {
+            alert("Nothing selected");
+        }
     }
 
 
@@ -161,9 +165,9 @@ $(document).ready(function () {
 
     // if all checkbox are selected, check the selectall checkbox
     // and viceversa
-    $(".case").click(function(){
+    $(".case").click(function () {
 
-        if($(".case").length == $(".case:checked").length) {
+        if ($(".case").length == $(".case:checked").length) {
             $("#selectall").attr("checked", "checked");
         } else {
             $("#selectall").removeAttr("checked");
