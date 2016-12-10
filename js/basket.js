@@ -33,13 +33,43 @@ $(document).ready(function () {
             
             var reservation = $('#comments').attr('rel');
             
-            alert(comment+" reservation"+reservation);    
+            // alert(comment+" reservation"+reservation);
+
+            $.ajax({
+                type: 'POST',
+                url: '/mod/renew_loan.php',
+                data: ({reservation: reservation, comment:comment}),
+                success: function (data) {
+                     refreshReservation();
+                },
+                error: function (data) {
+                    alert("An error has occurred");
+                }
+            });
+            return false;
+            
         }else{
             alert('Please do not provide empty comment.');
         }
+
+    }
+    
+    
+    function refreshReservation() {
+
+        $.ajax({
+            url: '/mod/reservation_view.php',
+            dataType: 'html',
+            success: function (data) {
+                $('#reservation_details').html(data);
+                initBinds();
+            },
+            error: function (data) {
+                alert('An error has occurred');
+            }
+        });
         
-
-
+        
     }
 
     function selectAll() {

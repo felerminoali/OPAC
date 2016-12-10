@@ -2,18 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: feler
- * Date: 12/10/2016
- * Time: 11:28 PM
+ * Date: 12/11/2016
+ * Time: 2:52 AM
  */
 
-
-Login::restrictFront();
+require_once('../inc/autoload.php');
 
 
 $id = Url::getParam('id');
 
 if (!empty($id)) {
-
 
     $objReservation = new Reservation();
     $reservation = $objReservation->getReservation($id);
@@ -22,12 +20,8 @@ if (!empty($id)) {
 
     if (!empty($reservation)) {
 
-        require_once('_header.php');
         ?>
-        
-        <div id="reservation_details">
 
-        <h1>Reservation</h1>
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
 
@@ -145,7 +139,8 @@ if (!empty($id)) {
                     <strong>Your comments</strong>
                 </td>
                 <td>
-                    <textarea name="comments" id="comments" rows="8" cols="75" rel="<?php echo $reservation['id'];?>"></textarea>
+                    <textarea name="comments" id="comments" rows="8" cols="75"
+                              rel="<?php echo $reservation['id']; ?>"></textarea>
                 </td>
             </tr>
 
@@ -179,14 +174,13 @@ if (!empty($id)) {
 
         </table>
 
-        </div>
         <?php
-        require_once('_footer.php');
-        
-        
+
     } else {
         require_once('error.php');
     }
 } else {
     require_once('error.php');
 } ?>
+
+?>
