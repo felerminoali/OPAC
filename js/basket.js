@@ -25,7 +25,7 @@ $(document).ready(function () {
     // if all checkbox are selected, check the selectall checkbox
     // and viceversa
     function viceVersa() {
-        if ($(".case").length == $(".case:checked").length) {
+        if ($(this).length == $(".case:checked").length) {
             $("#selectall").attr("checked", "checked");
         } else {
             $("#selectall").removeAttr("checked");
