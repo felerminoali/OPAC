@@ -141,9 +141,16 @@ $(document).ready(function () {
     
     function renewLoans() {
 
-        alert('renew');
-        // $(".loan_item").prop("checked", true);
-        
+        // alert('renew');
+
+        $('.case input:checked').each(function () {
+
+            var values = $(this).val();
+            var item = values.split('_');
+            
+            alert('loan: '+item[0]+' item:'+item[1]);
+
+        });
     }
 
 
