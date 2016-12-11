@@ -40,7 +40,7 @@ $(document).ready(function () {
         // alert('reservation: '+reservation);
         
         // Ask to confirm cancelation
-        // if(true){
+        if(true){
 
             $.ajax({
                 type: 'POST',
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 }
             });
             return false;
-        // }
+        }
     }
     
     function showCancelationMessage() {
