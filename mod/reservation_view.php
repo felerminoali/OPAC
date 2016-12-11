@@ -182,8 +182,8 @@ if(isset($_POST['reservation'])){
         <?php
 
     } else {
-        echo '<h1>Error</h1><p>An error has occured 1</p>';
+        echo '<h1>Error</h1><p>An error has occured</p>';
     }
 } else {
-    echo '<h1>Error</h1> <p>An error has occured 2</p>';
+    echo '<h1>Error</h1> <p>An error has occured </p>';
 } ?>

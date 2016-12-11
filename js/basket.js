@@ -22,8 +22,53 @@ $(document).ready(function () {
         if ($(".submit_comment").length > 0) {
             $(".submit_comment").bind('click', submitComment);
         }
+
+
+        if ($(".cancel_reservation").length > 0) {
+            $(".cancel_reservation").bind('click', cancelReservation);
+        }
+
     }
 
+    function cancelReservation() {
+
+        var reservation = $('#cancel').attr('rel');
+        
+        // Ask to confirm cancelation
+        if(true){
+
+            $.ajax({
+                type: 'POST',
+                url: '/mod/cancel_reservation.php',
+                data: ({reservation: reservation}),
+                success: function (data) {
+                    showCancelationMessage(reservation);
+                },
+                error: function (data) {
+                    alert("An error has occurred");
+                }
+            });
+            return false;
+        }
+    }
+    
+    function showCancelationMessage() {
+
+        $.ajax({
+            type: 'POST',
+            url: '/mod/reservation_view.php',
+            dataType: 'html',
+            data: ({reservation: reservation}),
+            success: function (data) {
+                $('#reservation_details').html(data);
+                initBinds();
+            },
+            error: function (data) {
+                alert('An error has occurred');
+            }
+        });
+        
+    }
     
     function submitComment() {
         

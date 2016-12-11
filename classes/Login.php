@@ -4,13 +4,17 @@ class Login {
 	public static $_login_page_front = "/?page=login";
 	public static $_dashboard_front = "/?page=catalogue";
 	public static $_login_front = "cid";
+
+    // Library Management system
+    public static $_login_page_lms = "/library/";
+    public static $_dashboard_lms = "/library/?page=checkout";
+    public static $_login_lms = "aid";
+
 	
 	public static $_valid_login = "valid";
-	
 	public static $_referrer = "refer";
-	
-        
-        
+
+
 	public static function isLogged($case = null) {
 		if (!empty($case)) {
 			if (
@@ -70,5 +74,32 @@ class Login {
 		}
 	}
 
+    
+    // LMS
+
+    public static function loginLMS($id = null, $url = null){
+        if(!empty($id)){
+            $url = !empty(!$url) ? $url : self::$_dashboard_lms;
+            $_SESSION[self::$_login_lms] = $id;
+            $_SESSION[self::$_valid_login] = 1;
+            Helper::redirect($url);
+        }
+    }
+
+    public static function restrictLMS() {
+        if (!self::isLogged(self::$_login_lms)) {
+            Helper::redirect(self::$_login_page_lms);
+        }
+    }
+
+    public static function getFullNameLMS($id = null) {
+        if (!empty($id)) {
+            $objLMS = new LMS();
+            $user = $objLMS->getUser($id);
+            if (!empty($user)) {
+                return $user['first_name']." ".$user['last_name'];
+            }
+        }
+    }
 
 }

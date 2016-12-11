@@ -165,4 +165,17 @@ class Reservation extends Application
         }
 
     }
+    
+    
+    public function updateReservation($array = null, $id = null)
+    {
+        if (!empty($array) && !empty($id)) {
+            $this->db->prepareUpdate($array);
+            if ($this->db->update($this->_table, $id)) {
+                return true;
+            }
+            return false;
+        }
+    }
+
 }

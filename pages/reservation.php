@@ -41,7 +41,7 @@ if (!empty($id)) {
                 </td>
                 <td>
                     <div class="sbm sbm_blue fl_r cancel_reservation">
-                        <a href="#" class="btn">Cancel</a>
+                        <a href="#" class="btn" rel="<?php echo $reservation['id'];?>" id="cancel">Cancel Reservation</a>
                     </div>
                 </td>
             </tr>

@@ -97,6 +97,12 @@ require_once("_header.php"); ?>
                         ?>
 
                     </td>
+                    <?php 
+                    /*  Status:
+                     *    1. On Waiting
+                     *    2. Ready for Pick up
+                     * */
+                    ?>
                     <td class="ta_r">On Waiting</td>
                 </tr>
 
