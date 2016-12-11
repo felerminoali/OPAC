@@ -31,8 +31,13 @@ $(document).ready(function () {
     }
 
     function cancelReservation() {
+        
+        
+        alert('cancel reservation');
 
         var reservation = $('#cancel').attr('rel');
+
+        alert('reservation: '+reservation);
         
         // Ask to confirm cancelation
         if(true){
