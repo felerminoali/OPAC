@@ -61,7 +61,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '/mod/reservation_view.php',
+            url: '/mod/cancelation_view.php',
             dataType: 'html',
             data: ({reservation: reservation}),
             success: function (data) {
