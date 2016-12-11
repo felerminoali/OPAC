@@ -33,14 +33,14 @@ $(document).ready(function () {
     function cancelReservation() {
         
         
-        alert('cancel reservation');
+        // alert('cancel reservation');
 
         var reservation = $('#cancel').attr('rel');
 
-        alert('reservation: '+reservation);
+        // alert('reservation: '+reservation);
         
         // Ask to confirm cancelation
-        if(true){
+        // if(true){
 
             $.ajax({
                 type: 'POST',
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 }
             });
             return false;
-        }
+        // }
     }
     
     function showCancelationMessage() {
