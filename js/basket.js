@@ -52,15 +52,13 @@ $(document).ready(function () {
     }
     
     function showCancelationMessage(reservation) {
-
         $.ajax({
             type: 'POST',
             url: '/mod/cancelation_view.php',
             dataType: 'html',
             data: ({reservation: reservation}),
             success: function (data) {
-                
-                alert('chegou aqui');
+                // alert('chegou aqui');
                 $('#reservation_details').html(data);
                 initBinds();
             },
