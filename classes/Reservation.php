@@ -65,13 +65,13 @@ class Reservation extends Application
 
                     
 //                    // Status
-//                    $objCatalogue = new Catalogue();
-//                    $cat = $objCatalogue->getCategory($item['category']);
+                    $objCatalogue = new Catalogue();
+                    $cat = $objCatalogue->getCategory($item['category']);
 //
-//                    $objRBR = new ReservationBussinessRule();
-//                    $pick_up_date = $objRBR->get_pick_up_dat($item['id'], $cat['loanPeriod']);
+                    $objRBR = new ReservationBussinessRule();
+                    $pick_up_date = $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod']);
 //
-//                    $today = new DateTime();
+                    $today = new DateTime();
 
 //                    if($pick_up_date == $today){
                         $reservation_item['readyForPickUp'] = 1;

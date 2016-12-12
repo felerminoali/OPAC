@@ -15,13 +15,13 @@ $objReservation = new Reservation();
 $session = Session::getSession('basket');
 $objBasket = new Basket();
 
-$out = array();
+$items = array();
 
 if (!empty($session)) {
     $objCatalogue = new Catalogue();
 
     foreach ($session as $key => $value) {
-        $out[$key] = $objCatalogue->getItem($key);
+        $items[$key] = $objCatalogue->getItem($key);
     }
 }
 
@@ -34,7 +34,7 @@ if ($objSForm->isPost('pickuplocation')) {
     $comment = $objSForm->getPost('notes');
     $reservation['dateRevesed'] = Helper::setDate();
     
-    if($objReservation->placeRevervation($reservation, $out, $comment)){
+    if($objReservation->placeRevervation($reservation, $items, $comment)){
         Session::clear('basket');
         Helper::redirect('/?page=reserved');
     }else{
@@ -49,7 +49,7 @@ require_once("_header.php");
 
 <h1>Place reservation</h1>
 
-<?php if (!empty($out)) { ?>
+<?php if (!empty($items)) { ?>
 
 <form action="" method="post" id="frm_ph">
 
