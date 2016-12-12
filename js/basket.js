@@ -38,21 +38,23 @@ $(document).ready(function () {
 
     function checkoutLoan() {
         
-        var reservation = $('#checkout').attr('rel');
-        var item = loan.split("_");
-
-        $.ajax({
-            type: 'POST',
-            url: '/mod/checkout.php',
-            data: ({reservation: item[0], item: item[1]}),
-            success: function (data) {
-                alert("Success check out");
-            },
-            error: function (data) {
-                alert("An error has occurred");
-            }
-        });
-        return false;
+        // var reservation = $('#checkout').attr('rel');
+        // var item = loan.split("_");
+        //
+        // $.ajax({
+        //     type: 'POST',
+        //     url: '/mod/checkout.php',
+        //     data: ({reservation: item[0], item: item[1]}),
+        //     success: function (data) {
+        //         alert("Success check out");
+        //     },
+        //     error: function (data) {
+        //         alert("An error has occurred");
+        //     }
+        // });
+        // return false;
+        
+        alert("check out");
         
         
     }
