@@ -22,9 +22,10 @@ if (isset($_POST['loan']) && isset($_POST['item'])) {
 
         $array_reservation['readyForPickUp'] = 1;
         $reservation_id = $winner['id'];
+        
 
         // Update reservation status
-        if ($objReservation->updateReservation($array_reservation, $reservation_id)) {
+        if ($objReservation->updateReservation_Item($array_reservation, $item, $reservation_id)) {
 
             // send a notification email
             $objUser = new User();
