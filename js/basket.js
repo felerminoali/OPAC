@@ -63,7 +63,7 @@ $(document).ready(function () {
                 
                 alert('chegou aqui');
                 // $('#reservation_details').html(data);
-                // initBinds();
+                initBinds();
             },
             error: function (data) {
                 alert('An error has occurred');
