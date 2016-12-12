@@ -35,8 +35,7 @@ $(document).ready(function () {
         var reservation = $('#cancel').attr('rel');
         
         // Ask to confirm cancelation
-        if(true){
-
+        if (confirm('Are you sure you want to cancel this reservation?')) {
             $.ajax({
                 type: 'POST',
                 url: '/mod/cancel_reservation.php',
@@ -62,7 +61,7 @@ $(document).ready(function () {
             success: function (data) {
                 
                 alert('chegou aqui');
-                // $('#reservation_details').html(data);
+                $('#reservation_details').html(data);
                 initBinds();
             },
             error: function (data) {
