@@ -47,18 +47,11 @@ class ReservationBussinessRule
             $start_date->modify('+ ' . $total_waiting_day . ' days');
         }
 
-        $this->save_to_test_log(" date: ". $start_date->format('d/m/Y'));
-        
         return $start_date->format('d/m/Y');
 
     }
 
 
-    function save_to_test_log($text)
-    {
-        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-        fwrite($fp, $text);
-        fclose($fp);
-    }
+  
 
 }

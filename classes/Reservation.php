@@ -75,6 +75,10 @@ class Reservation extends Application
 
                     if($pick_up_date == $today){
                         $reservation_item['readyForPickUp'] = 1;
+                        
+                        $this->save_to_test_log($today. " Yes " . $pick_up_date);
+                    }else{
+                        $this->save_to_test_log($today. " No " . $pick_up_date);
                     }
 
                     if (!$this->addReservation_items($reservation_item)) {
@@ -210,6 +214,11 @@ class Reservation extends Application
 
     }
 
-   
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
+    }   
 
 }
