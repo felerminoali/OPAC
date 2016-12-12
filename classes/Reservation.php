@@ -14,23 +14,36 @@ class Reservation extends Application
     private $_table_2 = 'feedback_comments';
     private $_table_3 = "users";
 
-    public function getResevationsByItem($id)
+    public function getResevationsByItem($item = null, $user = null)
     {
 
-        $sql = "SELECT * FROM `{$this->_table}`, `{$this->_table_1}` 
+        if (!empty($item)) {
+
+            $sql = "SELECT * FROM `{$this->_table}`, `{$this->_table_1}`, `{$this->_table_3}`  
                  WHERE 
                   `{$this->_table}`.`id` = `{$this->_table_1}`.`reservation`
-                 AND `{$this->_table_1}`.`item` ='" . $this->db->escape($id) . "'
+                 AND `{$this->_table}`.`user` = `{$this->_table_3}`.`id`
+                 AND `{$this->_table_1}`.`item` ='" . $this->db->escape($item) . "'
                  AND `{$this->_table}`.`canceled` = 0";
 
-        $sql .= ' ORDER BY `dateRevesed` ASC ';
+            $sql .= ($user) ? "`{$this->_table_3}`.id = '" . $this->db->escape($user) . "'" : null;
+            $sql .= ' ORDER BY `dateRevesed` ASC ';
 
-        $this->save_to_test_log($sql);
-        
-        return $this->db->fetchAll($sql);
+            $this->save_to_test_log($sql);
+
+            return $this->db->fetchAll($sql);
+        }
     }
 
-    public function getItemByReservation($id = null)
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
+    }
+
+    public
+    function getItemByReservation($id = null)
     {
 
         if (!empty($id)) {
@@ -43,7 +56,8 @@ class Reservation extends Application
 
     }
 
-    public function placeRevervation($params = null, $items_array = null, $comment = null)
+    public
+    function placeRevervation($params = null, $items_array = null, $comment = null)
     {
 
         if (!empty($params) && !empty($items_array)) {
@@ -52,11 +66,11 @@ class Reservation extends Application
 
                 $reservation_id = $this->db->lastId();
 
-                $comment_array['reservation'] =  $reservation_id;
-                $comment_array['comment'] =  $comment;
-                
+                $comment_array['reservation'] = $reservation_id;
+                $comment_array['comment'] = $comment;
 
-                if(!$this->addFeedBackComments($comment_array)){
+
+                if (!$this->addFeedBackComments($comment_array)) {
                     return false;
                 }
 
@@ -66,20 +80,22 @@ class Reservation extends Application
                     $reservation_item['reservation'] = $reservation_id;
                     $reservation_item['item'] = $item['id'];
 
-                    
+
                     // Status
                     $objCatalogue = new Catalogue();
                     $cat = $objCatalogue->getCategory($item['category']);
 
                     $objRBR = new ReservationBussinessRule();
-                    $pick_up_date = $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod']);
+
+                    $user = Session::getSession(Login::$_login_front);
+                    $pick_up_date = $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod'], $user);
 
                     $today = new DateTime();
 
-                    if($pick_up_date == $today->format('d/m/Y')){
+                    if ($pick_up_date == $today->format('d/m/Y')) {
                         $reservation_item['readyForPickUp'] = 1;
                     }
-                    
+
                     if (!$this->addReservation_items($reservation_item)) {
                         return false;
                     }
@@ -90,7 +106,8 @@ class Reservation extends Application
 
     }
 
-    public function addReservation($params)
+    public
+    function addReservation($params)
     {
 
         if (!empty($params)) {
@@ -102,7 +119,20 @@ class Reservation extends Application
 
     }
 
-    public function addReservation_items($params)
+    public
+    function addFeedBackComments($params)
+    {
+
+        if (!empty($params)) {
+
+            $this->db->prepareInsert($params);
+
+            return $this->db->insert($this->_table_2);
+        }
+    }
+
+    public
+    function addReservation_items($params)
     {
 
         if (!empty($params)) {
@@ -114,8 +144,8 @@ class Reservation extends Application
 
     }
 
-
-    public function getUserReservations($id = null)
+    public
+    function getUserReservations($id = null)
     {
 
         if (!empty($id)) {
@@ -129,7 +159,8 @@ class Reservation extends Application
 
     }
 
-    public function getReservationsByUserAndItem($user = null, $item = null)
+    public
+    function getReservationsByUserAndItem($user = null, $item = null)
     {
 
         if (!empty($user) && !empty($item)) {
@@ -146,7 +177,8 @@ class Reservation extends Application
 
     }
 
-    public function getReservation($id = null)
+    public
+    function getReservation($id = null)
     {
 
         if (!empty($id)) {
@@ -156,21 +188,11 @@ class Reservation extends Application
         }
     }
 
-    public function addFeedBackComments($params)
+    public
+    function getCommentsByReservation($reservation = null)
     {
 
-        if (!empty($params)) {
-
-            $this->db->prepareInsert($params);
-
-            return $this->db->insert($this->_table_2);
-        }
-    }
-
-
-    public function getCommentsByReservation($reservation = null){
-
-        if(!empty($reservation)){
+        if (!empty($reservation)) {
 
             if (!empty($reservation)) {
                 $sql = "SELECT * FROM `{$this->_table_2}`
@@ -183,9 +205,9 @@ class Reservation extends Application
         }
 
     }
-    
-    
-    public function updateReservation($array = null, $id = null)
+
+    public
+    function updateReservation($array = null, $id = null)
     {
         if (!empty($array) && !empty($id)) {
             $this->db->prepareUpdate($array);
@@ -196,28 +218,22 @@ class Reservation extends Application
         }
     }
 
-    public function updateReservation_Item($array , $item, $reservation)
+    public
+    function updateReservation_Item($array, $item, $reservation)
     {
-        if(!empty($readyForPickUp) && !empty($item) && !empty($reservation)){
+        if (!empty($readyForPickUp) && !empty($item) && !empty($reservation)) {
 
             $this->db->prepareUpdate($array);
-            
+
             $sql = "UPDATE `{$this->_table_1}` SET ";
             $sql .= implode(", ", $this->db->_update_sets);
             $sql .= " WHERE 
                         `{$this->_table_2}`.item = '" . $this->db->escape($item) . "'
                         AND `{$this->_table_2}`.reservation = '" . $this->db->escape($reservation) . "'";
             return $this->query($sql);
-            
+
         }
 
     }
-
-    function save_to_test_log($text)
-    {
-        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-        fwrite($fp, $text);
-        fclose($fp);
-    }   
 
 }

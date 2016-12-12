@@ -9,12 +9,12 @@
 class ReservationBussinessRule
 {
 
-    public function get_total_waiting_day($item, $cat){
+    public function get_total_waiting_day($item, $cat, $user){
 
 
         $objReservation = new Reservation();
         $total_waiting_day = 0;
-        $queue_list = $objReservation->getResevationsByItem($item);
+        $queue_list = $objReservation->getResevationsByItem($item, $user);
 
 
         if (!empty($queue_list)) {
@@ -29,7 +29,7 @@ class ReservationBussinessRule
 
     }
 
-    public function get_pick_up_date($item, $cat){
+    public function get_pick_up_date($item, $cat, $user){
 
         $objBorrow = new Loan();
         $borrow = $objBorrow->getLoan($item);
@@ -41,7 +41,7 @@ class ReservationBussinessRule
             // Current date if this catalogue was not borrowed
             $start_date = new DateTime();
         }
-        $total_waiting_day = $this->get_total_waiting_day($item, $cat);
+        $total_waiting_day = $this->get_total_waiting_day($item, $cat, $user);
         
         if ($total_waiting_day!= 0) {
             $start_date->modify('+ ' . $total_waiting_day . ' days');

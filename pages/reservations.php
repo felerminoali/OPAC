@@ -62,40 +62,18 @@ require_once("_header.php"); ?>
                         <?php
 
                         $objRBR = new ReservationBussinessRule();
-//                        $total_waiting_day = 0;
-//                        $queue_list = $objReservation->getResevationsByItem($item['id']);
-//
-//
-//                        if (!empty($queue_list)) {
-//                            $no_of_waiting_days = $cat['loanPeriod'];
-//                            $total_waiting_day = $no_of_waiting_days * count($queue_list);
-//                        }
 
-                        echo $objRBR->get_total_waiting_day($item['id'], $cat['loanPeriod']);
+                        $user = Session::getSession(Login::$_login_front);
+
+                        echo $objRBR->get_total_waiting_day($item['id'], $cat['loanPeriod'], $user);
                         ?>
 
                     </td>
                     <td class="ta_r">
                         <?php
 
-//                        $objBorrow = new Loan();
-//                        $borrow = $objBorrow->getLoan($item['id']);
-//
-//                        if (!empty($borrow)) {
-//                            // Due date if this catalogue was borrowed
-//                            $start_date = new DateTime($borrow['duedate']);
-//                        } else {
-//                            // Current date if this catalogue was not borrowed
-//                            $start_date = new DateTime();
-//                        }
-//
-//                        if ($total_waiting_day != 0) {
-//                            $start_date->modify('+ ' . $total_waiting_day . ' days');
-//                        }
-//
-//                        echo $start_date->format('d/m/Y');
 
-                        echo $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod']);
+                        echo $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod'], $user);
                         ?>
 
                     </td>
