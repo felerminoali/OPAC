@@ -17,6 +17,9 @@ if (isset($_POST['reservation']) && isset($_POST['item'])) {
 
     $objLBR = new ReservationBussinessRule();
     $user_id = Session::getSession(Login::$_login_front);
+    
+    save_to_test_log("item: ".$item.' cate: '.$cat['id'].' iser: '.$user_id);
+    
     $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id);
 
     $objLoan = new Loan();
@@ -69,7 +72,14 @@ if (isset($_POST['reservation']) && isset($_POST['item'])) {
 
     }
 
+}
 
+
+function save_to_test_log($text)
+{
+    $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+    fwrite($fp, $text);
+    fclose($fp);
 }
 
 
