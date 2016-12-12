@@ -8,7 +8,7 @@
 
 Login::restrictLMS();
 
-$objLoan = new Loan();
+$objReservation = new Reservation();
 
 $search = Url::getParam('search');
 
@@ -48,10 +48,9 @@ require_once('template/_header.php');
 if (!empty($search)) {
 
 
-    $loans = $objLoan->getLoans($search);
+    $reservation = $objReservation->getReadyReservations($search);
 
-
-    $objPaging = new Paging($loans, 5);
+    $objPaging = new Paging($reservation, 5);
     $rows = $objPaging->getRecords();
     $objPaging->_url = '/library' . $objPaging->_url;
 
@@ -66,18 +65,15 @@ if (!empty($search)) {
 
         <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
             <tr>
-                <th class="col_5">ID</th>
                 <th>Item</th>
                 <th>Category</th>
                 <th>Reservation</th>
-                <th>Loan date</th>
-                <th>Due date</th>
                 <th class="col_15 ta_r">Check out</th>
             </tr>
 
-            <?php 
+            <?php
             $objCatalog = new Catalogue();
-            
+
             foreach ($rows as $row) {
 
                 $item = $objCatalog->getItem($row['item']);
@@ -85,16 +81,13 @@ if (!empty($search)) {
                 ?>
 
             <tr>
-                <td><?php echo $row['loan'];?></td>
                 <td><?php echo $item['title']; ?></td>
                 <td><?php echo $category['name']; ?></td>
                 <td><?php echo $row['reservation'];?> </td>
-                <td><?php echo Helper::setDate(1,$row['loandate']);?> </td>
-                <td><?php echo Helper::setDate(1,$row['duedate']);?> </td>
-                
+
                 <td class="ta_r">
                     <div class="checkout_loan">
-                        <a href="#" rel="<?php echo $row['loan'].'_'.$row['item'];?>" id="checkout">
+                        <a href="#" rel="" id="checkout">
                             Check out
                         </a>
                     </div>

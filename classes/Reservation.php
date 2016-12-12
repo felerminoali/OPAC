@@ -218,4 +218,29 @@ class Reservation extends Application
 
     }
 
+    public function getReadyReservations($user = null){
+
+        if(!empty($user)){
+
+            $sql = "
+                SELECT
+                    `{$this->_table_1}`.reservation,
+                    `{$this->_table_1}`.item,
+                    `{$this->_table_3}`.id
+                    
+                    FROM
+                    `{$this->_table_1}` ,
+                    `{$this->_table_3}` ,
+                    `{$this->_table}`
+                    
+                    
+                    WHERE
+                    `{$this->_table_3}`.id = `{$this->_table}`.`user`
+                    and `{$this->_table_3}`.card_id = '" . $this->db->escape($user) . "'
+                    and `{$this->_table_1}`.readyForPickUp = 1";
+            return $this->db->fetchOne($sql);
+
+        }
+    }
+
 }
