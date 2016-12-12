@@ -241,8 +241,6 @@ class Reservation extends Application
                     AND `{$this->_table}`.canceled = 0
                     AND `{$this->_table_1}`.readyForPickUp = 1";
             
-            $this->save_to_test_log($sql);
-            
             return $this->db->fetchAll($sql);
 
         }
