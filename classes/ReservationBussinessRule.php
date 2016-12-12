@@ -22,7 +22,7 @@ class ReservationBussinessRule
             $total_waiting_day = $no_of_waiting_days * count($queue_list);
         }
 
-        $this->save_to_test_log(" total waiting: ". $total_waiting_day);
+        
 
         return $total_waiting_day;
         
@@ -43,10 +43,12 @@ class ReservationBussinessRule
         }
         $total_waiting_day = $this->get_total_waiting_day($item, $cat);
         
-        if ($this->get_total_waiting_day($item, $cat)!= 0) {
+        if ($total_waiting_day!= 0) {
             $start_date->modify('+ ' . $total_waiting_day . ' days');
         }
 
+        $this->save_to_test_log(" date: ". $start_date->format('d/m/Y'));
+        
         return $start_date->format('d/m/Y');
 
     }

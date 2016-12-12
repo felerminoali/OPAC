@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Reservation.php" afterPath="$PROJECT_DIR$/classes/Reservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReservationBussinessRule.php" afterPath="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
     </list>
     <ignored path="OPAC-project.iws" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/pages/reserve.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
                 <marker date="1481537517430" expanded="true" signature="1430:1462" ph="..." />
                 <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
@@ -43,8 +42,8 @@
       <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="212" column="3" selection-start-line="212" selection-start-column="3" selection-end-line="212" selection-end-column="3" />
+            <state relative-caret-position="270">
+              <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
               <folding>
                 <marker date="1481539264183" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
                 <marker date="1481539264183" expanded="true" signature="837:941" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
@@ -83,8 +82,8 @@
       <file leaf-file-name="ReservationBussinessRule.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+            <state relative-caret-position="425">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -312,21 +311,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="20396000" />
-    </task>
-    <task id="LOCAL-00288" summary="First commit">
-      <created>1481387143177</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1481387143177</updated>
-    </task>
-    <task id="LOCAL-00289" summary="First commit">
-      <created>1481387423702</created>
-      <option name="number" value="00289" />
-      <option name="presentableId" value="LOCAL-00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1481387423702</updated>
+      <workItem from="1481475234322" duration="20759000" />
     </task>
     <task id="LOCAL-00290" summary="First commit">
       <created>1481387634100</created>
@@ -657,11 +642,25 @@
       <option name="project" value="LOCAL" />
       <updated>1481538318073</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="First commit">
+      <created>1481539380170</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1481539380170</updated>
+    </task>
+    <task id="LOCAL-00338" summary="First commit">
+      <created>1481539582723</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1481539582723</updated>
+    </task>
+    <option name="localTasksCounter" value="339" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206412000" />
+    <option name="totallyTimeSpent" value="206775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1131,18 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/reserve.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <marker date="1481537517430" expanded="true" signature="1430:1462" ph="..." />
-            <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
-            <marker date="1481537517430" expanded="true" signature="1814:1816" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -1159,10 +1146,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/reserve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <marker date="1481537517430" expanded="true" signature="1430:1462" ph="..." />
+            <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
+            <marker date="1481537517430" expanded="true" signature="1814:1816" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="212" column="3" selection-start-line="212" selection-start-column="3" selection-end-line="212" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
           <folding>
             <marker date="1481539264183" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
             <marker date="1481539264183" expanded="true" signature="837:941" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
@@ -1181,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+        <state relative-caret-position="425">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="57" />
           <folding />
         </state>
       </provider>
