@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Loan.php" afterPath="$PROJECT_DIR$/classes/Loan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/basket.js" afterPath="$PROJECT_DIR$/js/basket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/pages/checkout/list.php" afterPath="$PROJECT_DIR$/library/pages/checkout/list.php" />
-    </list>
+    <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="" />
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -41,7 +36,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="basket.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/basket.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="493">
@@ -51,20 +46,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Loan.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Loan.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/classes/Loan.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="123" column="39" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="39" />
+                <state relative-caret-position="823">
+                  <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
                   <folding>
-                    <marker date="1481526143641" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
-                    <marker date="1481526143641" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                    <marker date="1481526143641" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
+                    <marker date="1481526808370" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526808370" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
                   </folding>
                 </state>
               </provider>
@@ -145,9 +140,9 @@
         <option value="$PROJECT_DIR$/library/pages/checkout/search.php" />
         <option value="$PROJECT_DIR$/mod/cancel_reservation.php" />
         <option value="$PROJECT_DIR$/pages/index.php" />
-        <option value="$PROJECT_DIR$/classes/Loan.php" />
         <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
         <option value="$PROJECT_DIR$/js/basket.js" />
+        <option value="$PROJECT_DIR$/classes/Loan.php" />
       </list>
     </option>
   </component>
@@ -297,14 +292,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="8240000" />
-    </task>
-    <task id="LOCAL-00278" summary="First commit">
-      <created>1481383047403</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1481383047403</updated>
+      <workItem from="1481475234322" duration="8595000" />
     </task>
     <task id="LOCAL-00279" summary="First commit">
       <created>1481383126620</created>
@@ -642,23 +630,30 @@
       <option name="project" value="LOCAL" />
       <updated>1481522567049</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="First commit">
+      <created>1481526844271</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1481526844271</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194256000" />
+    <option name="totallyTimeSpent" value="194611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583964" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5098336" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57610476" sideWeight="0.5060514" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55482817" sideWeight="0.49394855" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55482817" sideWeight="0.49394855" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1148,23 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Loan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="123" column="39" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="39" />
-          <folding>
-            <marker date="1481526143641" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
-            <marker date="1481526143641" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481526143641" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1180,6 +1158,23 @@
         <state relative-caret-position="493">
           <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Loan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <marker date="1481526808370" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
+            <marker date="1481526808370" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526808370" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+          </folding>
         </state>
       </provider>
     </entry>
