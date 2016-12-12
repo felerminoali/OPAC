@@ -131,7 +131,29 @@ class Loan extends Application
 
             return $this->db->fetchAll($sql);
         }
+    }
 
+    public function getUserByLoan($id = null){
+        if (!empty($id)){
+
+            $sql = "
+                SELECT 
+                    `{$this->_table_3}`.first_name,
+                    `{$this->_table_3}`.last_name,
+                    `{$this->_table_3}`.email,
+                    `{$this->_table}`.id AS loan,
+                    `{$this->_table_3}`.id AS user_id 
+                FROM 
+                    `{$this->_table}` ,
+                    `{$this->_table_1}` ,
+                    `{$this->_table_3}`
+                 WHERE 
+                    `{$this->_table}`.reservation = `{$this->_table_1}`.id AND
+                    `{$this->_table_1}`.`user` = `{$this->_table_3}`.id AND
+                    `{$this->_table}`.id = '" . $this->db->escape($id) . "'";
+
+            return $this->db->fetchOne($sql);
+        }
     }
 
 }

@@ -61,39 +61,41 @@ require_once("_header.php"); ?>
 
                         <?php
 
-                        $total_waiting_day = 0;
-                        $queue_list = $objReservation->getResevationsByItem($item['id']);
+                        $objRBR = new ReservationBussinessRule();
+//                        $total_waiting_day = 0;
+//                        $queue_list = $objReservation->getResevationsByItem($item['id']);
+//
+//
+//                        if (!empty($queue_list)) {
+//                            $no_of_waiting_days = $cat['loanPeriod'];
+//                            $total_waiting_day = $no_of_waiting_days * count($queue_list);
+//                        }
 
-
-                        if (!empty($queue_list)) {
-                            $no_of_waiting_days = $cat['loanPeriod'];
-                            $total_waiting_day = $no_of_waiting_days * count($queue_list);
-                        }
-
-                        echo $total_waiting_day;
+                        echo $objRBR->get_total_waiting_day($item['id'], $cat['loanPeriod']);
                         ?>
 
                     </td>
                     <td class="ta_r">
                         <?php
 
-                        $objBorrow = new Loan();
-                        $borrow = $objBorrow->getLoan($item['id']);
+//                        $objBorrow = new Loan();
+//                        $borrow = $objBorrow->getLoan($item['id']);
+//
+//                        if (!empty($borrow)) {
+//                            // Due date if this catalogue was borrowed
+//                            $start_date = new DateTime($borrow['duedate']);
+//                        } else {
+//                            // Current date if this catalogue was not borrowed
+//                            $start_date = new DateTime();
+//                        }
+//
+//                        if ($total_waiting_day != 0) {
+//                            $start_date->modify('+ ' . $total_waiting_day . ' days');
+//                        }
+//
+//                        echo $start_date->format('d/m/Y');
 
-                        if (!empty($borrow)) {
-                            // Due date if this catalogue was borrowed
-                            $start_date = new DateTime($borrow['duedate']);
-                        } else {
-                            // Current date if this catalogue was not borrowed
-                            $start_date = new DateTime();
-                        }
-
-                        if ($total_waiting_day != 0) {
-                            $start_date->modify('+ ' . $total_waiting_day . ' days');
-                        }
-
-                        echo $start_date->format('d/m/Y');
-
+                        echo $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod']);
                         ?>
 
                     </td>
@@ -103,7 +105,12 @@ require_once("_header.php"); ?>
                      *    2. Ready for Pick up
                      * */
                     ?>
-                    <td class="ta_r">On Waiting</td>
+                    <td class="ta_r">
+                        <?php
+                            echo ($item_res['readyForPickUp'] == 1) ? "Ready for pickup" : "On Waiting";
+                        ?>
+
+                    </td>
                 </tr>
 
             <?php } ?>

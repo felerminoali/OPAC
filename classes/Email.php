@@ -57,6 +57,19 @@ class Email
                     );
 
                     break;
+                case 2:
+                    // add url to the array
+                    $link = '<a href="'. SITE_URL. '/?page=reservations';
+                    $array['link'] = $link;
+
+                    $this->objMailer->Subject = "Catalog Ready for pickup";
+
+                    $this->objMailer->msgHTML($this->fetchEmail($case, $array));
+                    $this->objMailer->addAddress(
+                        $array['email'], $array['first_name'] . ' ' . $array['last_name']
+                    );
+
+                    break;
             }
             // send email
             $this->objMailer->isHTML(true);

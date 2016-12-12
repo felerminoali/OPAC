@@ -32,13 +32,29 @@ $(document).ready(function () {
             $(".checkout_loan").bind('click', checkoutLoan);
         }
 
-
     }
 
 
 
     function checkoutLoan() {
         alert("check out");
+        var loan = $('#checkout').attr('rel');
+        var item = loan.split("_");
+
+        $.ajax({
+            type: 'POST',
+            url: '/mod/checkout.php',
+            data: ({loan: item[0], item: item[1]}),
+            success: function (data) {
+                
+            },
+            error: function (data) {
+                alert("An error has occurred");
+            }
+        });
+        return false;
+        
+        
     }
 
     function cancelReservation() {

@@ -110,6 +110,8 @@ class LoanBussinessRule
             return $objCatalogue->is_item_available($id);
         }
     }
-
+    
+    
+   
 
 }

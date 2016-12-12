@@ -56,9 +56,6 @@ if (!empty($search)) {
     $objPaging->_url = '/library' . $objPaging->_url;
 
     if (!empty($rows)) {
-
-
-
         ?>
 
         <div class="paging">
@@ -97,8 +94,8 @@ if (!empty($search)) {
                 
                 <td class="ta_r">
                     <div class="checkout_loan">
-                        <a href="#">
-                            Edit
+                        <a href="#" rel="<?php echo $row['loan'].'_'.$row['item'];?>" id="checkout">
+                            Check out
                         </a>
                     </div>
                 </td>
