@@ -116,10 +116,10 @@ class Loan extends Application
                   FROM `{$this->_table}`, `{$this->_table_1}`, `{$this->_table_2}`, `{$this->_table_3}`
                     WHERE
                     `{$this->_table}`.checked_in = 0 
-                    AND `{$this->_table}`.item = `{$this->_table_3}`.id
+                    AND `{$this->_table}`.item = `{$this->_table_2}`.id
                     AND `{$this->_table}`.reservation=`{$this->_table_1}`.id
-                    AND `{$this->_table_1}`.`user` = `{$this->_table_2}`.id
-                    AND `{$this->_table_2}`.card_id = '".$srch."'";
+                    AND `{$this->_table_1}`.`user` = `{$this->_table_3}`.id
+                    AND `{$this->_table_3}`.card_id = '".$srch."'";
 
             $sql .= " ORDER BY `duedate` DESC";
 
