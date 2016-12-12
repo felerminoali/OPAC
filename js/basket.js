@@ -41,8 +41,6 @@ $(document).ready(function () {
         var reservation = $('#checkout').attr('rel');
         var item = reservation.split("_");
         
-        
-        // alert(item[0]+" "+item[1]);
         $.ajax({
             type: 'POST',
             url: '/mod/checkout.php',
@@ -55,8 +53,6 @@ $(document).ready(function () {
             }
         });
         return false;
-        
-        
         
     }
 
