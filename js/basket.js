@@ -42,20 +42,20 @@ $(document).ready(function () {
         var item = reservation.split("_");
         
         
-        alert(item[0]+" "+item[1]);
-        // $.ajax({
-        //     type: 'POST',
-        //     url: '/mod/checkout.php',
-        //     data: ({reservation: item[0], item: item[1]}),
-        //     success: function (data) {
-        //         alert("Success check out");
-        //     },
-        //     error: function (data) {
-        //         alert("An error has occurred");
-        //     }
-        // });
-        // return false;
-        //
+        // alert(item[0]+" "+item[1]);
+        $.ajax({
+            type: 'POST',
+            url: '/mod/checkout.php',
+            data: ({reservation: item[0], item: item[1]}),
+            success: function (data) {
+                alert("Success check out");
+            },
+            error: function (data) {
+                alert("An error has occurred");
+            }
+        });
+        return false;
+        
         
         
     }
