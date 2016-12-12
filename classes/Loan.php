@@ -98,14 +98,6 @@ class Loan extends Application
         }
     }
 
-
-    function save_to_test_log($text)
-    {
-        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-        fwrite($fp, $text);
-        fclose($fp);
-    }
-
     public function getLoans($srch){
 
         if (!empty($srch)) {
@@ -128,6 +120,8 @@ class Loan extends Application
                     AND `{$this->_table_3}`.card_id = '".$srch."'";
 
             $sql .= " ORDER BY `duedate` DESC";
+
+            $this->save_to_test_log($sql);
 
             return $this->db->fetchAll($sql);
         }
@@ -155,5 +149,14 @@ class Loan extends Application
             return $this->db->fetchOne($sql);
         }
     }
+
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
+    }
+
 
 }

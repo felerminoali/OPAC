@@ -29,21 +29,12 @@ class Reservation extends Application
             $sql .= ($user) ? " AND `{$this->_table_3}`.id <> '" . $this->db->escape($user) . "'" : null;
             $sql .= ' ORDER BY `dateRevesed` ASC ';
 
-            $this->save_to_test_log($sql);
-
             return $this->db->fetchAll($sql);
         }
     }
 
-    function save_to_test_log($text)
-    {
-        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-        fwrite($fp, $text);
-        fclose($fp);
-    }
-
-    public
-    function getItemByReservation($id = null)
+    
+    public function getItemByReservation($id = null)
     {
 
         if (!empty($id)) {
@@ -56,8 +47,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function placeRevervation($params = null, $items_array = null, $comment = null)
+    public function placeRevervation($params = null, $items_array = null, $comment = null)
     {
 
         if (!empty($params) && !empty($items_array)) {
@@ -106,8 +96,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function addReservation($params)
+    public function addReservation($params)
     {
 
         if (!empty($params)) {
@@ -119,8 +108,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function addFeedBackComments($params)
+    public function addFeedBackComments($params)
     {
 
         if (!empty($params)) {
@@ -131,8 +119,7 @@ class Reservation extends Application
         }
     }
 
-    public
-    function addReservation_items($params)
+    public function addReservation_items($params)
     {
 
         if (!empty($params)) {
@@ -144,8 +131,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function getUserReservations($id = null)
+    public function getUserReservations($id = null)
     {
 
         if (!empty($id)) {
@@ -159,8 +145,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function getReservationsByUserAndItem($user = null, $item = null)
+    public function getReservationsByUserAndItem($user = null, $item = null)
     {
 
         if (!empty($user) && !empty($item)) {
@@ -177,8 +162,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function getReservation($id = null)
+    public function getReservation($id = null)
     {
 
         if (!empty($id)) {
@@ -206,8 +190,7 @@ class Reservation extends Application
 
     }
 
-    public
-    function updateReservation($array = null, $id = null)
+    public function updateReservation($array = null, $id = null)
     {
         if (!empty($array) && !empty($id)) {
             $this->db->prepareUpdate($array);
@@ -218,8 +201,7 @@ class Reservation extends Application
         }
     }
 
-    public
-    function updateReservation_Item($array, $item, $reservation)
+    public function updateReservation_Item($array, $item, $reservation)
     {
         if (!empty($readyForPickUp) && !empty($item) && !empty($reservation)) {
 
