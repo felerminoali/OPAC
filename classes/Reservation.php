@@ -73,14 +73,10 @@ class Reservation extends Application
 
                     $today = new DateTime();
 
-                    if($pick_up_date == $today){
+                    if($pick_up_date == $today->format('d/m/Y')){
                         $reservation_item['readyForPickUp'] = 1;
-                        $this->save_to_test_log($today->format('d/m/Y'). " Yes " . $pick_up_date);
-                        
-                    }else{
-                        $this->save_to_test_log($today->format('d/m/Y'). " No " . $pick_up_date);
                     }
-
+                    
                     if (!$this->addReservation_items($reservation_item)) {
                         return false;
                     }
