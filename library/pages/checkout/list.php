@@ -71,6 +71,7 @@ if (!empty($search)) {
             <tr>
                 <th class="col_5">ID</th>
                 <th>Item</th>
+                <th>Category</th>
                 <th>Reservation</th>
                 <th>Loan date</th>
                 <th>Due date</th>
@@ -83,12 +84,13 @@ if (!empty($search)) {
             foreach ($rows as $row) {
 
                 $item = $objCatalog->getItem($row['item']);
-                
+                $category = $objCatalog->getCategory($item['id']);
                 ?>
 
             <tr>
                 <td><?php echo $row['loan'];?></td>
-                <td><?php echo $row['item'];?> </td>
+                <td><?php echo $item['title']; ?></td>
+                <td><?php echo $category['name']; ?></td>
                 <td><?php echo $row['reservation'];?> </td>
                 <td><?php echo Helper::setDate(1,$row['loandate']);?> </td>
                 <td><?php echo Helper::setDate(1,$row['duedate']);?> </td>
