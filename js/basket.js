@@ -32,12 +32,7 @@ $(document).ready(function () {
 
     function cancelReservation() {
         
-        
-        // alert('cancel reservation');
-
         var reservation = $('#cancel').attr('rel');
-
-        // alert('reservation: '+reservation);
         
         // Ask to confirm cancelation
         if(true){
@@ -65,8 +60,11 @@ $(document).ready(function () {
             dataType: 'html',
             data: ({reservation: reservation}),
             success: function (data) {
-                $('#reservation_details').html(data);
-                initBinds();
+                
+                alert('chegou aqui');
+                
+                // $('#reservation_details').html(data);
+                // initBinds();
             },
             error: function (data) {
                 alert('An error has occurred');
