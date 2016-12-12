@@ -58,7 +58,6 @@ $(document).ready(function () {
             dataType: 'html',
             data: ({reservation: reservation}),
             success: function (data) {
-                // alert('chegou aqui');
                 $('#reservation_details').html(data);
                 initBinds();
             },
@@ -259,9 +258,5 @@ $(document).ready(function () {
                 alert('An error has occurred');
             }
         });
-
-
     }
-
-
 });
