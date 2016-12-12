@@ -4,6 +4,7 @@
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Reservation.php" afterPath="$PROJECT_DIR$/classes/Reservation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReservationBussinessRule.php" afterPath="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/pages/reserve.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding>
                 <marker date="1481537517430" expanded="true" signature="1430:1462" ph="..." />
                 <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
@@ -39,24 +40,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="421">
+              <caret line="212" column="3" selection-start-line="212" selection-start-column="3" selection-end-line="212" selection-end-column="3" />
               <folding>
-                <marker date="1481537785206" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="2959:3152" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="3371:3729" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="3371:3777" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="3898:3990" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-                <marker date="1481537785206" expanded="true" signature="4432:4544" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537785206" expanded="true" signature="4432:4584" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481537785206" expanded="true" signature="4432:4587" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481537785206" expanded="true" signature="5225:5255" ph="UPDATE `${{$... " />
-                <marker date="1481537785206" expanded="true" signature="5225:5537" ph="UPDATE reser... " />
+                <marker date="1481539264183" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="837:941" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="2967:3160" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="3379:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="3379:3785" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="3906:3998" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+                <marker date="1481539264183" expanded="true" signature="4440:4552" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481539264183" expanded="true" signature="4440:4592" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481539264183" expanded="true" signature="4440:4595" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481539264183" expanded="true" signature="5233:5263" ph="UPDATE `${{$... " />
+                <marker date="1481539264183" expanded="true" signature="5233:5545" ph="UPDATE reser... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="149" column="5" selection-start-line="144" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
+              <folding>
+                <marker date="1481278057633" expanded="true" signature="207:412" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481278057633" expanded="true" signature="2648:2716" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481278057633" expanded="true" signature="2931:3032" ph="UPDATE `${{$... " />
+                <marker date="1481278057633" expanded="true" signature="3197:3314" ph="SELECT `id` ${{$this-&gt;_table}}" />
+                <marker date="1481278057633" expanded="true" signature="3473:3570" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481278057633" expanded="true" signature="3703:3773" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481278057633" expanded="true" signature="4175:4272" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationBussinessRule.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,12 +143,12 @@
         <option value="$PROJECT_DIR$/classes/Email.php" />
         <option value="$PROJECT_DIR$/classes/Loan.php" />
         <option value="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
-        <option value="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
         <option value="$PROJECT_DIR$/pages/reservations.php" />
         <option value="$PROJECT_DIR$/classes/DBase.php" />
         <option value="$PROJECT_DIR$/mod/checkout.php" />
         <option value="$PROJECT_DIR$/pages/reserve.php" />
         <option value="$PROJECT_DIR$/classes/Reservation.php" />
+        <option value="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
       </list>
     </option>
   </component>
@@ -197,6 +226,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OPAC-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OPAC-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -269,21 +312,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="19128000" />
-    </task>
-    <task id="LOCAL-00286" summary="First commit">
-      <created>1481385629431</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1481385629432</updated>
-    </task>
-    <task id="LOCAL-00287" summary="First commit">
-      <created>1481386646850</created>
-      <option name="number" value="00287" />
-      <option name="presentableId" value="LOCAL-00287" />
-      <option name="project" value="LOCAL" />
-      <updated>1481386646850</updated>
+      <workItem from="1481475234322" duration="20396000" />
     </task>
     <task id="LOCAL-00288" summary="First commit">
       <created>1481387143177</created>
@@ -614,11 +643,25 @@
       <option name="project" value="LOCAL" />
       <updated>1481537682076</updated>
     </task>
-    <option name="localTasksCounter" value="335" />
+    <task id="LOCAL-00335" summary="First commit">
+      <created>1481537819086</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1481537819086</updated>
+    </task>
+    <task id="LOCAL-00336" summary="First commit">
+      <created>1481538318073</created>
+      <option name="number" value="00336" />
+      <option name="presentableId" value="LOCAL-00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1481538318073</updated>
+    </task>
+    <option name="localTasksCounter" value="337" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205144000" />
+    <option name="totallyTimeSpent" value="206412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1035,14 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="91" column="36" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -1065,14 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="114" column="3" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1107,7 +1134,7 @@
     <entry file="file://$PROJECT_DIR$/pages/reserve.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
           <folding>
             <marker date="1481537517430" expanded="true" signature="1430:1462" ph="..." />
             <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
@@ -1116,23 +1143,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="149" column="5" selection-start-line="144" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <marker date="1481278057633" expanded="true" signature="207:412" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481278057633" expanded="true" signature="2648:2716" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481278057633" expanded="true" signature="2931:3032" ph="UPDATE `${{$... " />
+            <marker date="1481278057633" expanded="true" signature="3197:3314" ph="SELECT `id` ${{$this-&gt;_table}}" />
+            <marker date="1481278057633" expanded="true" signature="3473:3570" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481278057633" expanded="true" signature="3703:3773" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481278057633" expanded="true" signature="4175:4272" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="421">
+          <caret line="212" column="3" selection-start-line="212" selection-start-column="3" selection-end-line="212" selection-end-column="3" />
           <folding>
-            <marker date="1481537785206" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="2959:3152" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="3371:3729" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="3371:3777" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="3898:3990" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-            <marker date="1481537785206" expanded="true" signature="4432:4544" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537785206" expanded="true" signature="4432:4584" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481537785206" expanded="true" signature="4432:4587" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481537785206" expanded="true" signature="5225:5255" ph="UPDATE `${{$... " />
-            <marker date="1481537785206" expanded="true" signature="5225:5537" ph="UPDATE reser... " />
+            <marker date="1481539264183" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="837:941" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="2967:3160" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="3379:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="3379:3785" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="3906:3998" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+            <marker date="1481539264183" expanded="true" signature="4440:4552" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481539264183" expanded="true" signature="4440:4592" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481539264183" expanded="true" signature="4440:4595" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481539264183" expanded="true" signature="5233:5263" ph="UPDATE `${{$... " />
+            <marker date="1481539264183" expanded="true" signature="5233:5545" ph="UPDATE reser... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>

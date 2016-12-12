@@ -22,6 +22,8 @@ class ReservationBussinessRule
             $total_waiting_day = $no_of_waiting_days * count($queue_list);
         }
 
+        $this->save_to_test_log(" total waiting: " + $total_waiting_day);
+
         return $total_waiting_day;
         
 
@@ -47,6 +49,14 @@ class ReservationBussinessRule
 
         return $start_date->format('d/m/Y');
 
+    }
+
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
