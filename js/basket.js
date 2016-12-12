@@ -37,16 +37,16 @@ $(document).ready(function () {
 
 
     function checkoutLoan() {
-        alert("check out");
-        var loan = $('#checkout').attr('rel');
+        
+        var reservation = $('#checkout').attr('rel');
         var item = loan.split("_");
 
         $.ajax({
             type: 'POST',
             url: '/mod/checkout.php',
-            data: ({loan: item[0], item: item[1]}),
+            data: ({reservation: item[0], item: item[1]}),
             success: function (data) {
-                
+                alert("Success check out");
             },
             error: function (data) {
                 alert("An error has occurred");

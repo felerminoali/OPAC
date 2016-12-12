@@ -1,51 +1,66 @@
 <?php
 require_once('../inc/autoload.php');
 
-if (isset($_POST['loan']) && isset($_POST['item'])) {
+if (isset($_POST['reservation']) && isset($_POST['item'])) {
 
-    $loan = $_POST['loan'];
+    $reservation = $_POST['reservation'];
     $item = $_POST['item'];
+
     $array = array();
-    $array['check_in'] = 1;
+    $array['reservation'] = $reservation;
+    $array['item'] = $item;
+    $array['loandate'] = Helper::setDate();
+
+
+    $objCatalogue = new Catalogue();
+    $cat = $objCatalogue->getCategory($item);
+
+    $objLBR = new ReservationBussinessRule();
+    $user_id = Session::getSession(Login::$_login_front);
+    $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id);
 
     $objLoan = new Loan();
 
-    if ($objLoan->updateLoan($array, $loan)) {
+    if ($objLoan->addLoan($array)) {
 
 
-        // Get the reservation in-line
-        $objReservation = new Reservation();
-        $reservation = $objReservation->getResevationsByItem($item);
-
-        // Get the first in-line
-        $winner = array_shift($reservation);
-
-        $array_reservation['readyForPickUp'] = 1;
-        $reservation_id = $winner['id'];
-        
+        $array_reservation['canceled'] = 1;
 
         // Update reservation status
-        if ($objReservation->updateReservation_Item($array_reservation, $item, $reservation_id)) {
+        if ($objReservation->updateReservation($array_reservation, $reservation)) {
 
-            // send a notification email
-            $objUser = new User();
-            $user = $objUser->getUser($winner['user']);
+            // Get the reservation in-line
+            $objReservation = new Reservation();
+            $elegible = $objReservation->getResevationsByItem($item);
 
-            $objCatalog = new Catalogue();
-            $item_details = $objCatalog->getItem($item);
+            if (!empty($elegible)) {
+                // Get the first in-line
+                $winner = array_shift($elegible);
 
-            if (!empty($user) && !empty($item_details)) {
+                $reservation_item_array['readyForPickUp'] = 1;
 
-                // send email
-                $objEmail = new Email();
+                if ($objReservation->updateReservation_Item($reservation_item_array, $item, $winner['id'])) {
 
-                $process_result = $objEmail->process(2, array(
-                    'email' => $user['email'],
-                    'first_name' => $user['first_name'],
-                    'last_name' => $user['last_name'],
-                    'item' => $item_details['title'],
-                ));
+                    // send a notification email
+                    $objUser = new User();
+                    $user = $objUser->getUser($winner['user']);
 
+                    $item_details = $objCatalog->getItem($item);
+
+                    if (!empty($user) && !empty($item_details)) {
+
+                        // send email
+                        $objEmail = new Email();
+
+                        $process_result = $objEmail->process(2, array(
+                            'email' => $user['email'],
+                            'first_name' => $user['first_name'],
+                            'last_name' => $user['last_name'],
+                            'item' => $item_details['title'],
+                        ));
+
+                    }
+                }
             }
 
 
