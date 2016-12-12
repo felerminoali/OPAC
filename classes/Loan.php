@@ -112,7 +112,13 @@ class Loan extends Application
 
             $srch = $this->db->escape($srch);
 
-            $sql = "SELECT * 
+            $sql = "SELECT 
+                    `{$this->_table}`.id AS loan,
+                    `{$this->_table_2}`.id AS item,
+                    `{$this->_table_1}`.id AS reservation,
+                    `{$this->_table_3}`.id AS user_id,
+                    `loandate`, 
+                    `duedate`
                   FROM `{$this->_table}`, `{$this->_table_1}`, `{$this->_table_2}`, `{$this->_table_3}`
                     WHERE
                     `{$this->_table}`.checked_in = 0 

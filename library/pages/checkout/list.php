@@ -55,7 +55,11 @@ if (!empty($search)) {
     $rows = $objPaging->getRecords();
     $objPaging->_url = '/library' . $objPaging->_url;
 
-    if (!empty($rows)) { ?>
+    if (!empty($rows)) {
+
+
+
+        ?>
 
         <div class="paging">
             <?php echo $objPaging->getNumberFound(); ?>
@@ -73,12 +77,21 @@ if (!empty($search)) {
                 <th class="col_15 ta_r">Check out</th>
             </tr>
 
+            <?php 
+            $objCatalog = new Catalogue();
+            
+            foreach ($rows as $row) {
+
+                $item = $objCatalog->getItem($row['item']);
+                
+                ?>
+
             <tr>
-                <td>32</td>
-                <td>Testing </td>
-                <td>Testing </td>
-                <td>Testing </td>
-                <td>Testing </td>
+                <td><?php echo $row['loan'];?></td>
+                <td><?php echo $row['item'];?> </td>
+                <td><?php echo $row['reservation'];?> </td>
+                <td><?php echo Helper::setDate(1,$row['loandate']);?> </td>
+                <td><?php echo Helper::setDate(1,$row['duedate']);?> </td>
                 
                 <td class="ta_r">
                     <div class="checkout_loan">
@@ -86,9 +99,10 @@ if (!empty($search)) {
                             Edit
                         </a>
                     </div>
-                    
                 </td>
             </tr>
+
+            <?php } ?>
 
         </table>
 
