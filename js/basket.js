@@ -39,7 +39,7 @@ $(document).ready(function () {
     function checkoutLoan() {
         
         var reservation = $('#checkout').attr('rel');
-        var item = loan.split("_");
+        var item = reservation.split("_");
         
         
         alert(item[0]+" "+item[1]);
