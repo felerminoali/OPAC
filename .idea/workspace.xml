@@ -4,6 +4,9 @@
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Reservation.php" afterPath="$PROJECT_DIR$/classes/Reservation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/basket.js" afterPath="$PROJECT_DIR$/js/basket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/pages/checkout/list.php" afterPath="$PROJECT_DIR$/library/pages/checkout/list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod/checkout.php" afterPath="$PROJECT_DIR$/mod/checkout.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,34 +42,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
+            <state relative-caret-position="302">
+              <caret line="89" column="103" selection-start-line="89" selection-start-column="103" selection-end-line="89" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="243" column="12" selection-start-line="243" selection-start-column="12" selection-end-line="243" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="228" column="51" selection-start-line="228" selection-start-column="51" selection-end-line="228" selection-end-column="51" />
               <folding>
-                <marker date="1481555196003" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-                <marker date="1481555196003" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481555196003" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481555196003" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481555196003" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
-                <marker date="1481555196003" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
-                <marker date="1481555196003" expanded="true" signature="6087:6827" ph="SELECT reser... reservation_items" />
+                <marker date="1481555587945" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+                <marker date="1481555587945" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481555587945" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481555587945" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481555587945" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
+                <marker date="1481555587945" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
+                <marker date="1481555587945" expanded="true" signature="6087:6858" ph="SELECT reser... reservation_items" />
               </folding>
             </state>
           </provider>
@@ -85,8 +88,8 @@
       <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/basket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            <state relative-caret-position="323">
+              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -95,8 +98,8 @@
       <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mod/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="17">
+              <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -205,10 +208,10 @@
         <option value="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
         <option value="$PROJECT_DIR$/pages/reservations.php" />
         <option value="$PROJECT_DIR$/classes/Loan.php" />
-        <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
-        <option value="$PROJECT_DIR$/js/basket.js" />
         <option value="$PROJECT_DIR$/mod/checkout.php" />
+        <option value="$PROJECT_DIR$/js/basket.js" />
         <option value="$PROJECT_DIR$/classes/Reservation.php" />
+        <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
       </list>
     </option>
   </component>
@@ -402,14 +405,7 @@
       <workItem from="1481445951838" duration="4236000" />
       <workItem from="1481475234322" duration="21454000" />
       <workItem from="1481541887811" duration="2554000" />
-      <workItem from="1481547383210" duration="7743000" />
-    </task>
-    <task id="LOCAL-00312" summary="First commit">
-      <created>1481397241475</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1481397241475</updated>
+      <workItem from="1481547383210" duration="8135000" />
     </task>
     <task id="LOCAL-00313" summary="First commit">
       <created>1481397442178</created>
@@ -747,11 +743,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481554924325</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="First commit">
+      <created>1481555200614</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1481555200614</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217767000" />
+    <option name="totallyTimeSpent" value="218159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1179,6 +1182,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/reserve.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1188,6 +1199,43 @@
             <marker date="1481537517430" expanded="true" signature="1530:1604" ph="..." />
             <marker date="1481537517430" expanded="true" signature="1814:1816" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/basket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="228" column="51" selection-start-line="228" selection-start-column="51" selection-end-line="228" selection-end-column="51" />
+          <folding>
+            <marker date="1481555587945" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+            <marker date="1481555587945" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481555587945" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481555587945" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481555587945" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
+            <marker date="1481555587945" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
+            <marker date="1481555587945" expanded="true" signature="6087:6858" ph="SELECT reser... reservation_items" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,54 +1249,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/ReservationBussinessRule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="243" column="12" selection-start-line="243" selection-start-column="12" selection-end-line="243" selection-end-column="12" />
-          <folding>
-            <marker date="1481555196003" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-            <marker date="1481555196003" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481555196003" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481555196003" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481555196003" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
-            <marker date="1481555196003" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
-            <marker date="1481555196003" expanded="true" signature="6087:6827" ph="SELECT reser... reservation_items" />
-          </folding>
+          <caret line="89" column="103" selection-start-line="89" selection-start-column="103" selection-end-line="89" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

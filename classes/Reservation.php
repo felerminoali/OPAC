@@ -226,7 +226,8 @@ class Reservation extends Application
                 SELECT
                     `{$this->_table_1}`.reservation,
                     `{$this->_table_1}`.item,
-                    `{$this->_table_3}`.id
+                    `{$this->_table_3}`.id AS `user`
+                    
                     
                     FROM
                     `{$this->_table_1}` ,

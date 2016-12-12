@@ -87,7 +87,7 @@ if (!empty($search)) {
 
                 <td class="ta_r">
                     <div class="checkout_loan">
-                        <a href="#" rel="<?php echo $row['reservation'].'_'.$row['item'];?>" id="checkout">
+                        <a href="#" rel="<?php echo $row['reservation'].'_'.$row['item'].'_'.$row['user'];?>" id="checkout">
                             Check out
                         </a>
                     </div>

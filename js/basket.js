@@ -44,7 +44,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: '/mod/checkout.php',
-            data: ({reservation: item[0], item: item[1]}),
+            data: ({reservation: item[0], item: item[1], user: item[2]}),
             success: function (data) {
                 alert("Success check out");
             },

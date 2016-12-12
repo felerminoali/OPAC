@@ -1,10 +1,11 @@
 <?php
 require_once('../inc/autoload.php');
 
-if (isset($_POST['reservation']) && isset($_POST['item'])) {
+if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'])){
 
     $reservation = $_POST['reservation'];
     $item = $_POST['item'];
+    $user_id = $_POST['user'];
 
     $array = array();
     $array['reservation'] = $reservation;
@@ -16,7 +17,8 @@ if (isset($_POST['reservation']) && isset($_POST['item'])) {
     $cat = $objCatalogue->getCategory($item);
 
     $objLBR = new ReservationBussinessRule();
-    $user_id = Session::getSession(Login::$_login_front);
+    
+    
     
     save_to_test_log("item: ".$item.' cate: '.$cat['id'].' iser: '.$user_id);
     
