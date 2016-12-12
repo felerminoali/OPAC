@@ -26,7 +26,7 @@ class Reservation extends Application
                  AND `{$this->_table_1}`.`item` ='" . $this->db->escape($item) . "'
                  AND `{$this->_table}`.`canceled` = 0";
 
-            $sql .= ($user) ? "`{$this->_table_3}`.id = '" . $this->db->escape($user) . "'" : null;
+            $sql .= ($user) ? " AND `{$this->_table_3}`.id = '" . $this->db->escape($user) . "'" : null;
             $sql .= ' ORDER BY `dateRevesed` ASC ';
 
             $this->save_to_test_log($sql);
