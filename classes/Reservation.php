@@ -23,6 +23,8 @@ class Reservation extends Application
                  AND `{$this->_table}`.`canceled` = 0";
 
         $sql .= ' ORDER BY `dateRevesed` ASC ';
+
+        $this->save_to_test_log($sql);
         
         return $this->db->fetchAll($sql);
     }

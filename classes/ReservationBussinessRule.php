@@ -51,7 +51,12 @@ class ReservationBussinessRule
 
     }
 
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
+    }
 
-  
 
 }
