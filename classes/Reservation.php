@@ -237,6 +237,7 @@ class Reservation extends Application
                     WHERE
                     `{$this->_table_3}`.id = `{$this->_table}`.`user`
                     and `{$this->_table_3}`.card_id = '" . $this->db->escape($user) . "'
+                    AND `{$this->_table}`.canceled = 0
                     and `{$this->_table_1}`.readyForPickUp = 1";
             
             $this->save_to_test_log($sql);

@@ -38,21 +38,21 @@
       <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="243" column="38" selection-start-line="243" selection-start-column="38" selection-end-line="243" selection-end-column="38" />
+            <state relative-caret-position="302">
+              <caret line="246" column="9" selection-start-line="246" selection-start-column="9" selection-end-line="246" selection-end-column="9" />
               <folding>
-                <marker date="1481550840099" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-                <marker date="1481550840099" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481550840099" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481550840099" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481550840099" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
-                <marker date="1481550840099" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
-                <marker date="1481550840099" expanded="true" signature="6087:6693" ph="SELECT reser... reservation_items" />
+                <marker date="1481551200732" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+                <marker date="1481551200732" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481551200732" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481551200732" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481551200732" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
+                <marker date="1481551200732" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
+                <marker date="1481551200732" expanded="true" signature="6087:6748" ph="SELECT reser... reservation_items" />
               </folding>
             </state>
           </provider>
@@ -326,14 +326,7 @@
       <workItem from="1481445951838" duration="4236000" />
       <workItem from="1481475234322" duration="21454000" />
       <workItem from="1481541887811" duration="2554000" />
-      <workItem from="1481547383210" duration="3400000" />
-    </task>
-    <task id="LOCAL-00301" summary="First commit">
-      <created>1481392698285</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1481392698285</updated>
+      <workItem from="1481547383210" duration="3769000" />
     </task>
     <task id="LOCAL-00302" summary="First commit">
       <created>1481393613321</created>
@@ -671,11 +664,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481550546146</updated>
     </task>
-    <option name="localTasksCounter" value="350" />
+    <task id="LOCAL-00350" summary="First commit">
+      <created>1481550854855</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1481550854855</updated>
+    </task>
+    <option name="localTasksCounter" value="351" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213424000" />
+    <option name="totallyTimeSpent" value="213793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -688,7 +688,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5531915" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5531915" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1153,21 +1153,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="243" column="38" selection-start-line="243" selection-start-column="38" selection-end-line="243" selection-end-column="38" />
+        <state relative-caret-position="302">
+          <caret line="246" column="9" selection-start-line="246" selection-start-column="9" selection-end-line="246" selection-end-column="9" />
           <folding>
-            <marker date="1481550840099" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-            <marker date="1481550840099" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481550840099" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481550840099" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481550840099" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
-            <marker date="1481550840099" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
-            <marker date="1481550840099" expanded="true" signature="6087:6693" ph="SELECT reser... reservation_items" />
+            <marker date="1481551200732" expanded="true" signature="419:806" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="1145:1249" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="3544:3737" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="3956:4314" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="3956:4362" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="4483:4575" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+            <marker date="1481551200732" expanded="true" signature="4819:4931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481551200732" expanded="true" signature="4819:4971" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481551200732" expanded="true" signature="4819:4974" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481551200732" expanded="true" signature="5592:5622" ph="UPDATE `${{$... " />
+            <marker date="1481551200732" expanded="true" signature="5592:5904" ph="UPDATE reser... " />
+            <marker date="1481551200732" expanded="true" signature="6087:6748" ph="SELECT reser... reservation_items" />
           </folding>
         </state>
       </provider>
