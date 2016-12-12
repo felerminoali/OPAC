@@ -12,6 +12,7 @@ class Reservation extends Application
     private $_table = 'reservation';
     private $_table_1 = 'reservation_items';
     private $_table_2 = 'feedback_comments';
+    private $_table_3 = "users";
 
     public function getResevationsByItem($id)
     {
