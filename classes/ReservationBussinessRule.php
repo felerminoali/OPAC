@@ -22,7 +22,7 @@ class ReservationBussinessRule
             $total_waiting_day = $no_of_waiting_days * count($queue_list);
         }
 
-        $this->save_to_test_log(" total waiting: " + $total_waiting_day);
+        $this->save_to_test_log(" total waiting: ". $total_waiting_day);
 
         return $total_waiting_day;
         
