@@ -216,9 +216,6 @@ $(document).ready(function () {
 
     }
 
-
-    
-
     function renewLoans() {
 
         if ($(".case:checked").length > 0) {
