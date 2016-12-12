@@ -193,4 +193,21 @@ class Reservation extends Application
         }
     }
 
+    public function updateReservation_Item($array , $item, $reservation)
+    {
+        if(!empty($readyForPickUp) && !empty($item) && !empty($reservation)){
+
+            $this->db->prepareUpdate($array);
+            
+            $sql = "UPDATE `{$this->_table_1}` SET ";
+            $sql .= implode(", ", $this->db->_update_sets);
+            $sql .= " WHERE 
+                        `{$this->_table_2}`.item = '" . $this->db->escape($item) . "'
+                        AND `{$this->_table_2}`.reservation = '" . $this->db->escape($reservation) . "'";
+            return $this->query($sql);
+            
+        }
+
+    }
+
 }
