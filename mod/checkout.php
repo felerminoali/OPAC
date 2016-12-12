@@ -18,16 +18,13 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 
     $objLBR = new ReservationBussinessRule();
     
-    
-    
-    save_to_test_log("item: ".$item.' cate: '.$cat['id'].' iser: '.$user_id);
-    
     $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id);
+
+    save_to_test_log("item: ".$item.' cate: '.$cat['id'].' iser: '.$user_id.' due date: '.$array['duedate'] );
 
     $objLoan = new Loan();
 
     if ($objLoan->addLoan($array)) {
-
 
         $array_reservation['canceled'] = 1;
 
