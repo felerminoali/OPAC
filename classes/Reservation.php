@@ -23,6 +23,8 @@ class Reservation extends Application
                  AND `{$this->_table}`.`canceled` = 0";
 
         $sql .= ' ORDER BY `dateRevesed` ASC ';
+        
+        $this->save_to_test_log($sql);
 
         return $this->db->fetchAll($sql);
     }
@@ -208,6 +210,13 @@ class Reservation extends Application
             
         }
 
+    }
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
