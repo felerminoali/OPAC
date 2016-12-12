@@ -38,9 +38,11 @@ $(document).ready(function () {
 
     function checkoutLoan() {
         
-        // var reservation = $('#checkout').attr('rel');
-        // var item = loan.split("_");
-        //
+        var reservation = $('#checkout').attr('rel');
+        var item = loan.split("_");
+        
+        
+        alert(item[0]+" "+item[1]);
         // $.ajax({
         //     type: 'POST',
         //     url: '/mod/checkout.php',
@@ -53,8 +55,7 @@ $(document).ready(function () {
         //     }
         // });
         // return false;
-        
-        alert("check out");
+        //
         
         
     }
