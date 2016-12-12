@@ -4,7 +4,6 @@
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Reservation.php" afterPath="$PROJECT_DIR$/classes/Reservation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/reserve.php" afterPath="$PROJECT_DIR$/pages/reserve.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,20 +42,20 @@
       <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
+            <state relative-caret-position="194">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
-                <marker date="1481537678020" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="2969:3162" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="3381:3739" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="3381:3787" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="3908:4000" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-                <marker date="1481537678020" expanded="true" signature="4442:4554" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481537678020" expanded="true" signature="4442:4594" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481537678020" expanded="true" signature="4442:4597" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481537678020" expanded="true" signature="5235:5265" ph="UPDATE `${{$... " />
-                <marker date="1481537678020" expanded="true" signature="5235:5547" ph="UPDATE reser... " />
+                <marker date="1481537785206" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="2959:3152" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="3371:3729" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="3371:3777" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="3898:3990" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+                <marker date="1481537785206" expanded="true" signature="4432:4544" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481537785206" expanded="true" signature="4432:4584" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481537785206" expanded="true" signature="4432:4587" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+                <marker date="1481537785206" expanded="true" signature="5225:5255" ph="UPDATE `${{$... " />
+                <marker date="1481537785206" expanded="true" signature="5225:5537" ph="UPDATE reser... " />
               </folding>
             </state>
           </provider>
@@ -270,14 +269,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="18990000" />
-    </task>
-    <task id="LOCAL-00285" summary="First commit">
-      <created>1481385505640</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1481385505640</updated>
+      <workItem from="1481475234322" duration="19128000" />
     </task>
     <task id="LOCAL-00286" summary="First commit">
       <created>1481385629431</created>
@@ -615,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481537556701</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="First commit">
+      <created>1481537682076</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1481537682076</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205006000" />
+    <option name="totallyTimeSpent" value="205144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1119,20 +1118,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
+        <state relative-caret-position="194">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <marker date="1481537678020" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="2969:3162" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="3381:3739" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="3381:3787" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="3908:4000" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-            <marker date="1481537678020" expanded="true" signature="4442:4554" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481537678020" expanded="true" signature="4442:4594" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481537678020" expanded="true" signature="4442:4597" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-            <marker date="1481537678020" expanded="true" signature="5235:5265" ph="UPDATE `${{$... " />
-            <marker date="1481537678020" expanded="true" signature="5235:5547" ph="UPDATE reser... " />
+            <marker date="1481537785206" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="2959:3152" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="3371:3729" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="3371:3777" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="3898:3990" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
+            <marker date="1481537785206" expanded="true" signature="4432:4544" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481537785206" expanded="true" signature="4432:4584" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481537785206" expanded="true" signature="4432:4587" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
+            <marker date="1481537785206" expanded="true" signature="5225:5255" ph="UPDATE `${{$... " />
+            <marker date="1481537785206" expanded="true" signature="5225:5537" ph="UPDATE reser... " />
           </folding>
         </state>
       </provider>
