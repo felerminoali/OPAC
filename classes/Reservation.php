@@ -238,9 +238,21 @@ class Reservation extends Application
                     `{$this->_table_3}`.id = `{$this->_table}`.`user`
                     and `{$this->_table_3}`.card_id = '" . $this->db->escape($user) . "'
                     and `{$this->_table_1}`.readyForPickUp = 1";
-            return $this->db->fetchOne($sql);
+            
+            $this->save_to_test_log($sql);
+            
+            return $this->db->fetchAll($sql);
 
         }
+
+        
+    }
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
