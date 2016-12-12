@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Reservation.php" afterPath="$PROJECT_DIR$/classes/Reservation.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -254,14 +253,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="17939000" />
-    </task>
-    <task id="LOCAL-00283" summary="First commit">
-      <created>1481384889488</created>
-      <option name="number" value="00283" />
-      <option name="presentableId" value="LOCAL-00283" />
-      <option name="project" value="LOCAL" />
-      <updated>1481384889488</updated>
+      <workItem from="1481475234322" duration="18443000" />
     </task>
     <task id="LOCAL-00284" summary="First commit">
       <created>1481385006733</created>
@@ -599,11 +591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481536554951</updated>
     </task>
-    <option name="localTasksCounter" value="332" />
+    <task id="LOCAL-00332" summary="First commit">
+      <created>1481536580741</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1481536580741</updated>
+    </task>
+    <option name="localTasksCounter" value="333" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203955000" />
+    <option name="totallyTimeSpent" value="204459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
