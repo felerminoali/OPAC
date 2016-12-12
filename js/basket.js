@@ -62,7 +62,6 @@ $(document).ready(function () {
             success: function (data) {
                 
                 alert('chegou aqui');
-                
                 // $('#reservation_details').html(data);
                 // initBinds();
             },
