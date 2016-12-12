@@ -57,7 +57,7 @@ $(document).ready(function () {
         }
     }
     
-    function showCancelationMessage() {
+    function showCancelationMessage(reservation) {
 
         $.ajax({
             type: 'POST',
