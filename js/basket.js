@@ -28,6 +28,17 @@ $(document).ready(function () {
             $(".cancel_reservation").bind('click', cancelReservation);
         }
 
+        if ($(".checkout_loan").length > 0) {
+            $(".checkout_loan").bind('click', checkoutLoan);
+        }
+
+
+    }
+
+
+
+    function checkoutLoan() {
+        alert("check out");
     }
 
     function cancelReservation() {

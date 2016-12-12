@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.php" afterPath="$PROJECT_DIR$/pages/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Loan.php" afterPath="$PROJECT_DIR$/classes/Loan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/basket.js" afterPath="$PROJECT_DIR$/js/basket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/pages/checkout/list.php" afterPath="$PROJECT_DIR$/library/pages/checkout/list.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,131 +26,70 @@
     <favorites_list name="OPAC-project" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/pages/checkout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/basket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reservation_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/reservation_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3179">
-              <caret line="187" column="55" selection-start-line="187" selection-start-column="4" selection-end-line="187" selection-end-column="55" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cancelation_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/cancelation_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cancel_reservation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/cancel_reservation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Reservation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-              <folding>
-                <marker date="1481446967821" expanded="true" signature="329:619" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="829:933" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="2437:2630" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="2849:3207" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="2849:3255" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="3376:3468" ph="SELECT * FRO... ${{$this-&gt;_table_1}}" />
-                <marker date="1481446967821" expanded="true" signature="3910:4022" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481446967821" expanded="true" signature="3910:4062" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-                <marker date="1481446967821" expanded="true" signature="3910:4065" ph="SELECT * FRO... ${{$this-&gt;_table_2}}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="catalogue.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/catalogue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="39" column="33" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="33" />
-              <folding>
-                <element signature="e#6#88#0#PHP" expanded="true" />
-                <marker date="1481383547209" expanded="true" signature="760:820" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/pages/checkout/about.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.72087747">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="186">
+                  <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#6#89#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="basket.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/basket.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Loan.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/classes/Loan.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="123" column="39" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="39" />
+                  <folding>
+                    <marker date="1481526143641" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
+                    <marker date="1481526143641" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                    <marker date="1481526143641" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="catalogue.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/catalogue.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="237">
+                  <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#6#88#0#PHP" expanded="true" />
+                    <marker date="1481383547209" expanded="true" signature="760:820" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mod/basket.php" />
         <option value="$PROJECT_DIR$/classes/Paging.php" />
         <option value="$PROJECT_DIR$/mod/basket_small_refresh.php" />
         <option value="$PROJECT_DIR$/classes/Basket.php" />
@@ -178,7 +119,6 @@
         <option value="$PROJECT_DIR$/pages/basket.php" />
         <option value="$PROJECT_DIR$/classes/Catalogue.php" />
         <option value="$PROJECT_DIR$/pages/loans.php" />
-        <option value="$PROJECT_DIR$/classes/Loan.php" />
         <option value="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
         <option value="$PROJECT_DIR$/template/_header.php" />
         <option value="$PROJECT_DIR$/pages/catalogue.php" />
@@ -204,8 +144,10 @@
         <option value="$PROJECT_DIR$/library/pages/checkout/about.php" />
         <option value="$PROJECT_DIR$/library/pages/checkout/search.php" />
         <option value="$PROJECT_DIR$/mod/cancel_reservation.php" />
-        <option value="$PROJECT_DIR$/js/basket.js" />
         <option value="$PROJECT_DIR$/pages/index.php" />
+        <option value="$PROJECT_DIR$/classes/Loan.php" />
+        <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
+        <option value="$PROJECT_DIR$/js/basket.js" />
       </list>
     </option>
   </component>
@@ -279,135 +221,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mod" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,14 +297,7 @@
       <workItem from="1481010080189" duration="117898000" />
       <workItem from="1481371835493" duration="25033000" />
       <workItem from="1481445951838" duration="4236000" />
-      <workItem from="1481475234322" duration="4076000" />
-    </task>
-    <task id="LOCAL-00277" summary="First commit">
-      <created>1481382363514</created>
-      <option name="number" value="00277" />
-      <option name="presentableId" value="LOCAL-00277" />
-      <option name="project" value="LOCAL" />
-      <updated>1481382363514</updated>
+      <workItem from="1481475234322" duration="8240000" />
     </task>
     <task id="LOCAL-00278" summary="First commit">
       <created>1481383047403</created>
@@ -828,11 +635,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481520936126</updated>
     </task>
-    <option name="localTasksCounter" value="326" />
+    <task id="LOCAL-00326" summary="First commit">
+      <created>1481522567049</created>
+      <option name="number" value="00326" />
+      <option name="presentableId" value="LOCAL-00326" />
+      <option name="project" value="LOCAL" />
+      <updated>1481522567049</updated>
+    </task>
+    <option name="localTasksCounter" value="327" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190092000" />
+    <option name="totallyTimeSpent" value="194256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1013,20 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Loan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
-          <folding>
-            <marker date="1481379595208" expanded="true" signature="251:421" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481379595208" expanded="true" signature="658:1247" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481379595208" expanded="true" signature="658:1501" ph="SELECT borro... borrowed_items" />
-            <marker date="1481379595208" expanded="true" signature="2217:2744" ph="SELECT reser... ${{$this-&gt;_table}}" />
-            <marker date="1481379595208" expanded="true" signature="2217:2745" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Basket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1117,6 +917,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="false" />
+            <marker date="1481390390536" expanded="true" signature="1422:1454" ph="..." />
+            <marker date="1481390390536" expanded="true" signature="1522:1596" ph="..." />
+            <marker date="1481390390536" expanded="true" signature="1806:1808" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,7 +960,7 @@
         <state relative-caret-position="170">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#6#89#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1171,7 +977,7 @@
         <state relative-caret-position="306">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="36" />
           <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#6#90#0#PHP" expanded="false" />
             <marker date="1481446342905" expanded="true" signature="1136:1165" ph="..." />
             <marker date="1481446342905" expanded="true" signature="1207:1297" ph="..." />
             <marker date="1481446342905" expanded="true" signature="1240:1297" ph="..." />
@@ -1238,17 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/LMS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <marker date="1481449449215" expanded="true" signature="360:531" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481449449215" expanded="true" signature="837:931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1262,28 +1057,7 @@
         <state relative-caret-position="153">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/catalogue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="33" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <marker date="1481383547209" expanded="true" signature="760:820" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#6#89#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1319,7 +1093,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#6#89#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1339,16 +1113,8 @@
         <state relative-caret-position="391">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#6#89#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,6 +1122,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/LMS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <marker date="1481449449215" expanded="true" signature="360:531" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481449449215" expanded="true" signature="837:931" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <marker date="1481383547209" expanded="true" signature="760:820" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Loan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="123" column="39" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="39" />
+          <folding>
+            <marker date="1481526143641" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="724:1313" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="724:1567" ph="SELECT borro... borrowed_items" />
+            <marker date="1481526143641" expanded="true" signature="2283:2810" ph="SELECT reser... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="2283:2811" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="3183:3657" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="3183:3666" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481526143641" expanded="true" signature="3183:3667" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/pages/checkout/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/basket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding />
         </state>
       </provider>

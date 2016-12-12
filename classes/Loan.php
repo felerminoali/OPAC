@@ -11,6 +11,8 @@ class Loan extends Application
 
     private $_table = 'loans';
     private $_table_1 = 'reservation';
+    private $_table_2 = 'items';
+    private $_table_3 = 'users';
 
     public function getLoan($id)
     {
@@ -102,6 +104,28 @@ class Loan extends Application
         $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
         fwrite($fp, $text);
         fclose($fp);
+    }
+
+    public function getLoans($srch){
+
+        if (!empty($srch)) {
+
+            $srch = $this->db->escape($srch);
+
+            $sql = "SELECT * 
+                  FROM `{$this->_table}`, `{$this->_table_1}`, `{$this->_table_2}`, `{$this->_table_3}`
+                    WHERE
+                    `{$this->_table}`.checked_in = 0 
+                    AND `{$this->_table}`.item = `{$this->_table_3}`.id
+                    AND `{$this->_table}`.reservation=`{$this->_table_1}`.id
+                    AND `{$this->_table_1}`.`user` = `{$this->_table_2}`.id
+                    AND `{$this->_table_2}`.card_id = '".$srch."'";
+
+            $sql .= " ORDER BY `duedate` DESC";
+
+            return $this->db->fetchAll($sql);
+        }
+
     }
 
 }
