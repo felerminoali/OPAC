@@ -36,14 +36,7 @@ class Loan extends Application
         if(!empty($id)){
 
             $sql = "SELECT 
-                        `{$this->_table}`.id, 
-                        `{$this->_table}`.reservation,
-                        `{$this->_table}`.item,
-                        `{$this->_table}`.loandate,
-                        `{$this->_table}`.duedate,
-                        `{$this->_table}`.renewal,
-                        `{$this->_table}`.checked_in,
-                        `{$this->_table_1}`.`user`
+                        *
                         FROM
                         `{$this->_table}` ,
                         `{$this->_table_1}`

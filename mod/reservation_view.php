@@ -9,11 +9,6 @@
 require_once('../inc/autoload.php');
 
 
-//$id = Url::getParam('id');
-
-
-//if (!empty($id)) {
-
 if(isset($_POST['reservation'])){
 
     $id = $_POST['reservation'];

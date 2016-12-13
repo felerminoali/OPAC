@@ -62,19 +62,19 @@ class LoanBussinessRule
              *     2. Maximum number of renew reached
              *     3. Item isn't available
              * */
-            if (!$this->is_reserved($item) && !$this->is_maximum_loan($item, $user) && $this->is_item_available($item)) {
+            if (!$this->is_reserved($item, $user) && !$this->is_maximum_loan($item, $user) && $this->is_item_available($item)) {
                 return true;
             }
         }
         return false;
     }
 
-    private function is_reserved($id = null)
+    private function is_reserved($id = null, $user = null)
     {
-        if (!empty($id)) {
+        if (!empty($id) && !empty($user)) {
 
             $objReservation = new Reservation();
-            $reservation = $objReservation->getResevationsByItem($id);
+            $reservation = $objReservation->getResevationsByItem($id, $user);
 
             if (!empty($reservation)) {
                 return false;
