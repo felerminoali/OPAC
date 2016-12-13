@@ -24,11 +24,10 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 
     if ($objLoan->addLoan($array)) {
 
-        $array_reservation = array();
-        $array_reservation['canceled'] = 1;
 
         // Update reservation status
-        $objReservation->updateReserve(array("canceled" => 1), $reservation);
+        $objReservation = new Reservation();
+        if($objReservation->updateReserve(array("canceled" => 1), $reservation)){
         
 
 
@@ -64,7 +63,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 //
 //                    }
 //                }
-//            }
+            }
 
 
         
