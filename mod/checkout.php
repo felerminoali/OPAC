@@ -36,31 +36,29 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
             if (!empty($elegible)) {
                 // Get the first in-line
                 $winner = array_shift($elegible);
-                save_to_test_log("reservation: ".$winner['reservation']);
 
                 if ($objReservation->updateReservation_Item(array('readyForPickUp' => 1), $item, $winner['reservation'])) {
 
-                    save_to_test_log("sucess");
-//
-//                    // send a notification email
-//                    $objUser = new User();
-//                    $user = $objUser->getUser($winner['user']);
-//
-//                    $item_details = $objCatalog->getItem($item);
-//
-//                    if (!empty($user) && !empty($item_details)) {
-//
-//                        // send email
-//                        $objEmail = new Email();
-//
-//                        $process_result = $objEmail->process(2, array(
-//                            'email' => $user['email'],
-//                            'first_name' => $user['first_name'],
-//                            'last_name' => $user['last_name'],
-//                            'item' => $item_details['title'],
-//                        ));
-//
-//                    }
+
+                    // send a notification email
+                    $objUser = new User();
+                    $user = $objUser->getUser($winner['user']);
+
+                    $item_details = $objCatalogue->getItem($item);
+
+                    if (!empty($user) && !empty($item_details)) {
+
+                        // send email
+                        $objEmail = new Email();
+
+                        $process_result = $objEmail->process(2, array(
+                            'email' => $user['email'],
+                            'first_name' => $user['first_name'],
+                            'last_name' => $user['last_name'],
+                            'item' => $item_details['title'],
+                        ));
+
+                    }
                 }
             }
         }

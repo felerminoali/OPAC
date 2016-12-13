@@ -60,6 +60,9 @@ class Email
                 case 2:
                     // add url to the array
                     $link = '<a href="'. SITE_URL. '/?page=reservations';
+                    $link .='">';
+                    $link .= 'Reservations';
+                    $link .= '</a>';
                     $array['link'] = $link;
 
                     $this->objMailer->Subject = "Catalog Ready for pickup";
