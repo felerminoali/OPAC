@@ -10,7 +10,6 @@ OR
 
 you can register by providing a valid email
 
-
 After login into the system you can perform the following functionalities:
 
 Catalogue - Search catalogue and place reservation
