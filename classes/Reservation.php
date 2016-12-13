@@ -220,7 +220,12 @@ class Reservation extends Application
             $sql .= " WHERE 
                         `{$this->_table_2}`.item = '" . $this->db->escape($item) . "'
                         AND `{$this->_table_2}`.reservation = '" . $this->db->escape($reservation) . "'";
-            return $this->query($sql);
+
+            $this->save_to_test_log($sql);
+
+
+            return true;
+//            return $this->query($sql);
 
         }
 
