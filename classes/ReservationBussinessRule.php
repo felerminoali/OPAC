@@ -29,7 +29,7 @@ class ReservationBussinessRule
 
     }
 
-    public function get_pick_up_date($item, $cat, $user){
+    public function get_pick_up_date($item, $cat, $user, $format = "'d/m/Y'"){
 
         $objBorrow = new Loan();
         $borrow = $objBorrow->getLoan($item);
@@ -47,7 +47,7 @@ class ReservationBussinessRule
             $start_date->modify('+ ' . $total_waiting_day . ' days');
         }
 
-        return $start_date->format('d/m/Y');
+        return $start_date->format($format);
 
     }
 

@@ -148,6 +148,9 @@ class DBase {
             $sql = "UPDATE `{$table}` SET ";
             $sql .= implode(", ", $this->_update_sets);
             $sql .= " WHERE `id` = '" . $this->escape($id) . "'";
+
+            $this->save_to_test_log($sql);
+            
             return $this->query($sql);
         }
     }

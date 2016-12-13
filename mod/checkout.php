@@ -18,14 +18,13 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 
     $objLBR = new ReservationBussinessRule();
     
-    $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id);
+    $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id, "Y-m-d-H:i:s");
 
     $objLoan = new Loan();
 
     if ($objLoan->addLoan($array)) {
 
-
-
+        $array_reservation = array();
         $array_reservation['canceled'] = 1;
 
         // Update reservation status
