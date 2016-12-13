@@ -211,7 +211,7 @@ class Reservation extends Application
 
     public function updateReservation_Item($array, $item, $reservation)
     {
-        if (!empty($readyForPickUp) && !empty($item) && !empty($reservation)) {
+        if (!empty($array) && !empty($item) && !empty($reservation)) {
 
             $this->db->prepareUpdate($array);
 
