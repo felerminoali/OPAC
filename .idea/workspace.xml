@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/LoanBussinessRule.php" afterPath="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/basket.js" afterPath="$PROJECT_DIR$/js/basket.js" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +28,18 @@
       <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mod/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="595">
               <caret line="35" column="29" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/basket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -61,21 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoanBussinessRule.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoanBussinessRule.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/LoanBussinessRule.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
               <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/basket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="128" column="39" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -150,7 +150,6 @@
         <option value="$PROJECT_DIR$/pages/index.php" />
         <option value="$PROJECT_DIR$/pages/reserve.php" />
         <option value="$PROJECT_DIR$/pages/reservations.php" />
-        <option value="$PROJECT_DIR$/js/basket.js" />
         <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
@@ -163,6 +162,7 @@
         <option value="$PROJECT_DIR$/mod/reservation_view.php" />
         <option value="$PROJECT_DIR$/classes/Loan.php" />
         <option value="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
+        <option value="$PROJECT_DIR$/js/basket.js" />
       </list>
     </option>
   </component>
@@ -372,14 +372,7 @@
       <workItem from="1481541887811" duration="2554000" />
       <workItem from="1481547383210" duration="10533000" />
       <workItem from="1481594564838" duration="6426000" />
-      <workItem from="1481639711423" duration="3685000" />
-    </task>
-    <task id="LOCAL-00328" summary="First commit">
-      <created>1481527890971</created>
-      <option name="number" value="00328" />
-      <option name="presentableId" value="LOCAL-00328" />
-      <option name="project" value="LOCAL" />
-      <updated>1481527890971</updated>
+      <workItem from="1481639711423" duration="4252000" />
     </task>
     <task id="LOCAL-00329" summary="First commit">
       <created>1481528143155</created>
@@ -717,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481643392452</updated>
     </task>
-    <option name="localTasksCounter" value="377" />
+    <task id="LOCAL-00377" summary="First commit">
+      <created>1481643754400</created>
+      <option name="number" value="00377" />
+      <option name="presentableId" value="LOCAL-00377" />
+      <option name="project" value="LOCAL" />
+      <updated>1481643754400</updated>
+    </task>
+    <option name="localTasksCounter" value="378" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230668000" />
+    <option name="totallyTimeSpent" value="231235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1155,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="128" column="39" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Loan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1206,18 +1198,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/LoanBussinessRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mod/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="595">
           <caret line="35" column="29" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/LoanBussinessRule.php">
+    <entry file="file://$PROJECT_DIR$/js/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="670">
+          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
           <folding />
         </state>
       </provider>

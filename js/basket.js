@@ -46,7 +46,8 @@ $(document).ready(function () {
             url: '/mod/checkout.php',
             data: ({reservation: item[0], item: item[1], user: item[2]}),
             success: function (data) {
-                alert("Success check out");
+                alert("Item was successfully checkout and email sent to eligible waiting borrower");
+                redirect("/");
             },
             error: function (data) {
                 alert("An error has occurred");
@@ -54,6 +55,10 @@ $(document).ready(function () {
         });
         return false;
         
+    }
+
+    function redirect(url) {
+        window.location = url;
     }
 
     function cancelReservation() {
