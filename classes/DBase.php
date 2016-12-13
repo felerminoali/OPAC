@@ -124,6 +124,8 @@ class DBase {
             $sql .= "`) VALUES ('";
             $sql .= implode("', '", $this->_insert_values);
             $sql .= "')";
+            
+            $this->save_to_test_log($sql);
 
             if ($this->query($sql)) {
                 $this->_id = $this->lastId();
@@ -148,6 +150,14 @@ class DBase {
             $sql .= " WHERE `id` = '" . $this->escape($id) . "'";
             return $this->query($sql);
         }
+    }
+
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
 }
