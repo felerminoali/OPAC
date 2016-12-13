@@ -194,13 +194,13 @@ class Reservation extends Application
     {
         if (!empty($array) && !empty($id)) {
             $this->db->prepareUpdate($array);
+            $this->save_to_test_log("cheguei");
             if ($this->db->update($this->_table, $id)) {
                 return true;
             }
             return false;
-        }else{
-            $this->save_to_test_log("empy");
         }
+        
     }
 
     function save_to_test_log($text)
