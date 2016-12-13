@@ -37,7 +37,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
                 // Get the first in-line
                 $winner = array_shift($elegible);
 
-                save_to_test_log("winner: ".$winner);
+                save_to_test_log("winner: ".$winner['user']);
 
 //                if ($objReservation->updateReservation_Item(array('readyForPickUp' => 1), $item, $winner['id'])) {
 //
