@@ -28,9 +28,8 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
         $array_reservation['canceled'] = 1;
 
         // Update reservation status
-        if ($objReservation->updateReserve(array("canceled" => 1), $reservation)) {
-
-            save_to_test_log("yeeeeeeeeeeeeeeeeeeeeeee");
+        $objReservation->updateReserve(array("canceled" => 1), $reservation);
+        
 
 
 //            // Get the reservation in-line
@@ -68,7 +67,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 //            }
 
 
-        }
+        
 
 
     }
