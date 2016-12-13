@@ -2,6 +2,7 @@
 Myopac
 ====================
 
+Patron: http://myopac.herokuapp.com/
 login: guest
 password: password
 
