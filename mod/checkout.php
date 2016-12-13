@@ -1,7 +1,7 @@
 <?php
 require_once('../inc/autoload.php');
 
-if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'])){
+if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'])) {
 
     $reservation = $_POST['reservation'];
     $item = $_POST['item'];
@@ -17,7 +17,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
     $cat = $objCatalogue->getCategory($item);
 
     $objLBR = new ReservationBussinessRule();
-    
+
     $array['duedate'] = $objLBR->get_pick_up_date($item, $cat['id'], $user_id, "Y-m-d-H:i:s");
 
     $objLoan = new Loan();
@@ -27,21 +27,19 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 
         // Update reservation status
         $objReservation = new Reservation();
-        if($objReservation->updateReserve(array("canceled" => 1), $reservation)){
-        
+        if ($objReservation->updateReserve(array("canceled" => 1), $reservation)) {
 
+            // Get the reservation in-line
+            $objReservation = new Reservation();
+            $elegible = $objReservation->getResevationsByItem($item);
 
-//            // Get the reservation in-line
-//            $objReservation = new Reservation();
-//            $elegible = $objReservation->getResevationsByItem($item);
-//
-//            if (!empty($elegible)) {
-//                // Get the first in-line
-//                $winner = array_shift($elegible);
-//
-//                $reservation_item_array['readyForPickUp'] = 1;
-//
-//                if ($objReservation->updateReservation_Item($reservation_item_array, $item, $winner['id'])) {
+            if (!empty($elegible)) {
+                // Get the first in-line
+                $winner = array_shift($elegible);
+
+                save_to_test_log("winner: ".$winner);
+
+//                if ($objReservation->updateReservation_Item(array('readyForPickUp' => 1), $item, $winner['id'])) {
 //
 //                    // send a notification email
 //                    $objUser = new User();
@@ -64,9 +62,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 //                    }
 //                }
             }
-
-
-        
+        }
 
 
     }
