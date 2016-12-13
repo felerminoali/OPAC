@@ -15,6 +15,6 @@ if(isset($_POST['reservation'])){
     $array['canceled'] = 1;
     
     $objReservation = new Reservation();
-    $objReservation->updateReservation($array, $reservation);
+    $objReservation->updateReserve($array, $reservation);
     
 }

@@ -28,7 +28,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
         $array_reservation['canceled'] = 1;
 
         // Update reservation status
-        if ($objReservation->updateReservation($array_reservation, $reservation)) {
+        if ($objReservation->updateReserve(array("canceled" => 1), $reservation)) {
 
             save_to_test_log("yeeeeeeeeeeeeeeeeeeeeeee");
 

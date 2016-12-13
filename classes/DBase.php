@@ -136,7 +136,7 @@ class DBase {
 
     public function prepareUpdate($array = null) {
         if (!empty($array)) {
-//            $this->_update_sets = array();
+            $this->_update_sets = array();
             foreach ($array as $key => $value) {
                 $this->_update_sets[] = "`{$key}` = '" . $this->escape($value) . "'";
             }
@@ -148,8 +148,6 @@ class DBase {
             $sql = "UPDATE `{$table}` SET ";
             $sql .= implode(", ", $this->_update_sets);
             $sql .= " WHERE `id` = '" . $this->escape($id) . "'";
-
-            $this->save_to_test_log($sql);
             
             return $this->query($sql);
         }
