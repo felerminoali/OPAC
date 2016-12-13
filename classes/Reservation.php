@@ -218,8 +218,8 @@ class Reservation extends Application
             $sql = "UPDATE `{$this->_table_1}` SET ";
             $sql .= implode(", ", $this->db->_update_sets);
             $sql .= " WHERE 
-                        `{$this->_table_2}`.item = '" . $this->db->escape($item) . "'
-                        AND `{$this->_table_2}`.reservation = '" . $this->db->escape($reservation) . "'";
+                        `{$this->_table_1}`.item = '" . $this->db->escape($item) . "'
+                        AND `{$this->_table_1}`.reservation = '" . $this->db->escape($reservation) . "'";
 
             $this->save_to_test_log($sql);
 

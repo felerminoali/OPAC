@@ -38,7 +38,7 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
                 $winner = array_shift($elegible);
                 save_to_test_log("winner: ".$winner['user']);
 
-                if ($objReservation->updateReservation_Item(array('readyForPickUp' => 1), $item, $winner['id'])) {
+                if ($objReservation->updateReservation_Item(array('readyForPickUp' => 1), $item, $winner['reservation'])) {
 //
 //                    // send a notification email
 //                    $objUser = new User();
