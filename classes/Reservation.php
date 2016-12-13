@@ -221,11 +221,9 @@ class Reservation extends Application
                         `{$this->_table_1}`.item = '" . $this->db->escape($item) . "'
                         AND `{$this->_table_1}`.reservation = '" . $this->db->escape($reservation) . "'";
 
-            $this->save_to_test_log($sql);
-
-
-            return true;
-//            return $this->query($sql);
+//            $this->save_to_test_log($sql);
+//            return true;
+            return $this->query($sql);
 
         }
 
