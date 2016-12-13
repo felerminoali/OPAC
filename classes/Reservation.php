@@ -198,7 +198,16 @@ class Reservation extends Application
                 return true;
             }
             return false;
+        }else{
+            $this->save_to_test_log("empy");
         }
+    }
+
+    function save_to_test_log($text)
+    {
+        $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
+        fwrite($fp, $text);
+        fclose($fp);
     }
 
     public function updateReservation_Item($array, $item, $reservation)
