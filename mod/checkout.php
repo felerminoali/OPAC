@@ -24,12 +24,14 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 
     if ($objLoan->addLoan($array)) {
 
+        save_to_test_log("yeeeeeeeeeeeeeeeeeeeeeee");
+
         $array_reservation['canceled'] = 1;
 
         // Update reservation status
         if ($objReservation->updateReservation($array_reservation, $reservation)) {
 
-            save_to_test_log("yeeeeeeeeeeeeeeeeeeeeeee");
+
 
 //            // Get the reservation in-line
 //            $objReservation = new Reservation();
