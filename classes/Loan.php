@@ -75,7 +75,6 @@ class Loan extends Application
             
             $this->db->prepareInsert($params);
             return $this->db->insert($this->_table);
-            
         }
     }
 
