@@ -38,8 +38,8 @@
       <file leaf-file-name="basket.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/basket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+            <state relative-caret-position="221">
+              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -372,14 +372,7 @@
       <workItem from="1481541887811" duration="2554000" />
       <workItem from="1481547383210" duration="10533000" />
       <workItem from="1481594564838" duration="6426000" />
-      <workItem from="1481639711423" duration="4252000" />
-    </task>
-    <task id="LOCAL-00329" summary="First commit">
-      <created>1481528143155</created>
-      <option name="number" value="00329" />
-      <option name="presentableId" value="LOCAL-00329" />
-      <option name="project" value="LOCAL" />
-      <updated>1481528143155</updated>
+      <workItem from="1481639711423" duration="4506000" />
     </task>
     <task id="LOCAL-00330" summary="First commit">
       <created>1481535081822</created>
@@ -717,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481643754400</updated>
     </task>
-    <option name="localTasksCounter" value="378" />
+    <task id="LOCAL-00378" summary="First commit">
+      <created>1481644326198</created>
+      <option name="number" value="00378" />
+      <option name="presentableId" value="LOCAL-00378" />
+      <option name="project" value="LOCAL" />
+      <updated>1481644326199</updated>
+    </task>
+    <option name="localTasksCounter" value="379" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231235000" />
+    <option name="totallyTimeSpent" value="231489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1216,8 +1216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+        <state relative-caret-position="221">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding />
         </state>
       </provider>

@@ -47,7 +47,7 @@ $(document).ready(function () {
             data: ({reservation: item[0], item: item[1], user: item[2]}),
             success: function (data) {
                 alert("Item was successfully checkout and email sent to eligible waiting borrower");
-                redirect("/");
+                redirect("/library/");
             },
             error: function (data) {
                 alert("An error has occurred");
