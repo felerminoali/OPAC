@@ -29,7 +29,7 @@ class ReservationBussinessRule
 
     }
 
-    public function get_pick_up_date($item, $cat, $user, $format = "'d/m/Y'"){
+    public function get_pick_up_date($item, $cat, $user, $format = 'd/m/Y'){
 
         $objBorrow = new Loan();
         $borrow = $objBorrow->getLoan($item);
