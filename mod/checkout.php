@@ -69,11 +69,6 @@ if (isset($_POST['reservation']) && isset($_POST['item']) && isset($_POST['user'
 }
 
 
-function save_to_test_log($text)
-{
-    $fp = fopen(ROOT_PATH . DS . "log" . DS . "error.log", 'a');
-    fwrite($fp, $text);
-    fclose($fp);
-}
+
 
 
