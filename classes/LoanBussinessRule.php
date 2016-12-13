@@ -69,18 +69,18 @@ class LoanBussinessRule
         return false;
     }
 
-    private function is_reserved($id = null, $user = null)
+    private function is_reserved($item=null, $user = null)
     {
-        if (!empty($id) && !empty($user)) {
+        if (!empty($item) && !empty($user)) {
 
             $objReservation = new Reservation();
-            $reservation = $objReservation->getResevationsByItem($id, $user);
+            $reservation = $objReservation->getResevationsByItem($item, $user);
 
             if (!empty($reservation)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     private function is_maximum_loan($item = null, $user = null)
