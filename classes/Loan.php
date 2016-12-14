@@ -36,7 +36,7 @@ class Loan extends Application
         if(!empty($id)){
 
             $sql = "SELECT 
-                        *
+                        *, `{$this->_table}`.id AS `loan_id`
                         FROM
                         `{$this->_table}` ,
                         `{$this->_table_1}`
