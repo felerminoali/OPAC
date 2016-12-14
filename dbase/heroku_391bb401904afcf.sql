@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50546
 File Encoding         : 65001
 
-Date: 2016-12-14 00:08:17
+Date: 2016-12-14 11:46:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -324,7 +324,7 @@ CREATE TABLE `feedback_comments` (
   PRIMARY KEY (`id`),
   KEY `feedback_comments_ibfk_1` (`reservation`),
   CONSTRAINT `feedback_comments_ibfk_1` FOREIGN KEY (`reservation`) REFERENCES `reservation` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=892 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=902 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of feedback_comments
@@ -434,7 +434,7 @@ CREATE TABLE `loans` (
   KEY `loans_ibfk_4` (`reservation`),
   CONSTRAINT `loans_ibfk_4` FOREIGN KEY (`reservation`) REFERENCES `reservation` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `loans_ibfk_2` FOREIGN KEY (`item`) REFERENCES `items` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1102 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1142 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of loans
@@ -456,7 +456,7 @@ CREATE TABLE `reservation` (
   KEY `reservation_ibfk_4` (`user`),
   CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`pickuplocation`) REFERENCES `library` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `reservation_ibfk_4` FOREIGN KEY (`user`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=862 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=872 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of reservation

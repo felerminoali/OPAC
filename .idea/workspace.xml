@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screeanshot/Untitled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screeanshot/Untitled2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/DBase.php" afterPath="$PROJECT_DIR$/classes/DBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Loan.php" afterPath="$PROJECT_DIR$/classes/Loan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbase/heroku_391bb401904afcf.sql" afterPath="$PROJECT_DIR$/dbase/heroku_391bb401904afcf.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/loans.php" afterPath="$PROJECT_DIR$/pages/loans.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,63 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/basket.js">
+      <file leaf-file-name="renew_loan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/renew_loan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="306">
-                <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index.php">
+      <file leaf-file-name="loans.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/loans.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heroku_391bb401904afcf.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbase/heroku_391bb401904afcf.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/about.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+            <state relative-caret-position="306">
+              <caret line="51" column="66" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -93,58 +49,15 @@
       <file leaf-file-name="Loan.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Loan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="289">
+              <caret line="38" column="59" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="59" />
               <folding>
-                <marker date="1481686683679" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481686683679" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481686683679" expanded="true" signature="1904:2432" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481686683679" expanded="true" signature="2635:3396" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481686683679" expanded="true" signature="3667:4328" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481687086826" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481687086826" expanded="true" signature="724:1219" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481687086826" expanded="true" signature="1939:2467" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481687086826" expanded="true" signature="2670:3431" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481687086826" expanded="true" signature="3702:4363" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBase.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classes/DBase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
-              <folding>
-                <marker date="1481686683545" expanded="true" signature="3152:3177" ph="INSERT INTO `${{$table}}`... " />
-                <marker date="1481686683545" expanded="true" signature="3947:3968" ph="UPDATE `${{$... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loans.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/loans.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="renew_loan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/renew_loan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoanBussinessRule.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/LoanBussinessRule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +83,6 @@
         <option value="$PROJECT_DIR$/mod/renew_loan_view.php" />
         <option value="$PROJECT_DIR$/pages/basket.php" />
         <option value="$PROJECT_DIR$/classes/Catalogue.php" />
-        <option value="$PROJECT_DIR$/pages/loans.php" />
         <option value="$PROJECT_DIR$/template/_header.php" />
         <option value="$PROJECT_DIR$/pages/catalogue.php" />
         <option value="$PROJECT_DIR$/css/core.css" />
@@ -206,8 +118,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pages/index.php" />
         <option value="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
-        <option value="$PROJECT_DIR$/classes/Loan.php" />
         <option value="$PROJECT_DIR$/classes/DBase.php" />
+        <option value="$PROJECT_DIR$/classes/Loan.php" />
+        <option value="$PROJECT_DIR$/pages/loans.php" />
       </list>
     </option>
   </component>
@@ -268,76 +181,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mod" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="emails" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OPAC-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,21 +262,7 @@
       <workItem from="1481594564838" duration="6426000" />
       <workItem from="1481639711423" duration="6613000" />
       <workItem from="1481648354834" duration="1396000" />
-      <workItem from="1481685178609" duration="1238000" />
-    </task>
-    <task id="LOCAL-00341" summary="First commit">
-      <created>1481542161593</created>
-      <option name="number" value="00341" />
-      <option name="presentableId" value="LOCAL-00341" />
-      <option name="project" value="LOCAL" />
-      <updated>1481542161595</updated>
-    </task>
-    <task id="LOCAL-00342" summary="First commit">
-      <created>1481542451382</created>
-      <option name="number" value="00342" />
-      <option name="presentableId" value="LOCAL-00342" />
-      <option name="project" value="LOCAL" />
-      <updated>1481542451382</updated>
+      <workItem from="1481685178609" duration="2233000" />
     </task>
     <task id="LOCAL-00343" summary="First commit">
       <created>1481543563019</created>
@@ -764,11 +593,25 @@
       <option name="project" value="LOCAL" />
       <updated>1481685751571</updated>
     </task>
-    <option name="localTasksCounter" value="390" />
+    <task id="LOCAL-00390" summary="First commit">
+      <created>1481686708429</created>
+      <option name="number" value="00390" />
+      <option name="presentableId" value="LOCAL-00390" />
+      <option name="project" value="LOCAL" />
+      <updated>1481686708429</updated>
+    </task>
+    <task id="LOCAL-00391" summary="First commit">
+      <created>1481687098539</created>
+      <option name="number" value="00391" />
+      <option name="presentableId" value="LOCAL-00391" />
+      <option name="project" value="LOCAL" />
+      <updated>1481687098539</updated>
+    </task>
+    <option name="localTasksCounter" value="392" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236230000" />
+    <option name="totallyTimeSpent" value="237225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -780,7 +623,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5499182" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5499182" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -833,12 +676,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/mod/renew_loan.php</url>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
@@ -1198,19 +1035,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/loans.php">
+    <entry file="file://$PROJECT_DIR$/classes/DBase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/renew_loan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="279">
+          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+          <folding>
+            <marker date="1481686683545" expanded="true" signature="3152:3177" ph="INSERT INTO `${{$table}}`... " />
+            <marker date="1481686683545" expanded="true" signature="3947:3968" ph="UPDATE `${{$... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,26 +1056,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Loan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="289">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="59" />
           <folding>
-            <marker date="1481686683679" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481686683679" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481686683679" expanded="true" signature="1904:2432" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481686683679" expanded="true" signature="2635:3396" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481686683679" expanded="true" signature="3667:4328" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481687086826" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481687086826" expanded="true" signature="724:1219" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481687086826" expanded="true" signature="1939:2467" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481687086826" expanded="true" signature="2670:3431" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481687086826" expanded="true" signature="3702:4363" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/DBase.php">
+    <entry file="file://$PROJECT_DIR$/mod/renew_loan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
-          <folding>
-            <marker date="1481686683545" expanded="true" signature="3152:3177" ph="INSERT INTO `${{$table}}`... " />
-            <marker date="1481686683545" expanded="true" signature="3947:3968" ph="UPDATE `${{$... " />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/loans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="51" column="66" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
