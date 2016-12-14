@@ -12,7 +12,7 @@ require_once('_header.php')
 
             <h1>Patron</h1>
             <p>url: <?php echo Helper::encodeHTML("https://myopac.herokuapp.com/");?></p>
-            <p><strong>login</strong>: admin</p>
+            <p><strong>login</strong>: guest</p>
             <p><strong>password</strong>: password</p>
             <p>OR</p>
             <p>you can register by providing a valid email</p>
