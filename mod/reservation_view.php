@@ -139,7 +139,6 @@ if(isset($_POST['reservation'])){
                 </td>
             </tr>
 
-
             <?php
 
             $feedback_comments = $objReservation->getCommentsByReservation($reservation['id']);
