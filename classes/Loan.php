@@ -56,7 +56,7 @@ class Loan extends Application
         if (!empty($array) && !empty($id)) {
             $this->db->prepareUpdate($array);
             if ($this->db->update($this->_table, $id)) {
-                $this->save_to_test_log("sucess");
+                
                 return true;
             }
             return false;

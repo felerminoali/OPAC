@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac899d57-7227-4387-a8e3-de7db39aaab4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screeanshot/Untitled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screeanshot/Untitled2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/DBase.php" afterPath="$PROJECT_DIR$/classes/DBase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Loan.php" afterPath="$PROJECT_DIR$/classes/Loan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/LoanBussinessRule.php" afterPath="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
     </list>
     <ignored path="OPAC-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,16 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/checkout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/basket.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,17 +90,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Loan.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Loan.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Loan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+            <state relative-caret-position="98">
+              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding>
-                <marker date="1481685736307" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-                <marker date="1481685736307" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481685736307" expanded="true" signature="1938:2466" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481685736307" expanded="true" signature="2669:3430" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-                <marker date="1481685736307" expanded="true" signature="3701:4362" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481686683679" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+                <marker date="1481686683679" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481686683679" expanded="true" signature="1904:2432" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481686683679" expanded="true" signature="2635:3396" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+                <marker date="1481686683679" expanded="true" signature="3667:4328" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBase.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/DBase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+              <folding>
+                <marker date="1481686683545" expanded="true" signature="3152:3177" ph="INSERT INTO `${{$table}}`... " />
+                <marker date="1481686683545" expanded="true" signature="3947:3968" ph="UPDATE `${{$... " />
               </folding>
             </state>
           </provider>
@@ -191,7 +196,6 @@
         <option value="$PROJECT_DIR$/library/pages/checkout/list.php" />
         <option value="$PROJECT_DIR$/classes/ReservationBussinessRule.php" />
         <option value="$PROJECT_DIR$/classes/User.php" />
-        <option value="$PROJECT_DIR$/classes/DBase.php" />
         <option value="$PROJECT_DIR$/classes/Reservation.php" />
         <option value="$PROJECT_DIR$/classes/Email.php" />
         <option value="$PROJECT_DIR$/emails/2.php" />
@@ -203,6 +207,7 @@
         <option value="$PROJECT_DIR$/pages/index.php" />
         <option value="$PROJECT_DIR$/classes/LoanBussinessRule.php" />
         <option value="$PROJECT_DIR$/classes/Loan.php" />
+        <option value="$PROJECT_DIR$/classes/DBase.php" />
       </list>
     </option>
   </component>
@@ -414,14 +419,7 @@
       <workItem from="1481594564838" duration="6426000" />
       <workItem from="1481639711423" duration="6613000" />
       <workItem from="1481648354834" duration="1396000" />
-      <workItem from="1481685178609" duration="527000" />
-    </task>
-    <task id="LOCAL-00340" summary="First commit">
-      <created>1481539949758</created>
-      <option name="number" value="00340" />
-      <option name="presentableId" value="LOCAL-00340" />
-      <option name="project" value="LOCAL" />
-      <updated>1481539949758</updated>
+      <workItem from="1481685178609" duration="1238000" />
     </task>
     <task id="LOCAL-00341" summary="First commit">
       <created>1481542161593</created>
@@ -759,11 +757,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481685298598</updated>
     </task>
-    <option name="localTasksCounter" value="389" />
+    <task id="LOCAL-00389" summary="First commit">
+      <created>1481685751571</created>
+      <option name="number" value="00389" />
+      <option name="presentableId" value="LOCAL-00389" />
+      <option name="project" value="LOCAL" />
+      <updated>1481685751571</updated>
+    </task>
+    <option name="localTasksCounter" value="390" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235519000" />
+    <option name="totallyTimeSpent" value="236230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -775,7 +780,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5506536" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5499182" sideWeight="0.4908953" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1098,13 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/DBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1160">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/reservations.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1226,14 +1224,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Loan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        <state relative-caret-position="98">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <marker date="1481685736307" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
-            <marker date="1481685736307" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481685736307" expanded="true" signature="1938:2466" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481685736307" expanded="true" signature="2669:3430" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
-            <marker date="1481685736307" expanded="true" signature="3701:4362" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481686683679" expanded="true" signature="317:487" ph="SELECT * FRO... ${{$this-&gt;_table}}" />
+            <marker date="1481686683679" expanded="true" signature="724:1184" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481686683679" expanded="true" signature="1904:2432" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481686683679" expanded="true" signature="2635:3396" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+            <marker date="1481686683679" expanded="true" signature="3667:4328" ph="SELECT `${{$... ${{$this-&gt;_table}}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/DBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+          <folding>
+            <marker date="1481686683545" expanded="true" signature="3152:3177" ph="INSERT INTO `${{$table}}`... " />
+            <marker date="1481686683545" expanded="true" signature="3947:3968" ph="UPDATE `${{$... " />
           </folding>
         </state>
       </provider>
