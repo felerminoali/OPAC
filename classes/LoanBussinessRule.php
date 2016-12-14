@@ -13,8 +13,7 @@ class LoanBussinessRule
     {
         if (!empty($array) && ($id)) {
 
-            $param['checked_in'] = 1;
-            if ($this->checkIn($param, $id)) {
+            if ($this->checkIn(array("checked_in" => 1), $id)) {
                 if ($this->checkOut($array, 1)) {
                     return true;
                 }
