@@ -69,7 +69,6 @@ if (!empty($id)) {
 
             $items = $objReservation->getItemByReservation($reservation['id']);
 
-
             foreach ($items as $item_res) {
                 $item = $objCatalogue->getItem($item_res['item'])
                 ?>
@@ -89,43 +88,34 @@ if (!empty($id)) {
 
                         <?php
 
-                        $total_waiting_day = 0;
-                        $queue_list = $objReservation->getResevationsByItem($item['id']);
+                        $objRBR = new ReservationBussinessRule();
 
+                        $user = Session::getSession(Login::$_login_front);
 
-                        if (!empty($queue_list)) {
-                            $no_of_waiting_days = $cat['loanPeriod'];
-                            $total_waiting_day = $no_of_waiting_days * count($queue_list);
-                        }
-
-                        echo $total_waiting_day;
+                        echo $objRBR->get_total_waiting_day($item['id'], $cat['loanPeriod'], $user);
                         ?>
 
                     </td>
                     <td class="ta_r">
                         <?php
 
-                        $objBorrow = new Loan();
-                        $borrow = $objBorrow->getLoan($item['id']);
 
-                        if (!empty($borrow)) {
-                            // Due date if this catalogue was borrowed
-                            $start_date = new DateTime($borrow['duedate']);
-                        } else {
-                            // Current date if this catalogue was not borrowed
-                            $start_date = new DateTime();
-                        }
-
-                        if ($total_waiting_day != 0) {
-                            $start_date->modify('+ ' . $total_waiting_day . ' days');
-                        }
-
-                        echo $start_date->format('d/m/Y');
-
+                        echo $objRBR->get_pick_up_date($item['id'], $cat['loanPeriod'], $user);
                         ?>
 
                     </td>
-                    <td class="ta_r">On Waiting</td>
+                    <?php
+                    /*  Status:
+                     *    1. On Waiting
+                     *    2. Ready for Pick up
+                     * */
+                    ?>
+                    <td class="ta_r">
+                        <?php
+                        echo ($item_res['readyForPickUp'] == 1) ? "Ready for pickup" : "On Waiting";
+                        ?>
+
+                    </td>
                 </tr>
 
             <?php } ?>
