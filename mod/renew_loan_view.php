@@ -10,8 +10,8 @@ require_once('../inc/autoload.php');
 
 $objLoan = new Loan();
 $objCatalog = new Catalogue();
-
-$loans = $objLoan->getLoanByUser(Session::getSession(Login::$_login_front));
+$user = Session::getSession(Login::$_login_front);
+$loans = $objLoan->getLoanByUser($user);
  ?>
 
 <?php if (!empty($loans)) { ?>
@@ -40,11 +40,17 @@ $loans = $objLoan->getLoanByUser(Session::getSession(Login::$_login_front));
             <?php foreach ($loans as $loan) { ?>
                 <tr>
                     <td>
+                        <?php
+
+                        $objLoanBR = new LoanBussinessRule();
+                        if($objLoanBR->is_renewable($loan['item'], $user)) {
+                        ?>
                         <input type="checkbox"
                                name="loan_items"
                                id="<?php echo $loan['loan_id'] . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
                                value="<?php echo $loan['loan_id']  . '_' . $loan['item']. '_' . $loan['reservation']; ?>"
                                class="case">
+                        <?php } ?>
                     </td>
 
                     <td>
