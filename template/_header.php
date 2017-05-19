@@ -57,7 +57,7 @@ $business = $objBusiness->getBusiness();
                     <a href="/?page=catalogue"
                         <?php
                         echo Helper::getActive(
-                            array('page' => 'catalog')
+                            array('page' => 'catalogue')
                         );
                         ?>>
                         Catalogue
